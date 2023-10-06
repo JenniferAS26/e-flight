@@ -31,8 +31,22 @@
 - https://www.avianca.com/co/es/
 - https://www.latamairlines.com/co/es
 
+### Pasos para clonar el repositorio
+- Copiar el link del boton code
+- Utilizar los siguientes comandos
+
+``
+  git clone urlDelRepositorio
+``
+##### Nota: seguir los pasos del siguiente punto
+### Pasos para la creacion de ramas
+``
+  git checkout -b NombreRama
+``
+
 ### Sugerencias nombres de ramas
 - Feat/Gallery
 - Feat/Datepicker
 - Feat/Header-Footer
 - Feat/Explore
+
