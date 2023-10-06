@@ -1,9 +1,11 @@
+import { BsFillCloudLightningRainFill } from 'react-icons/bs'
+import './styles.scss'
 
 const App = () => {
   return (
-    <h1>
-      App
-    </h1>
+    <button>
+      <BsFillCloudLightningRainFill />
+    </button>
   )
 }
 
