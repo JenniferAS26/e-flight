@@ -1,6 +1,7 @@
 # Documentación Flowbite para uso de componentes
 - https://flowbite.com/
 - https://tailwindcss.com/
+- https://react-icons.github.io/react-icons/
 
 ## Pasos para ejecución por primera vez
 1. Clonar el repositorio
