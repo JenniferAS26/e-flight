@@ -39,6 +39,7 @@
   git clone urlDelRepositorio
 ``
 ##### Nota: seguir los pasos del siguiente punto
+
 ### Pasos para la creacion de ramas
 ``
   git checkout -b NombreRama
