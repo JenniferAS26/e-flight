@@ -13,8 +13,8 @@
   - components (para fragmentos pequeños reutilizables)
     - NombreComponente
       - index.jsx
-  - pages
-    -NombrePagina
+  - pages (paginas de mayor tamaño)
+    - NombrePagina
       - index.jsx
 5. Correr el servidor 
   ``
