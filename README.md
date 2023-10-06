@@ -29,3 +29,9 @@
 - https://clicair.co/
 - https://www.avianca.com/co/es/
 - https://www.latamairlines.com/co/es
+
+### Sugerencias nombres de ramas
+- Feat/Gallery
+- Feat/Datepicker
+- Feat/Header-Footer
+- Feat/Explore
