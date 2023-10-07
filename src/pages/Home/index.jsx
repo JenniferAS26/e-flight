@@ -6,6 +6,11 @@ const Home = () => {
     <section className='home-container'>
       <Gallery>
         <GalleryCard />
+        <GalleryCard />
+        <GalleryCard />
+        <GalleryCard />
+        <GalleryCard />
+        <GalleryCard />
       </Gallery>
     </section>
   )

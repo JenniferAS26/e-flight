@@ -11,3 +11,14 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin buttonStyle($width, $height, $border-radius, $color, $bg-color, $font-size) {
+  cursor: pointer;
+  width: $width;
+  height: $height,;
+  border: none;
+  border-radius: $border-radius;
+  color: $color;
+  background-color: $bg-color,;
+  font-size: $font-size;
+}
