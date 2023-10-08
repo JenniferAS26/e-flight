@@ -1,9 +1,15 @@
-const Home = () => {
+import React from "react";
+import Header from "../../components/App/Header"; // Ruta relativa para llegar al componente Header
+import Footer from "../../components/App/Footer"; // Ruta relativa para llegar al componente Footer
+
+function App() {
   return (
-    <h1>
-      Home page
-    </h1>
-  )
+    <div>
+      <Header />
+      {/* Contenido principal */}
+      <Footer />
+    </div>
+  );
 }
 
-export default Home
+export default App;

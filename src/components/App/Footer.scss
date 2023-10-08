@@ -1,0 +1,81 @@
+    // /src/components/Footer.scss
+
+    .footer {
+        background-color: #fff; /* Fondo blanco */
+        color: #333;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Divide en cuatro columnas iguales */
+        grid-gap: 20px; /* Espacio entre columnas y filas */
+        justify-content: space-between; /* Espacio entre columnas */
+        align-items: center; /* Alineación centrada verticalmente */
+        text-align: center; /* Alineación centrada horizontalmente */
+    }
+    
+    .logo img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    
+    .copy {
+        font-size: 12px;
+    }
+    
+    /* Estilo de los íconos de redes sociales (por ejemplo, Font Awesome) */
+    
+    .social-icons {
+        display: flex;
+        justify-content: center; /* Alineación centrada horizontalmente */
+    }
+    
+    .social-icon {
+        font-size: 24px;
+        margin: 0 10px; /* Espacio entre íconos */
+    }
+    
+    /* Estilos para las tres primeras columnas */
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Alineación centrada verticalmente */
+    }
+    
+    .column-title {
+        font-weight: bold;
+    }
+    
+    .column-subtitle {
+        font-size: 14px;
+        margin: 5px 0; /* Espacio entre subtitulos */
+    }
+    
+    .subscribe input[type="email"] {
+        padding: 8px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        margin: 10px 0; /* Espacio entre el input y el botón */
+        width: 150px;
+        background-color: transparent;
+        color: #333;
+    }
+    
+    .subscribe button {
+        background-color: lightgreen;
+        color: #333;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        margin-top: 10px; /* Espacio entre el botón y el siguiente elemento */
+    }
+    
+    /* Estilo del texto Copyright */
+    
+    .copy {
+        font-size: 12px;
+        margin-top: 20px;
+        grid-column: 1 / span 4; /* Ocupa las 4 columnas */
+        text-align: center; /* Alineación centrada horizontalmente */
+    }
+    
