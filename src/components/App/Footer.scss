@@ -1,81 +1,89 @@
-    // /src/components/Footer.scss
+// Footer.scss
 
-    .footer {
-        background-color: #fff; /* Fondo blanco */
-        color: #333;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Divide en cuatro columnas iguales */
-        grid-gap: 20px; /* Espacio entre columnas y filas */
-        justify-content: space-between; /* Espacio entre columnas */
-        align-items: center; /* Alineación centrada verticalmente */
-        text-align: center; /* Alineación centrada horizontalmente */
-    }
-    
-    .logo img {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-    }
-    
-    .copy {
-        font-size: 12px;
-    }
-    
-    /* Estilo de los íconos de redes sociales (por ejemplo, Font Awesome) */
-    
-    .social-icons {
-        display: flex;
-        justify-content: center; /* Alineación centrada horizontalmente */
-    }
-    
-    .social-icon {
-        font-size: 24px;
-        margin: 0 10px; /* Espacio entre íconos */
-    }
-    
-    /* Estilos para las tres primeras columnas */
-    
-    .column {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Alineación centrada verticalmente */
-    }
-    
-    .column-title {
-        font-weight: bold;
-    }
-    
-    .column-subtitle {
-        font-size: 14px;
-        margin: 5px 0; /* Espacio entre subtitulos */
-    }
-    
-    .subscribe input[type="email"] {
-        padding: 8px;
-        border: 1px solid #333;
-        border-radius: 5px;
-        margin: 10px 0; /* Espacio entre el input y el botón */
-        width: 150px;
-        background-color: transparent;
-        color: #333;
-    }
-    
-    .subscribe button {
-        background-color: lightgreen;
-        color: #333;
-        border: none;
-        padding: 8px 16px;
-        cursor: pointer;
-        margin-top: 10px; /* Espacio entre el botón y el siguiente elemento */
-    }
-    
-    /* Estilo del texto Copyright */
-    
-    .copy {
-        font-size: 12px;
-        margin-top: 20px;
-        grid-column: 1 / span 4; /* Ocupa las 4 columnas */
-        text-align: center; /* Alineación centrada horizontalmente */
-    }
-    
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+  }
+  
+  .nombre {
+    color: #6C6CFE;
+    font-family: Sarabun;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+  }
+  
+  .links {
+    margin-top: 20px;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: #171A1F; /* Cambia el color para "About us", "Flight" y "Contact us" */
+    font-family: Sarabun;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    margin-right: 20px;
+  }
+  
+  .subscribe {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .subscribe input[type="email"] {
+    display: inline-flex;
+    padding: 7px 89px 6px 12px;
+    align-items: center;
+    gap: 6px;
+    border: none; /* Añade un borde aquí si es necesario */
+    border-radius: 5px;
+  }
+  
+  .subscribe button {
+    display: inline-flex;
+    padding: 7px 13.5px 7px 14.5px;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff; /* Cambia el color del botón */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .social {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
+  .social svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  
+  .copy {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
