@@ -7,7 +7,7 @@
         <div className="footer">
         <div className="logo">
             <img src="./assets/icons/airline1.svg" alt="E-Flight logo" />
-            <span>E-Flight</span>
+            <span className="name">E-Flight</span>
         </div>
         <div className="links">
             <a href="#">About us</a>

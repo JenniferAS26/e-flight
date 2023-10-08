@@ -1,89 +1,92 @@
-// Footer.scss
+    // Footer.scss
 
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    width: 35px;
-    height: 35px;
-    flex-shrink: 0;
-  }
-  
-  .nombre {
-    color: #6C6CFE;
-    font-family: Sarabun;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 30px; /* 150% */
-  }
-  
-  .links {
-    margin-top: 20px;
-  }
-  
-  .links a {
-    text-decoration: none;
-    color: #171A1F; /* Cambia el color para "About us", "Flight" y "Contact us" */
-    font-family: Sarabun;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 30px; /* 150% */
-    margin-right: 20px;
-  }
-  
-  .subscribe {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .subscribe input[type="email"] {
-    display: inline-flex;
-    padding: 7px 89px 6px 12px;
-    align-items: center;
-    gap: 6px;
-    border: none; /* Añade un borde aquí si es necesario */
-    border-radius: 5px;
-  }
-  
-  .subscribe button {
-    display: inline-flex;
-    padding: 7px 13.5px 7px 14.5px;
-    justify-content: center;
-    align-items: center;
-    background-color: #007bff; /* Cambia el color del botón */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .social {
-    margin-top: 20px;
-    font-size: 20px;
-  }
-  
-  .social svg {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-  }
-  
-  .copy {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-  
+    .footer {
+        background-color: #FEFEFE;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 35px;
+        height: 35px;
+        flex-shrink: 0;
+    }
+    
+    .name {
+        color: #6C6CFE;
+        font-family: Sarabun;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px; /* 150% */
+    }
+    
+    .links {
+        margin-top: 20px;
+    }
+    
+    .links a {
+        text-decoration: none;
+        color: #171A1F; /* Cambia el color para "About us", "Flight" y "Contact us" */
+        font-family: Sarabun;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px; /* 150% */
+        margin-right: 20px;
+    }
+    
+    .subscribe {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .subscribe input[type="email"] {
+        display: inline-flex;
+        padding: 7px 89px 6px 12px;
+        align-items: center;
+        gap: 6px;
+        border-radius: 18px;
+        border: 1px solid #8F949F;
+        background: #FEFEFE;
+    }
+    
+    .subscribe button {
+        display: inline-flex;
+        padding: 7px 13.5px 7px 14.5px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 18px;
+        background: #11D295;
+        color: #FEFEFE;
+        border: none;
+        margin: 10px;
+        
+    }
+    
+    .social {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    
+    .social svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+    
+    .copy {
+        color: #424955;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
