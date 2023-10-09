@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-'use client'
 import PropTypes from 'prop-types'
 // import { Carousel } from 'flowbite-react'
 import './styles.scss'
@@ -13,9 +11,15 @@ const Gallery = ({ children }) => {
     <section className='gallery-container'>
       <h2 className='gallery-container__title'>What's new?</h2>
       <div className='gallery-container__cards-container'>
-        {children}
+          {children}
+        
       </div>
-      <button className='gallery-container__button' type='button'>Read more articles</button>
+      <button className='gallery-container__button'>Read more articles</button>
+      {/* <div className='w-screen'>
+        <Carousel slide={false}>
+          {children}
+        </Carousel>
+      </div> */}
     </section>
   )
 }
