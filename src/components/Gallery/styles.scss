@@ -26,6 +26,8 @@
       justify-content: center;
       grid-template-columns: repeat(3, 380px);
       gap: 5px;
+      @include removeHorizontalScroll;
+
     }
   }
   &__button {
