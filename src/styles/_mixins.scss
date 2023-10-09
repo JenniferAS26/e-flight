@@ -22,3 +22,10 @@
   background-color: $bg-color,;
   font-size: $font-size;
 }
+
+@mixin removeHorizontalScroll {
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
