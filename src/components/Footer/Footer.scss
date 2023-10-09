@@ -78,6 +78,11 @@
     .social {
         margin-top: 20px;
         font-size: 20px;
+        width: 100px;
+        height: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .social svg {
