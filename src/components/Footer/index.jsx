@@ -1,7 +1,6 @@
-import React from "react";
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
-import './Footer.scss';
 import logo from '../../assets/icons/logo.svg'; // Importa el logo SVG
+import './Footer.scss';
 
 function Footer() {
     return (
