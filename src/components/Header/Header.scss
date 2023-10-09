@@ -1,0 +1,71 @@
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px 20px;
+    }
+    
+    .header-logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .plane-icon {
+        color: #11D396;
+        font-size: 24px;
+        margin-right: 10px;
+        width: 35.84px;
+        height: 35.84px;
+        flex-shrink: 0;
+    }
+    
+    .logo-text {
+        font-size: 18px;
+    }
+    
+    .header-center-space {
+        flex-grow: 1;
+    }
+    
+    .header-currency {
+        display: flex;
+        align-items: center;
+    }
+    
+    .currency-text {
+        color: #171A1F;
+        text-align: right;
+        font-family: Sarabun;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px; /* 166.667% */
+        text-transform: uppercase;
+        margin: 10px;
+    }
+    
+    .globe-icon {
+        color: #1e90ff;
+        font-size: 24px;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+    
+    .bell-icon {
+        color: orange;
+        font-size: 24px;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+    
+    .avatar-icon {
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+    }
