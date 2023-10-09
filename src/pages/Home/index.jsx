@@ -1,15 +1,23 @@
-import React from "react";
 import Header from "../../components/Header"; // Ruta relativa para llegar al componente Header
 import Footer from "../../components/Footer"; // Ruta relativa para llegar al componente Footer
+import Gallery from '../../components/Gallery'
+import GalleryCard from '../../components/GalleryCard'
 
-function App() {
+const Home = () => {
   return (
-    <div>
+    <section className='home-container'>
       <Header />
-      {/* Contenido principal */}
+      <Gallery>
+        <GalleryCard />
+        <GalleryCard />
+        <GalleryCard />
+        <GalleryCard />
+        <GalleryCard />
+        <GalleryCard />
+      </Gallery>
       <Footer />
-    </div>
-  );
+    </section>
+  )
 }
 
-export default App;
+export default Home

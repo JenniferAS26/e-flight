@@ -1,0 +1,118 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.card {
+  min-width: 343px;
+  width: 350px;
+  height: 380px;
+  border-radius: 15px;
+  // box-shadow: -9px 10px 28px -20px $secondary-color;
+  position: relative;
+  margin: 15px 5px;
+  &__image-container {
+    width: 350px;
+    height: 200px;
+    @include borderRadiusCards(15px, 15px, 0, 0);
+    &--image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include borderRadiusCards(15px, 15px, 0, 0);
+    }
+  }
+  &__details {
+    position: absolute;
+    bottom: 0;
+    width: 350px;
+    height: 210px;
+    @include borderRadiusCards(15px, 15px, 0, 0);
+    background-color: #FFFFFF;
+    z-index: 1;
+    &--date {
+      display: grid;
+      align-items: start;
+      width: 100%;
+      height: 50px;
+      background-color: rgba($color: $primary-color, $alpha: 0.1);
+      padding: 0 2.5rem;
+      padding-top: 5px;
+      font-size: 1.6rem;
+      position: absolute;
+      z-index: 1;
+      @include borderRadiusCards(15px, 15px, 0, 0);
+    }
+    .info-wrapper {
+      display: grid;
+      grid-template-rows: 40px 40px 79px;
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      height: 180px;
+      box-shadow: 0px 13px 63px -24px #8F949F;
+      padding: 1.6rem 1.6rem 0.5rem;
+      background-color: #FFFFFF;
+      @include borderRadiusCards(15px, 15px, 15px, 15px);
+    }
+    &--city {
+      font-size: 2.8rem;
+      font-weight: $regular-weight;
+      color: $primary-color;
+    }
+    &--labels {
+      width: 100%;
+      height: 30px;
+      display: flex;
+      .label {
+        width: 90px;
+        height: 25px;
+        padding: 0 1.2rem;
+        border-radius: 1.2rem;
+        font-size: 1.6rem;
+        display: grid;
+        place-content: center;
+        letter-spacing: 0.5px;
+      }
+      .category {
+        background-color: rgba($color: $primary-color, $alpha: 0.2);
+        color: $primary-color;
+        font-weight: $medium-weight;
+        padding-bottom: 4px;
+      }
+      .one-way {
+        color: $secondary-text-color;
+      }
+    }
+    .bottom {
+      width: 100%;
+      height: 100%;
+      @include flexCenter(row, space-between, center);
+    }
+    &--price-info {
+      width: 80%;
+      height: 100%;
+      display: grid;
+      align-content: center;
+      .from {
+        font-size: 1.6rem;
+        font-weight: $regular-weight;
+        color: $secondary-text-color;
+      }
+      .price {
+        font-size: 2rem;
+        color: $primary-color;
+
+      }
+      .type {
+        @extend .from;
+      }
+    }
+    &--button {
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      margin-right: 5px;
+      @include buttonStyle(40px, 40px, 50%, #FFFFFF, $secondary-color, 2.8rem);
+    }
+  }
+}

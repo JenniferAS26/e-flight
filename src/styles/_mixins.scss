@@ -1,0 +1,24 @@
+@mixin borderRadiusCards($top-right, $top-left, $bottom-right, $bottom-left) {
+  border-top-right-radius: $top-right;
+  border-top-left-radius: $top-left;
+  border-bottom-right-radius: $bottom-right;
+  border-bottom-left-radius: 15px;
+}
+
+@mixin flexCenter($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin buttonStyle($width, $height, $border-radius, $color, $bg-color, $font-size) {
+  cursor: pointer;
+  width: $width;
+  height: $height,;
+  border: none;
+  border-radius: $border-radius;
+  color: $color;
+  background-color: $bg-color,;
+  font-size: $font-size;
+}
