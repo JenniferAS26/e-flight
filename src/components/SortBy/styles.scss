@@ -3,8 +3,7 @@
 
 
 $light-color: #FFFFFF;
-.sortby-container {
-  .sortby {
+.sortby {
   width: 150px;
   height: 50px;
   display: grid;
@@ -35,6 +34,7 @@ $light-color: #FFFFFF;
     }
     &__title {
       font-size: 2rem !important;
+      font-weight: $bold-weight !important;
     }
     &__bar {
       width: 100%;
@@ -44,6 +44,7 @@ $light-color: #FFFFFF;
     }
     &__legend {
       font-size: 1.6rem !important;
+      font-weight: $bold-weight !important;
     }
     &__radio {
       width: 15px !important;
@@ -66,8 +67,8 @@ $light-color: #FFFFFF;
     @media (min-width: $desktop-width) {
       display: block;
     }
-  }
 }
+
 
 [type='radio']:checked {
   background-color: $primary-color !important;
