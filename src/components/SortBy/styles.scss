@@ -3,58 +3,69 @@
 
 
 $light-color: #FFFFFF;
-.sortby {
+.sortby-container {
+  .sortby {
   width: 150px;
   height: 50px;
   display: grid;
   align-items: center;
   justify-items: center;
-  &__button {
-    width: 120px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: $light-color !important;
-    border: 1px solid $secondary-color !important;
-    color: $secondary-color !important;
-    &:hover {
-      border: none !important;
-      background-color: $secondary-color !important;
-      color: $light-color !important;
+    &__button {
+      width: 120px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: $light-color !important;
+      border: 1px solid $secondary-color !important;
+      color: $secondary-color !important;
+      &:hover {
+        border: none !important;
+        background-color: $secondary-color !important;
+        color: $light-color !important;
+      }
+      &:focus {
+        box-shadow: none !important;
+      }
     }
-    &:focus {
-      box-shadow: none !important;
+    &__text-button {
+      font-size: 1.8rem;
+    }
+    &__content-container {
+      width: 100%;
+      height: 100%;
+    }
+    &__title {
+      font-size: 2rem !important;
+    }
+    &__bar {
+      width: 100%;
+      height: 1px;
+      background-color:#DDE0E5;
+      margin: 10px 0;
+    }
+    &__legend {
+      font-size: 1.6rem !important;
+    }
+    &__radio {
+      width: 15px !important;
+      height: 15px !important;
+      margin-right: 10px;
+      background-color: $light-color !important;
+      &:focus {
+        background-color: $primary-color !important;
+      }
+    }
+    &__label {
+      font-size: 1.4rem !important;
+    }
+    @media (min-width: $desktop-width) {
+      display: none;
     }
   }
-  &__text-button {
-    font-size: 1.8rem;
-  }
-  &__content-container {
-    width: 100%;
-    height: 100%;
-  }
-  &__title {
-    font-size: 2rem !important;
-  }
-  &__bar {
-    width: 100%;
-    height: 1px;
-    background-color:#DDE0E5;
-    margin: 10px 0;
-  }
-  &__legend {
-    font-size: 1.6rem !important;
-  }
-  &__radio {
-    width: 15px !important;
-    height: 15px !important;
-    margin-right: 10px;
-    background-color: $light-color !important;
-    &:focus {
-      background-color: $primary-color !important;
+  .sortby-desktop {
+    display: none;
+    @media (min-width: $desktop-width) {
+      display: block;
     }
-  }
-  &__label {
-    font-size: 1.4rem !important;
   }
 }
 
