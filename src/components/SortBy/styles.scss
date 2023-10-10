@@ -1,0 +1,61 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+$light-color: #FFFFFF;
+.sortby {
+  width: 100%;
+  height: 50px;
+  display: grid;
+  &__button {
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: $light-color !important;
+    border: 1px solid $secondary-color !important;
+    color: $secondary-color !important;
+    &:hover {
+      border: none !important;
+      background-color: $secondary-color !important;
+      color: $light-color !important;
+    }
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  &__text-button {
+    font-size: 1.8rem;
+  }
+  &__content-container {
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    font-size: 2rem !important;
+  }
+  &__bar {
+    width: 100%;
+    height: 1px;
+    background-color:#DDE0E5;
+    margin: 10px 0;
+  }
+  &__legend {
+    font-size: 1.6rem !important;
+  }
+  &__radio {
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: 10px;
+    background-color: $light-color !important;
+    &:focus {
+      background-color: $primary-color !important;
+    }
+  }
+  &__label {
+    font-size: 1.4rem !important;
+  }
+}
+
+[type='radio']:checked {
+  background-color: $primary-color !important;
+}
