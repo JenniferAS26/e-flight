@@ -13,11 +13,10 @@ function Footer() {
                 <a href="#">About us</a>
                 <a href="#">Flight</a>
                 <a href="#">Contact us</a>
-                <a href="#">Promotions</a>
             </div>
             <div className="subscribe">
                 <input type="email" placeholder="Enter your email" />
-                <button>Subscribe</button>
+                <button>Subscribete</button>
             </div>
             <div className="social">
                 <FaTwitter />
