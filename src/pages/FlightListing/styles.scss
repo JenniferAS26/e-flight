@@ -2,11 +2,13 @@
 @use '../../styles/mixins' as *;
 
 .flight-listing {
+  height: 800px;
   &__filters{
     width: 100%;
     height: 70px;
     @include flexCenter(row, center, center);
     @media (min-width: $desktop-width) {
+      height: auto;
       display: grid;
       justify-content: start;
     }

@@ -1,9 +1,12 @@
-import { Button, Label, Modal, Radio } from 'flowbite-react'
 import { useState } from 'react'
+import { Button, Label, Modal, Radio } from 'flowbite-react'
+import chevron from '../../assets/icons/chevron.svg'
+import options from '../../assets/icons/options.svg'
 import './styles.scss'
 
 const SortBy = () => {
   const [openModal, setOpenModal] = useState();
+
 
   return (
     <section className='sortby-container'>
@@ -56,7 +59,30 @@ const SortBy = () => {
         </Modal>
       </section>
       <section className='sortby-desktop'>
-        <h1>hola hola hola</h1>
+        <div className='sortby-desktop__top-container'>
+          <div className='sortby-desktop__top-container--left'>
+            <img src={options} alt='bars icon' />
+            <h3 className='title'>Sort by</h3>
+          </div>
+          <span className='sortby-desktop__top-container--span'>Reset</span>
+        </div>
+        <div className='sortby-desktop__bar-desktop'></div>
+        <div className='sortby-desktop__bottom-container'>
+          <div className='sortby-desktop__bottom-container--top'>
+            <h4 className='title'>Price</h4>
+            <img className='cursor-pointer' src={chevron} alt='chevron icon' />
+          </div>
+          <form className='sortby-desktop__bottom-container--form'>
+            <div className='input-container'>
+              <input className='input-container__radio-button' type='radio' id='lowest' />
+              <label className='input-container__label' htmlFor='lowest'>Lowest price</label>
+            </div>
+            <div className='input-container'>
+              <input className='input-container__radio-button' type='radio' id='highest' />
+              <label className='input-container__label' htmlFor='highest'>Highest price</label>
+            </div>
+          </form>
+        </div>
       </section>
     </section>
   )
