@@ -98,7 +98,7 @@
         justify-content: space-between;
         align-items: center;
         margin-left: 780px;
-        transform: translateY(-98px); /* Ajusta la cantidad de movimiento según tus necesidades */
+        transform: translateY(-98px);
         transition: transform 0.3s ease;
     }
     
@@ -113,5 +113,48 @@
         color: #424955;
         margin-top: 20px;
         font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .footer {
+            padding: 10px; /* Ajusta el espacio según tus necesidades */
+        }
+    
+        .logo {
+            margin-left: 0; /* Centrar el logo */
+            margin-top: 10px; /* Ajustar el margen superior según tus necesidades */
+        }
+    
+        .name {
+            text-align: center; /* Centrar el texto */
+        }
+    
+        .links {
+            margin: 10px 0; /* Espacio entre enlaces y centrarlos */
+            transform: translateY(0); /* Restablecer transform */
+        }
+    
+        .links a {
+            margin: 0 10px; /* Espacio entre enlaces reducido */
+        }
+    
+        .subscribe {
+            margin-left: 0; /* Centrar el formulario de suscripción */
+            transform: translateY(0); /* Restablecer transform */
+        }
+    
+        .subscribe input[type="email"] {
+            padding: 7px 12px; /* Ajustar el relleno según tus necesidades */
+            width: 100%; /* Ocupar todo el ancho disponible */
+        }
+    
+        .social {
+            margin: 10px 0; /* Espacio entre iconos de redes sociales y centrarlos */
+            transform: translateY(0); /* Restablecer transform */
+        }
+    
+        .copy {
+            text-align: center; /* Centrar el texto de derechos de autor */
+        }
     }
     
