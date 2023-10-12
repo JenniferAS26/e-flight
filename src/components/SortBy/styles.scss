@@ -1,0 +1,145 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+$light-color: #FFFFFF;
+$title-color: #323842;
+.sortby {
+  width: 150px;
+  height: 50px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+    &__button {
+      width: 120px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: $light-color !important;
+      border: 1px solid $secondary-color !important;
+      color: $secondary-color !important;
+      &:hover {
+        border: none !important;
+        background-color: $secondary-color !important;
+        color: $light-color !important;
+      }
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+    &__text-button {
+      font-size: 1.8rem;
+    }
+    &__content-container {
+      width: 100%;
+      height: 100%;
+    }
+    &__title {
+      font-size: 2rem !important;
+      font-weight: $bold-weight !important;
+    }
+    &__bar {
+      width: 100%;
+      height: 1px;
+      background-color:rgba(23, 26, 31, 0.07);
+      margin: 10px 0;
+    }
+    &__legend {
+      font-size: 1.6rem !important;
+      font-weight: $bold-weight !important;
+    }
+    &__radio {
+      width: 15px !important;
+      height: 15px !important;
+      margin-right: 10px;
+      background-color: $light-color !important;
+      &:focus {
+        background-color: $primary-color !important;
+      }
+    }
+    &__label {
+      font-size: 1.4rem !important;
+    }
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+.sortby-desktop {
+  display: none;
+  @media (min-width: $desktop-width) {
+    width: 328px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 60px 4px 136px;
+    align-items: center;
+    border-radius: 8px;
+    background: #FEFEFE;
+    box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
+    &__top-container {
+      width: 100%;
+      height: 60px;
+      @include flexCenter(row, space-between, center);
+      padding: 0 15px;
+      &--left {
+        width: 50%;
+        height: 100%;
+        @include flexCenter(row, flex-start, center);
+        .title {
+          margin-left: 10px;
+          font-size: 2rem;
+          font-weight: $bold-weight;
+          color: $title-color;
+        }
+      }
+      &--span {
+        font-size: 1.4rem;
+        font-weight: $regular-weight;
+        color: $primary-text-color;
+      }
+    }
+    &__bar-desktop {
+      width: 100%;
+      height: 1px;
+      background-color:rgba(23, 26, 31, 0.07);
+    }
+    &__bottom-container {
+      width: 100%;
+      height: 136px;
+      padding: 0 15px;
+      &--top {
+        width: 100%;
+        height: 56px;
+        @include flexCenter(row, space-between, center);
+        .title {
+          font-size: 1.6rem;
+          font-weight: $bold-weight;
+          color: $primary-text-color;
+        }
+      }
+      &--form {
+        width: 100%;
+        height: 80px;
+        display: grid;
+        grid-template-rows: repeat(2, 30px);
+        .input-container {
+          width: 100%;
+          height: 22px;
+          @include flexCenter(row, flex-start, center);
+          &__radio-button {
+            width: 16px;
+            height: 16px;
+          }
+          &__label {
+            font-size: 1.4rem;
+            color: $primary-text-color;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+[type='radio']:checked {
+  background-color: $primary-color !important;
+}
