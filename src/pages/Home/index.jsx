@@ -1,9 +1,11 @@
 import Gallery from '../../components/Gallery'
 import GalleryCard from '../../components/GalleryCard'
+import DatePicker from '../../components/DatePicker'
 
 const Home = () => {
   return (
     <section className='home-container'>
+      <DatePicker />
       <Gallery>
         <GalleryCard />
         <GalleryCard />
