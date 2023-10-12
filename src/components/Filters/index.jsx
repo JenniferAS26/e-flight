@@ -70,7 +70,7 @@ const Filters = () => {
         </Modal>
       </section>
       <section className='filters-desktop'>
-        <h1>hola hola hola lola</h1>
+        <h1></h1>
       </section>
     </section>
   )
