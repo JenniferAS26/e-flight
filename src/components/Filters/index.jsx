@@ -70,7 +70,13 @@ const Filters = () => {
         </Modal>
       </section>
       <section className='filters-desktop'>
-        <h1></h1>
+        <div className='sortby-desktop__top-container'>
+          <div className='filters-desktop__top-container--left'>
+            <img src={filter} alt="" />
+            <h3>Filters</h3>
+          </div>
+          <span className='filters-desktop__top-container--span'>Reset</span>
+        </div>
       </section>
     </section>
   )
