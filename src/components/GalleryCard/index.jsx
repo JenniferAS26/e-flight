@@ -1,3 +1,4 @@
+import React from 'react'
 import image from '../../assets/images/gallery-1.svg'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import './styles.scss'

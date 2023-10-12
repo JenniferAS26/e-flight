@@ -1,3 +1,4 @@
+import React from 'react'
 import logo from '../../assets/icons/logo.svg'; // Importa el logo SVG
 import globeIcon from '../../assets/icons/location.svg'; // Importa el icono de ubicación
 import bellIcon from '../../assets/icons/notifications.svg'; // Importa el icono de notificaciones

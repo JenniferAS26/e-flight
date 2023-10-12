@@ -1,3 +1,4 @@
+import React from 'react'
 import Gallery from '../../components/Gallery'
 import GalleryCard from '../../components/GalleryCard'
 import DatePicker from '../../components/DatePicker/index'

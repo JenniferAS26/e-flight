@@ -1,3 +1,4 @@
+import React from 'react'
 import { Tabs } from 'flowbite-react'
 import Filters from '../../components/Filters'
 import SortBy from '../../components/SortBy'

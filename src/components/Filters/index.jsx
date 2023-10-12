@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react';
 import { Button, Checkbox, Label, Modal, Progress } from 'flowbite-react'
 import filter from '../../assets/icons/filter.svg'
