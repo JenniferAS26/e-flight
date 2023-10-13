@@ -26,7 +26,7 @@ const DatePicker = () => {
             <div className='DataPicker-header__wrapper'>
                 <div className='DatePicker__informacion'>
                 <div className='round-trip'>
-                    <span>Roun Trip</span>
+                    <span>Round Trip</span>
                     <img src={ImageRound} alt='doble-flechas' />
                 </div>
                 <div className='one-way'>

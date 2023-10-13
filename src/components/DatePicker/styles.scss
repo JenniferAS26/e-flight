@@ -18,7 +18,7 @@
         height: 100%;
         @include flexCenter(row, left, left);
         font-family: $font-source;
-        h1{
+        span{
           color: $primary-text-color;
           font-family: $font-source;
           font-weight: 700;
