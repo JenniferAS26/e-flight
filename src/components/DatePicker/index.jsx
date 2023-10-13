@@ -4,6 +4,7 @@ import ImageRound from '../../assets/icons/round-tip.svg'
 import ImageOne from '../../assets/icons/one-way.svg'
 import ImageLine from '../../assets/icons/Line 1.svg'
 import ImagePasseger from '../../assets/icons/passeger.svg'
+import ImageTriangulo from '../../assets/icons/triangulo-invertido.svg'
 import ImageChange from '../../assets/icons/change.svg'
 import ImageLineHorizontal from '../../assets/icons/Line horizontal.svg'
 import ImageSearch from '../../assets/icons/search.svg'
@@ -17,57 +18,58 @@ import './styles.scss'
 
 const DatePicker = () => {
   return (
-    <section className="DatePicker-page-container">
-        <div className="DatePicker-container-wrapper">
-            <div className="DataPicker-page-tittle">
+    <section className='DatePicker-page-container'>
+        <div className='DatePicker-container-wrapper'>
+            <div className='DataPicker-page-tittle'>
                 <span>Find your flight</span>
             </div>
-            <div className="DataPicker-header__wrapper">
-                <div className="DatePicker__informacion">
-                <div className="round-trip">
+            <div className='DataPicker-header__wrapper'>
+                <div className='DatePicker__informacion'>
+                <div className='round-trip'>
                     <span>Roun Trip</span>
-                    <img src={ImageRound} alt="doble-flechas" />
+                    <img src={ImageRound} alt='doble-flechas' />
                 </div>
-                <div className="one-way">
+                <div className='one-way'>
                     <span>One Way</span>
-                    <img src={ImageOne} alt="flecha" />
+                    <img src={ImageOne} alt='flecha' />
                 </div>
-                <div className="line"><img src={ImageLine} alt="linea"/></div>
-                <div className="passager">
+                <div className='line'><img src={ImageLine} alt='linea'/></div>
+                <div className='passager'>
                     <span>1</span>
-                    <img src={ImagePasseger} alt="pasajero" />
+                    <img src={ImagePasseger} alt='pasajero' />
+                    <img src={ImageTriangulo} alt='triangulo' />
                 </div>
                 </div>
-            <div className="DatePicker-from-to__container">
-                <div className="DatePicker__from-to">
+            <div className='DatePicker-from-to__container'>
+                <div className='DatePicker__from-to'>
                     <div><span>Form</span></div>
                     <div><span>To</span></div>
-                    <img src={ImageChange} alt="doble-flecha"/>
-                    <img src={ImageLineHorizontal} alt="linea-horizontal" />
+                    <img src={ImageChange} alt='doble-flecha'/>
+                    <img src={ImageLineHorizontal} alt='linea-horizontal' />
                 </div>
-                <div className="search">
-                  <img src={ImageSearch} alt="buscar"/>
+                <div className='search'>
+                  <img src={ImageSearch} alt='buscar'/>
                 </div>
-                <div className="DataPicker__Today">
+                <div className='DataPicker__Today'>
                    <span>today</span>
                    <span>houston</span>
                    <p>Texas, United State</p>
-                   <img src={ImageGroup1} alt="circulo-amariilo" />
+                   <img src={ImageGroup1} alt='circulo-amariilo' />
                 </div>
             </div>
-            <div className="DatePicker-calendary__global">
-                <div className="DatePicker__Departure">
+            <div className='DatePicker-calendary__global'>
+                <div className='DatePicker__Departure'>
                     <p>Departure date</p>
-                    <img src={ImageCalendarW} alt="calendario-blanco" />
+                    <img src={ImageCalendarW} alt='calendario-blanco' />
                 </div>
-                <div className="DatePicker__Returndate">
+                <div className='DatePicker__Returndate'>
                     <p>Return date</p>
-                    <img src={ImageCalendaryO} alt="calendario-naranja" />
+                    <img src={ImageCalendaryO} alt='calendario-naranja' />
                 </div>
                 <div className='DatePicker__world'>
-                    <img src={ImageWorld} alt="mundo" />
+                    <img src={ImageWorld} alt='mundo' />
                 </div>
-                <div><img src={ImageAirplane} alt="avion" /></div>
+                <div><img src={ImageAirplane} alt='avion' /></div>
             </div>
             </div>
         </div>
