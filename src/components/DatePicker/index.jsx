@@ -20,15 +20,15 @@ const DatePicker = () => {
     <section className="DatePicker-page-container">
         <div className="DatePicker-container-wrapper">
             <div className="DataPicker-page-tittle">
-                <h1>Find your flight</h1>
+                <span>Find your flight</span>
             </div>
             <div className="DataPicker-header__wrapper">
-                <div className="DatePocker__informacion">
+                <div className="DatePicker__informacion">
                 <div className="round-trip">
-                    <span>Round trip</span>
+                    <span>Roun Trip</span>
                     <img src={ImageRound} alt="doble-flechas" />
                 </div>
-                <div className="one way">
+                <div className="one-way">
                     <span>One Way</span>
                     <img src={ImageOne} alt="flecha" />
                 </div>
@@ -49,7 +49,7 @@ const DatePicker = () => {
                 </div>
                 <div className="DataPicker__Today">
                    <span>today</span>
-                   <h1>houston</h1>
+                   <span>houston</span>
                    <p>Texas, United State</p>
                    <img src={ImageGroup} alt="circulo-amariilo" />
                 </div>
