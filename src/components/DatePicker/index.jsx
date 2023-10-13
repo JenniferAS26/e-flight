@@ -7,7 +7,7 @@ import ImagePasseger from '../../assets/icons/passeger.svg'
 import ImageChange from '../../assets/icons/change.svg'
 import ImageLineHorizontal from '../../assets/icons/Line horizontal.svg'
 import ImageSearch from '../../assets/icons/search.svg'
-import ImageGroup from '../../assets/icons/Group 1.svg'
+import ImageGroup1 from '../../assets/icons/Group 1.svg'
 import ImageCalendarW from '../../assets/icons/calendar-white.svg'
 import ImageCalendaryO from '../../assets/icons/calendar-orange.svg'
 import ImageWorld from '../../assets/images/world-map.svg'
@@ -51,7 +51,7 @@ const DatePicker = () => {
                    <span>today</span>
                    <span>houston</span>
                    <p>Texas, United State</p>
-                   <img src={ImageGroup} alt="circulo-amariilo" />
+                   <img src={ImageGroup1} alt="circulo-amariilo" />
                 </div>
             </div>
             <div className="DatePicker-calendary__global">
