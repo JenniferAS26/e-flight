@@ -4,11 +4,11 @@ import Footer from '../Footer'
 
 const Layout = () => {
   return (
-    <main className='layout'>
+    <section className='layout'>
       <Header />
       <Outlet />
       <Footer />
-    </main>
+    </section>
   )
 }
 
