@@ -1,8 +1,10 @@
-import { Tabs } from 'flowbite-react'
+// import { Tabs } from 'flowbite-react'
 import Filters from '../../components/Filters'
 import SortBy from '../../components/SortBy'
-import { HiAdjustments, HiClipboardList, HiUserCircle } from 'react-icons/hi'
-import { MdDashboard } from 'react-icons/md'
+// import { HiAdjustments, HiClipboardList, HiUserCircle } from 'react-icons/hi'
+// import { MdDashboard } from 'react-icons/md'
+import FlightResults from '../../components/FlightResults'
+import FlightResultsCard from '../../components/FlightResultsCard'
 import './styles.scss'
 
 const FlightListing = () => {
@@ -12,8 +14,8 @@ const FlightListing = () => {
         <SortBy />
         <Filters />
       </div>
-      <div>
-        <Tabs.Group
+      <div className='flight-listing__results'>
+        {/* <Tabs.Group
           aria-label="Default tabs"
           style="default"
         >
@@ -23,13 +25,7 @@ const FlightListing = () => {
             title="Profile"
           >
             <p>
-              This is
-              <span className="font-medium text-gray-800 dark:text-white">
-                Profile tab's associated content
-              </span>
-              .
-              Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-              control the content visibility and styling.
+              fecha 1
             </p>
           </Tabs.Item>
           <Tabs.Item
@@ -37,13 +33,7 @@ const FlightListing = () => {
             title="Dashboard"
           >
             <p>
-              This is
-              <span className="font-medium text-gray-800 dark:text-white">
-                Dashboard tab's associated content
-              </span>
-              .
-              Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-              control the content visibility and styling.
+              fecha 2
             </p>
           </Tabs.Item>
           <Tabs.Item
@@ -51,13 +41,7 @@ const FlightListing = () => {
             title="Settings"
           >
             <p>
-              This is
-              <span className="font-medium text-gray-800 dark:text-white">
-                Settings tab's associated content
-              </span>
-              .
-              Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-              control the content visibility and styling.
+              fecha 3
             </p>
           </Tabs.Item>
           <Tabs.Item
@@ -65,16 +49,14 @@ const FlightListing = () => {
             title="Contacts"
           >
             <p>
-              This is
-              <span className="font-medium text-gray-800 dark:text-white">
-                Contacts tab's associated content
-              </span>
-              .
-              Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-              control the content visibility and styling.
+              fecha 4
             </p>
           </Tabs.Item>
-        </Tabs.Group>
+        </Tabs.Group> */}
+        <FlightResults>
+          <FlightResultsCard />
+          <FlightResultsCard />
+        </FlightResults>
       </div>
     </section>
   )

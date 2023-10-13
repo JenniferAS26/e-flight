@@ -8,9 +8,18 @@
     height: 70px;
     @include flexCenter(row, center, center);
     @media (min-width: $desktop-width) {
+      width: 350px;
       height: auto;
       display: grid;
       justify-content: start;
     }
+  }
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    display: grid;
+    justify-content: flex-start;
+    align-items: start;
+    grid-template-columns: 350px 1fr;
+    margin: 0 auto;
   }
 }
