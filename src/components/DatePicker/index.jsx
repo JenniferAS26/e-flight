@@ -35,17 +35,18 @@ const DatePicker = () => {
                 <div className="line"><img src={ImageLine} alt="linea"/></div>
                 <div className="passager">
                     <span>1</span>
-                    <img src={ImagePasseger} alt="pasajero" /></div>
+                    <img src={ImagePasseger} alt="pasajero" />
+                </div>
                 </div>
             <div className="DatePicker-from-to__container">
                 <div className="DatePicker__from-to">
-                <span>Form</span>
-                <psan>To</psan>
-                <img src={ImageChange} alt="doble-flecha"/>
-                <img src={ImageLineHorizontal} alt="linea-horizontal" />
+                    <div><span>Form</span></div>
+                    <div><span>To</span></div>
+                    <img src={ImageChange} alt="doble-flecha"/>
+                    <img src={ImageLineHorizontal} alt="linea-horizontal" />
                 </div>
                 <div className="search">
-                <img src={ImageSearch} alt="buscar"/>
+                  <img src={ImageSearch} alt="buscar"/>
                 </div>
                 <div className="DataPicker__Today">
                    <span>today</span>
@@ -72,7 +73,7 @@ const DatePicker = () => {
         </div>
    
         {/*  <Datepicker />  */}
-  </section>
+    </section>
   )
 }
 
