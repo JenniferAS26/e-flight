@@ -1,5 +1,5 @@
 # Documentación Flowbite para uso de componentes
-- https://flowbite.com/
+- https://www.flowbite-react.com/
 - https://tailwindcss.com/
 - https://react-icons.github.io/react-icons/
 

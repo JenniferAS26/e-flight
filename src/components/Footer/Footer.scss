@@ -13,7 +13,9 @@
     
     .logo {
         display: flex;
-        align-items: center;
+        align-self: start;
+        margin-left: 17%;
+        margin-top: 70px;
     }
     
     .logo img {
@@ -30,11 +32,18 @@
         font-weight: 600;
         line-height: 30px; /* 150% */
     }
+
     
     .links {
-        margin-top: 20px;
+        display: flex;
+        flex-direction: row; /* Esto coloca los elementos en una fila */
+        align-items: center; /* Esto alinea verticalmente los elementos en el centro */
+        margin-left: 600px;
+        transform: translateY(-44px); /* Ajusta la cantidad de movimiento según tus necesidades */
+        transition: transform 0.3s ease;
     }
     
+
     .links a {
         text-decoration: none;
         color: #171A1F; /* Cambia el color para "About us", "Flight" y "Contact us" */
@@ -43,23 +52,29 @@
         font-style: normal;
         font-weight: 700;
         line-height: 30px; /* 150% */
-        margin-right: 20px;
+        margin-right: 50px; /* Espacio entre los elementos en la fila */
     }
     
     .subscribe {
-        margin-top: 20px;
+        margin-top: 30px;
         display: flex;
         align-items: center;
+        align-self: start;
+        margin-left: 217px;
+        transform: translateY(-50px); /* Ajusta la cantidad de movimiento según tus necesidades */
+        transition: transform 0.3s ease;
     }
     
     .subscribe input[type="email"] {
-        display: inline-flex;
         padding: 7px 89px 6px 12px;
         align-items: center;
         gap: 6px;
         border-radius: 18px;
         border: 1px solid #8F949F;
         background: #FEFEFE;
+        display: flex;
+        color: black;
+        width: 60%;
     }
     
     .subscribe button {
@@ -76,13 +91,15 @@
     }
     
     .social {
-        margin-top: 20px;
         font-size: 20px;
         width: 100px;
-        height: 35px;
+        height: 1px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-left: 780px;
+        transform: translateY(-98px); /* Ajusta la cantidad de movimiento según tus necesidades */
+        transition: transform 0.3s ease;
     }
     
     .social svg {

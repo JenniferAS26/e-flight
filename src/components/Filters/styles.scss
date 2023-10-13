@@ -1,0 +1,152 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+$light-color: #FFFFFF;
+$letters: #323842;
+.filters {
+  width: 150px !important;
+  height: 50px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  &__button {
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: $light-color !important;
+    border: 1px solid $secondary-color !important;
+    color: $secondary-color !important;
+    &:hover {
+      border: none !important;
+      background-color: $secondary-color !important;
+      color: $light-color !important;
+    }
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  &__text-button {
+    font-size: 1.8rem;
+  }
+  &__wrapper-title {
+    width: 100% !important;
+    @include flexCenter(row, flex-start, center);
+    height: 30px;
+    gap: 5px;
+    &--title {
+      font-size: 2rem !important;
+      font-weight: $bold-weight !important;
+    }
+  }
+  &__bar {
+    width: 100%;
+    height: 1px;
+    background-color:rgba(23, 26, 31, 0.07);
+    margin: 10px 0;
+  }
+  &__wrapper-subtitle {
+    width: 100%;
+    height: 40px;
+    @include flexCenter(row, space-between, center);
+    &--title {
+      font-size: 1.6rem;
+      font-weight: $bold-weight;
+    }
+  }
+  &__checkbox-wrapper {
+    height: 30px !important;
+  }
+  &__label {
+    font-size: 1.4rem !important;
+    padding-left: 5px;
+  }
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+.filters-desktop {
+  display: none;
+  @media (min-width: $desktop-width) {
+    width: 328px;
+    height: 473px;
+    margin-top: 16px;
+    padding: 0 15px;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 58px 2px 133px 2px 133px 2px 143px;
+    border-radius: 8px;
+    background: #FEFEFE;
+    box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
+    &__top-container {
+      width: 100%;
+      height: 100%;
+      @include flexCenter(row, space-between, center);
+      &--left {
+        width: 100px;
+        height: 100%;
+        @include flexCenter(row, flex-start, center);
+        h3 {
+          margin-left: 10px;
+          font-size: 2rem;
+          font-weight: $bold-weight;
+          color: $letters;
+        }
+      }
+      &--span {
+        font-size: 1.4rem;
+        font-weight: $regular-weight;
+      }
+    }
+    &__bar-desktop {
+      width: 100%;
+      height: 1px;
+      background-color:rgba(23, 26, 31, 0.07);
+    }
+    &__transit-container {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 45px 88px;
+      &--top {
+        width: 100%;
+        height: 100%;
+        @include flexCenter(row, space-between, center);
+        .title {
+          font-size: 1.6rem;
+          font-weight: $bold-weight;
+          color: $primary-text-color;
+        }
+      }
+      &--form {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, 30px);
+        .wrapper {
+          width: 100%;
+          @include flexCenter(row, space-between, center);
+          .input-container {
+            @include inputCheckContainer;
+          }
+          span {
+            font-size: 1.4rem;
+            font-weight: $regular-weight;
+            color: $secondary-text-color;
+          }
+        }
+      }
+    }
+    &__point-container {
+      @extend .filters-desktop__transit-container;
+      &--top {
+        @extend .filters-desktop__transit-container--top;
+      }
+      &--form {
+        @extend .filters-desktop__transit-container--form;
+        .input-container {
+          @include inputCheckContainer;
+        }
+      }
+    }
+  }
+}

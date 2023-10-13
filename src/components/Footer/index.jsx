@@ -1,7 +1,6 @@
-import React from "react";
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
-import './Footer.scss';
 import logo from '../../assets/icons/logo.svg'; // Importa el logo SVG
+import './Footer.scss';
 
 function Footer() {
     return (
@@ -14,11 +13,10 @@ function Footer() {
                 <a href="#">About us</a>
                 <a href="#">Flight</a>
                 <a href="#">Contact us</a>
-                <a href="#">Promotions</a>
             </div>
             <div className="subscribe">
                 <input type="email" placeholder="Enter your email" />
-                <button>Subscribe</button>
+                <button>Subscribete</button>
             </div>
             <div className="social">
                 <FaTwitter />
