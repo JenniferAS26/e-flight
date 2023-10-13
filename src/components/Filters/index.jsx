@@ -84,17 +84,17 @@ const Filters = () => {
             <img className='cursor-pointer' src={chevron} alt='chevron icon' />
           </div>
           <form className='filters-desktop__transit-container--form'>
-            <div className='direct-container'>
+            <div className='wrapper'>
               <div className='input-container'>
-                <input type="checkbox" name="" id="direct" />
-                <label htmlFor="direct">Direct</label>
+                <input className='check-input' type="checkbox" name="" id="direct" />
+                <label className='check-label' htmlFor="direct">Direct</label>
               </div>
               <span>30 USD</span>
             </div>
-            <div className='transit-container'>
+            <div className='wrapper'>
               <div className='input-container'>
-                <input type="checkbox" name="" id="transit" />
-                <label htmlFor="transit">Transit</label>
+                <input className='check-input' type="checkbox" name="" id="transit" />
+                <label className='check-label' htmlFor="transit">Transit</label>
               </div>
               <span>45 USD</span>
             </div>
@@ -108,12 +108,12 @@ const Filters = () => {
           </div>
           <form className='filters-desktop__point-container--form'>
             <div className='input-container'>
-              <input type="checkbox" name="" id="departure" />
-              <label htmlFor="departure">Osaka (ITM)</label>
+              <input className='check-input' type="checkbox" name="" id="departure" />
+              <label className='check-label' htmlFor="departure">Osaka (ITM)</label>
             </div>
             <div className='input-container'>
-              <input type="checkbox" name="" id="arrival" />
-              <label htmlFor="arrival">Kuala Lumpur (KUL)</label>
+              <input className='check-input' type="checkbox" name="" id="arrival" />
+              <label className='check-label' htmlFor="arrival">Kuala Lumpur (KUL)</label>
             </div>
           </form>
         </div>
