@@ -222,189 +222,203 @@
         }
       }
       }
-      .container-date-climate {
-        width: 234px;
-        height: 300px;
-        border-radius: 117px;
-        border: 2px solid $input-background;
+      .Datepicker-container__climate-world{
+        min-width: $mobile-width;
+        width: 100%;
         display: grid;
-        position: relative;
-        span {
-          color: $secondary-text-color;
-          font-family: $font-source;
-          font-size: 14px;
-          font-weight: 400;
-          margin-left: 95px;
-          margin-top: 28px;
-        }
-        .horizon-line {
-          width: 200px;
-          height: 02px;
-          color: $input-background;
-          margin-left: 15px;
-          margin-top: 8px;
-        }
-        /* .rectangle {
-          width: 28px;
-          height: 10px;
-          display: flex;
-          align-content: stretch;
-        } */
-        h1 {
-          width: 69px;
-          color: $primary-color;
-          font-family: $font-source;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 28px;
-          margin-top: 10px;
-          text-align: center;
-          margin-left: 75px;
-        }
-        p {
-          color: $primary-color;
-          font-family: $font-source;
-          font-size: 1.2rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22px;
-          margin-left: 60px;
-        }
-        
-        .group {
-          width: 64px;
-          height: 64px;
-          margin-left: 75px;
-        }
-     /*    
-        .oval {
-          width: 6px;
-          height: 6px;
-          top: 210px; 
-          left: 150px;
-        } */
-        
-        .numero {
-          color: $primary-text-color;
-          font-family: $font-source;
-          font-size: 24px;
-          font-weight: $regular-weight;
-          line-height: 36px;
-          margin-left: 95px;
-          margin-top: 20px;
+        grid-auto-flow: column;
+        .container-date-climate {
+          width: 234px;
+          height: 300px;
+          border-radius: 117px;
+          border: 2px solid $input-background;
+          display: grid;
+          position: relative;
+          span {
+            color: $secondary-text-color;
+            font-family: $font-source;
+            font-size: 14px;
+            font-weight: 400;
+            margin-left: 95px;
+            margin-top: 28px;
+          }
+          .horizon-line {
+            width: 200px;
+            height: 02px;
+            color: $input-background;
+            margin-left: 15px;
+            margin-top: 8px;
+          }
+          /* .rectangle {
+            width: 28px;
+            height: 10px;
+            display: flex;
+            align-content: stretch;
+          } */
+          h1 {
+            width: 69px;
+            color: $primary-color;
+            font-family: $font-source;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px;
+            margin-top: 10px;
+            text-align: center;
+            margin-left: 75px;
+          }
+          p {
+            color: $primary-color;
+            font-family: $font-source;
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            margin-left: 60px;
+          }
           
+          .group {
+            width: 64px;
+            height: 64px;
+            margin-left: 75px;
+          }
+       /*    
+          .oval {
+            width: 6px;
+            height: 6px;
+            top: 210px; 
+            left: 150px;
+          } */
+          
+          .numero {
+            color: $primary-text-color;
+            font-family: $font-source;
+            font-size: 24px;
+            font-weight: $regular-weight;
+            line-height: 36px;
+            margin-left: 95px;
+            margin-top: 20px;
+            
+          }
+          
+          h2 {
+            color: $secondary-text-color;
+            font-family: $font-source;
+            font-weight: $regular-weight;
+            line-height: 22px;
+            margin-left: 80px;
+            margin-bottom: 23px;
+  
+          } 
         }
-        
-        h2 {
-          color: $secondary-text-color;
-          font-family: $font-source;
-          font-weight: $regular-weight;
-          line-height: 22px;
-          margin-left: 80px;
-          margin-bottom: 23px;
-
-        } 
-      }
-      .DatePicker__world {
-        min-height: $mobile-width;
-        height: 373px;
-        position: relative; 
-        .airplane {
-          img {
-            width: 230px;
-            height: 77px;
-            transform: rotate(6.27deg);
-            position: absolute; 
-            top: 120px; 
-            left: 290px; 
-            z-index: 1; 
+        .DatePicker__world {
+          height: 797px;
+          height: 370px;
+          gap: 10px;
+          position: relative; 
+          .airplane {
+            min-width: $mobile-width;
+            height: 10%;
+            img {
+              width: 230px;
+              height: 77px;
+              transform: rotate(6.27deg);
+              position: absolute; 
+              top: 110px;
+              left: 260px; 
+              z-index: 1; 
+          }
+          .bestPrice{
+            width: 109px;
+            height: 24px;
+            display: inline-flex;
+            padding: 7px 17.5px;
+            justify-content: center;
+            background-color: #FEF1DC;
+            align-items: center;
+            border-radius: 18px;
+            position: absolute;
+            bottom: 10px;
+            left: 249px;
+            h2{
+              color: #9C6100;
+              font-family: $font-source;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 22px;
+            }
+          }
+          .eco{
+            width: 109px;
+            height: 24px;
+            display: inline-flex;
+            padding: 7px 17.5px;
+            justify-content: center;
+            background-color: #FEF6EF;
+            border-radius: 18px;
+            align-items: center;
+            position: absolute;
+            top: 250px;
+            left: 520px;
+            p{
+              color: #FE902B;
+              font-family: $font-source;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 22px; /* 157.143% */
+            }
+          }
+          .fly{
+            width: 109px;
+            height: 24px;
+            display: inline-flex;
+            padding: 7px 17.5px;
+            justify-content: center;
+            background-color: #F2FAF9;
+            align-items: center;
+            border-radius: 18px;
+            position: absolute;
+            top: 200px;
+            right: 550px;
+            h3{
+              color:  #246B5E;
+              font-family: $font-source;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 22px; /* 157.143% */;
+              font-family: Sarabun;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 22px; /* 157.143% */
+            }
+          }
+          .rojo-oval{
+            width: 16px;
+            height: 16px;
+            position: relative;
+            top: 250px;
+            left: 220px;
+          }
+          .verde-oval{
+            width: 16px;
+            height: 16px;
+            position: relative;
+            top: px;
+          }
+          .azul-oval{
+            width: 16px;
+            height: 16px;
+            position: relative;
+            bottom: 10px;
+            left: 375px;
+          }
         }
+       }
       }
-      .bestPrice{
-        display: inline-flex;
-        padding: 7px 17.5px;
-        justify-content: center;
-        background-color: #FEF1DC;
-        align-items: center;
-        border-radius: 18px;
-        position: absolute;
-        bottom: 150px;
-        left: 150px;
-        h2{
-          color: #9C6100;
-          font-family: Sarabun;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22px;
-        }
-      }
-      .eco{
-        display: inline-flex;
-        padding: 7px 17.5px;
-        justify-content: center;
-        background-color: #FEF6EF;
-        border-radius: 18px;
-        align-items: center;
-        position: absolute;
-        bottom: 170px;
-        left: 550px;
-        p{
-          color: #FE902B;
-          font-family: Sarabun;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22px; /* 157.143% */
-        }
-      }
-      .fly{
-        display: inline-flex;
-        padding: 7px 17.5px;
-        justify-content: center;
-        background-color: #F2FAF9;
-        align-items: center;
-        border-radius: 18px;
-        position: absolute;
-        bottom: 250px;
-        right: 550px;
-        h3{
-          color:  #246B5E;
-          font-family: Sarabun;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22px; /* 157.143% */;
-          font-family: Sarabun;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22px; /* 157.143% */
-        }
-      }
-      .rojo-oval{
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        bottom: 124px;
-        left: 470px;
-      }
-      .verde-oval{
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        bottom: 220px;
-        left: 150px;
-      }
-      .azul-oval{
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        bottom: 310px;
-        left: 570px;
-      }
-    }
     .DatePicker-calendary__global{
       min-height: $mobile-width;
       height: 100%;
