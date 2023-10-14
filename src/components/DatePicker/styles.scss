@@ -150,8 +150,8 @@
             }
           }
       }
-    }
-    .DatePicker-from-to__container {
+      }
+      .DatePicker-from-to__container {
       min-width: $mobile-width;
       height: 150px;
       display: flex;
@@ -200,7 +200,6 @@
           }
         }
       }
-    
       .container-search {
         width: 46px;
         height: 100px;
@@ -222,78 +221,93 @@
           margin-left: 15px;
         }
       }
-      .container-date-global {
+      }
+      .container-date-climate {
         width: 234px;
         height: 300px;
-        display: grid;
         border-radius: 117px;
-        border: 2px solid #F2F3F5;
-        background: #FEFEFE;
-        margin-top: 20px;
-        margin-right: 300px;
-        align-content: space-around;
-        justify-content: space-around;
-        align-items: end;
-        justify-items: center;
-        @include flexCenter(row, space-around , center);
+        border: 2px solid $input-background;
+        display: grid;
         span {
-          color: #8F949F;
+          color: $secondary-text-color;
           font-family: $font-source;
           font-size: 14px;
           font-weight: 400;
-          line-height: 22px;
-          display: grid;
-          align-items: center;
-          justify-content: space-evenly;
-          justify-items: center;
-          margin-top: 25px;
+          background-color: #0A7956;
         }
-        .horizon-line{
-          width: 185px;
+        .horizon-line {
+          width: 100%;
           height: 1px;
-          color: $input-background;
-          display: grid;
-          align-content: space-between;
-          align-items: center;
-          margin-bottom: 26px;
-          color: #8F949F;
+          background-color: $input-background;
+          margin: 15px 0;
         }
-        .rectangle{
+        .rectangle {
           width: 28px;
           height: 10px;
-          padding: 2px 4px;
-          background-color: #8F949F;
+          margin-bottom: 30px;
         }
-        h1{
+        h1 {
           color: $primary-color;
-          text-align: center;
           font-family: $font-source;
           font-size: 18px;
           font-style: normal;
           font-weight: 600;
-          line-height: 28px; 
-          display: grid;
-          align-content: center;
+          line-height: 28px;
           margin-top: 10px;
         }
-        p{
+        p {
           color: $primary-color;
           font-family: $font-source;
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
-          line-height: 22px; 
+          line-height: 22px;
         }
-        img{
+        .goup {
           width: 64px;
           height: 64px;
+          margin: 20px auto;
+        }
+        
+        .oval {
+          width: 6px;
+          height: 6px;
+          margin-top: 28px;
+        }
+        
+        .numero {
+          color: $primary-text-color;
+          font-family: $font-source;
+          font-size: 24px;
+          font-weight: $regular-weight;
+          line-height: 36px;
+        }
+        
+        h2 {
+          color: $secondary-text-color;
+          font-family: $font-source;
+          font-weight: $regular-weight;
+          line-height: 22px;
+        } 
+      }
+      .DatePicker__world{
+        min-height: $mobile-width;
+        height: 373px;
+        transform: rotate(9.49deg);
+        .airplane{
+          img{
+            width: 230px;
+            height: 77px;
+            transform: rotate(6.27deg);
+            display: grid;
+            margin-right: 25px;
+          }
         }
       }
-    }
-  }    
-    .DatePicker-calendary__global{
-      width: 580px;
-      height: 387;
-      display: grid;
-    }
-}
+      .DatePicker-calendary__World{
+        width: 580px;
+        height: 387;
+        display: grid;
+      }
+    }    
+  }
