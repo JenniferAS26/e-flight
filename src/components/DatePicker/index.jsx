@@ -41,8 +41,9 @@ const DatePicker = () => {
                     <img src={ImageTriangulo} alt='triangulo' />
                 </div>
                 <div className='economy'>
+                    <img className='ticket' src={ImageTicket} alt="tiquete" />
                     <span>Economy</span>
-                    <img src={ImageTicket} alt="tiquete" />
+                   <img className='triangulo' src={ ImageTriangulo} alt='triangulo' />
                 </div>
                 </div>
             <div className='DatePicker-from-to__container'>
