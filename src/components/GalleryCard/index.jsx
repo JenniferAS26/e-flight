@@ -1,12 +1,12 @@
-import image from '../../assets/images/gallery-1.svg'
+// import image from '../../assets/images/gallery-1.svg'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import './styles.scss'
 
-const GalleryCard = () => {
+const GalleryCard = ({ imageUrl }) => {
   return (
     <div className='card'>
       <div className='card__image-container'>
-        <img className='card__image-container--image' src={image} alt='image card' />
+        <img className='card__image-container--image' src={imageUrl} alt='image card' />
       </div>
       <div className='card__details'>
         <span className='card__details--date'>Dec 24, 2022</span>

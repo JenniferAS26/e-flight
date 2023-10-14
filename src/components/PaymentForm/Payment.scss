@@ -2,14 +2,20 @@ form {
     background-color: white;
     width: 400px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border: 1px solid red;
     margin-left: 127px;
     margin-top: 449px;
     margin-bottom: 910px;
+    width: 600px;
+    height: 660px;
 }
 
 form div {
     margin-bottom: 20px;
+}
+.payment-metodh {
+    display: flex;
+    justify-content: space-between;
 }
 
 form label {

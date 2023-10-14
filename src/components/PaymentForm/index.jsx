@@ -14,7 +14,7 @@
 
     return (
         <form onSubmit={handleSubmit}>
-        <div>
+        <div className="payment-metodh">
             <label>
             <input type="radio" value="Visa" checked={paymentMethod === "Visa"} onChange={() => setPaymentMethod("Visa")} />
             Visa
