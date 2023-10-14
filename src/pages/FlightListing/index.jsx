@@ -40,27 +40,26 @@ const FlightListing = () => {
         </div>
         <div className='flight-listing__results--change-flight'>
           <form className='switch-flight'>
-            <div className='input-wrapper'>
-              <img src={pointer} alt='pointer icon' />
-              <input type='text' placeholder='Houston (HOU)' />
+            <div className='switch-flight__wrapper flex justify-between items-center'>
+              <div className='input-wrapper'>
+                <img src={pointer} alt='pointer icon' />
+                <input type='text' placeholder='Houston (HOU)' />
+              </div>
+              <span className='mx-8'>
+                <img src={switching} alt='arrows icon' />
+              </span>
+              <div className='input-wrapper'>
+                <img src={pointer} alt='pointer icon' />
+                <input type='text' placeholder='Los Angeles (LAX)' />
+              </div>
             </div>
-            <span>
-              <img src={switching} alt='arrows icon' />
-            </span>
-            <div className='input-wrapper'>
-              <img src={pointer} alt='pointer icon' />
-              <input type='text' placeholder='Los Angeles (LAX)' />
-            </div>
-            <div className='input-wrapper'>
+            <div className='switch-flight__date-wrapper flex justify-between items-center'>
               <img src={calendar} alt='pointer icon' />
               <input type='date' />
-            </div>
-            <span>-</span>
-            <div className='input-wrapper'>
-              <img src={calendar} alt='pointer icon' />
+              <div className='separator'></div>
               <input type='date' />
             </div>
-            <button type='submit'>
+            <button className='switch-flight__button' type='submit'>
               <img src={glass} alt='glass icon' />
             </button>
           </form>
