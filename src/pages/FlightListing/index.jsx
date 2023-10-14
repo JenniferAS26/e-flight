@@ -19,71 +19,6 @@ const FlightListing = () => {
         <SortBy />
         <Filters />
       </div>
-<<<<<<< HEAD
-      <div>
-        <Tabs.Group
-          aria-label="Default tabs"
-          style="default"
-        >
-          <Tabs.Item
-            active
-            icon={HiUserCircle}
-            title="Profile"
-          >
-            <p>
-              This is
-              <span className="font-medium text-gray-800 dark:text-white">
-             Profile tabs associated content
-              </span>
-              .
-              Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-              control the content visibility and styling.
-            </p>
-          </Tabs.Item>
-          <Tabs.Item
-            icon={MdDashboard}
-            title="Dashboard"
-          >
-            <p>
-              This is
-              <span className="font-medium text-gray-800 dark:text-white">
-                Dashboard tabs associated content
-              </span>
-              .
-              Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-              control the content visibility and styling.
-            </p>
-          </Tabs.Item>
-          <Tabs.Item
-            icon={HiAdjustments}
-            title="Settings"
-          >
-            <p>
-              This is
-              <span className="font-medium text-gray-800 dark:text-white">
-                Settings tabs associated content
-              </span>
-              .
-              Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-              control the content visibility and styling.
-            </p>
-          </Tabs.Item>
-          <Tabs.Item
-            icon={HiClipboardList}
-            title="Contacts"
-          >
-            <p>
-              This is
-              <span className="font-medium text-gray-800 dark:text-white">
-                Contacts tabs associated content
-              </span>
-              .
-              Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to
-              control the content visibility and styling.
-            </p>
-          </Tabs.Item>
-        </Tabs.Group>
-=======
       <div className='flight-listing__results'>
         <div className='flight-listing__results--types'>
           <button className='options trip'>
@@ -137,7 +72,6 @@ const FlightListing = () => {
           <FlightResultsCard />
           <FlightResultsCard />
         </FlightResults>
->>>>>>> 6c878a97cb2b6a178d4b6cadf9c9660da75006ba
       </div>
     </section>
   )
