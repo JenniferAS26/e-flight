@@ -46,22 +46,31 @@ const DatePicker = () => {
                    <img className='triangulo' src={ ImageTriangulo} alt='triangulo' />
                 </div>
                 </div>
-                <div className='DatePicker-from-to__container'>
+            </div>
+            <div className='DatePicker-from-to__container'>
                     <div className='DatePicker-from__to'>
-                        <div className='from'><span>Form</span></div>
-                        <div className='to'><span>To</span></div>
+                        <div className='from'>
+                            <span>Form</span>
+                            <p>Houston (HOU)</p>
+                            <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
+                        </div>
                         <img className='arrows' src={ImageChange} alt='doble-flecha'/>
-                        <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
+                        <div className='to'>
+                            <span>To</span>
+                            <p>Where is your destination?</p>
+                            <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
+                        </div>
+                        <button className='search'>
+                          <img src={ImageSearch} alt='buscar'/>
+                       </button>
+                       <div className='DataPicker__Today'>
+                             <span>today</span>
+                             <span>houston</span>
+                             <p>Texas, United State</p>
+                            <img src={ImageGroup1} alt='circulo-amariilo' />
+                       </div>
                     </div>
-                    <div className='search'>
-                        <img src={ImageSearch} alt='buscar'/>
-                    </div>
-                    <div className='DataPicker__Today'>
-                        <span>today</span>
-                        <span>houston</span>
-                        <p>Texas, United State</p>
-                        <img src={ImageGroup1} alt='circulo-amariilo' />
-                    </div>
+                   
                 </div>
                 <div className='DatePicker-calendary__global'>
                     <div className='DatePicker__Departure'>
@@ -77,7 +86,6 @@ const DatePicker = () => {
                     </div>
                     <div><img src={ImageAirplane} alt='avion' /></div>
                 </div>
-            </div>
         </div>
    
         {/*  <Datepicker />  */}

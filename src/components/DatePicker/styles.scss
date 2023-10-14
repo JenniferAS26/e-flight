@@ -149,48 +149,71 @@
               height: 10px;
             }
           }
-        .DatePicker-from-to__container {
-          width: 550px;
-          height: 150px;
+      }
+    }
+    .DatePicker-from-to__container{
+      min-width: $mobile-width;
+      height: 150px;
+      display: grid;
+      gap: 10px;
+      .DatePicker-from__to{
+        width: 507px;
+        height: 100px;
+        padding: 7px ;
+        background-color: $primary-color;
+        border-radius: 10px;
+        display: grid;
+        align-content: space-between;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: auto auto auto;
+        .from{
+          color: #DDE0E5;
+          font-family: $font-source;
+          font-size: 14px;
+          font-weight: $regular-weight;
           display: grid;
-          .DatePicker-from__to {
-            width: 100%;
-            height: 100%;
-            display: grid;
-            align-items: center;
-            .from{
-              color: #DDE0E5;
-
-            }
-          }
-  
-          .search img {
-            width: 24px;
-            height: 24px;
+          margin-right: 20px;
+          margin-top: 20px;
+          margin-bottom: 30px;
+          margin-inline-start: auto;
+        }
+       .arrows{
+        width: 20px;
+        height: 20px;
+       display: grid;
+       }
+        .to{
+          color: #DDE0E5;
+          font-family: $font-source;
+          font-size: 14px;
+          font-weight: $regular-weight;
+          display: grid;
+          margin-right: 20px;
+          margin-top: 20px;
+          margin-bottom: 30px;
+          margin-inline-start: auto;
+          p{
+            color: #CDCDFE;
           }
         }
-  
-        .DataPicker__Today {
-          span, h1, p {
-            margin: 0;
-          }
-        }
-  
-        .DatePicker-calendary__global {
+        .search{
+          background-color: $secondary-color;
+          border-radius: 6px;
           display: grid;
-          justify-content: space-between;
-  
-          div {
-            margin-right: 1rem;
-            display: grid;
-            align-items: center;
-          }
-  
-          img {
-            margin-left: 0.5rem;
-          }
+          width: 44px;
+          height: 100px;
+          justify-content: center;
+          align-items: center;
+          margin-right: 20px;
+          margin-bottom: 30px;
+          grid-template-columns: auto auto auto;
+          justify-content: center;
         }
       }
+    }
+    .DatePicker-calendary__global{
+      background-color: red;
     }
   }
 } 
