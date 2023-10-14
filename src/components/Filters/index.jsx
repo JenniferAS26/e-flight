@@ -70,7 +70,55 @@ const Filters = () => {
         </Modal>
       </section>
       <section className='filters-desktop'>
-        <h1>hola hola hola lola</h1>
+        <div className='filters-desktop__top-container'>
+          <div className='filters-desktop__top-container--left'>
+            <img src={filter} alt="filter icon" />
+            <h3>Filters</h3>
+          </div>
+          <span className='filters-desktop__top-container--span'>Reset</span>
+        </div>
+        <div className='filters-desktop__bar-desktop'></div>
+        <div className='filters-desktop__transit-container'>
+          <div className='filters-desktop__transit-container--top'>
+            <h4 className='title'>No. of transit</h4>
+            <img className='cursor-pointer' src={chevron} alt='chevron icon' />
+          </div>
+          <form className='filters-desktop__transit-container--form'>
+            <div className='wrapper'>
+              <div className='input-container'>
+                <input className='check-input' type="checkbox" name="" id="direct" />
+                <label className='check-label' htmlFor="direct">Direct</label>
+              </div>
+              <span>30 USD</span>
+            </div>
+            <div className='wrapper'>
+              <div className='input-container'>
+                <input className='check-input' type="checkbox" name="" id="transit" />
+                <label className='check-label' htmlFor="transit">Transit</label>
+              </div>
+              <span>45 USD</span>
+            </div>
+          </form>
+        </div>
+        <div className='filters-desktop__bar-desktop'></div>
+        <div className='filters-desktop__point-container'>
+          <div className='filters-desktop__point-container--top'>
+            <h4 className='title'>Transit point</h4>
+            <img className='cursor-pointer' src={chevron} alt='chevron icon' />
+          </div>
+          <form className='filters-desktop__point-container--form'>
+            <div className='input-container'>
+              <input className='check-input' type="checkbox" name="" id="departure" />
+              <label className='check-label' htmlFor="departure">Osaka (ITM)</label>
+            </div>
+            <div className='input-container'>
+              <input className='check-input' type="checkbox" name="" id="arrival" />
+              <label className='check-label' htmlFor="arrival">Kuala Lumpur (KUL)</label>
+            </div>
+          </form>
+        </div>
+        <div className='filters-desktop__bar-desktop'></div>
+        <Progress color='purple' progress={45} />
       </section>
     </section>
   )
