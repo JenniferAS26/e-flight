@@ -1,6 +1,7 @@
 @use '../../styles/variables' as *;
 
 .explore-container {
+  min-width: $mobile-width;
   width: 100%;
   height: 1100px;
   display: grid;
