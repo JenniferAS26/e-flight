@@ -5,6 +5,7 @@ import ImageOne from '../../assets/icons/one-way.svg'
 import ImageLine from '../../assets/icons/Line 1.svg'
 import ImagePasseger from '../../assets/icons/passeger.svg'
 import ImageTriangulo from '../../assets/icons/triangulo-invertido.svg'
+import ImageTicket from '../../assets/icons/ticket.svg'
 import ImageChange from '../../assets/icons/change.svg'
 import ImageLineHorizontal from '../../assets/icons/Line horizontal.svg'
 import ImageSearch from '../../assets/icons/search.svg'
@@ -35,9 +36,13 @@ const DatePicker = () => {
                 </div>
                 <div className='line'><img src={ImageLine} alt='linea'/></div>
                 <div className='passager'>
-                    <span>1</span>
                     <img src={ImagePasseger} alt='pasajero' />
+                    <span>1</span>
                     <img src={ImageTriangulo} alt='triangulo' />
+                </div>
+                <div className='economy'>
+                    <span>Economy</span>
+                    <img src={ImageTicket} alt="tiquete" />
                 </div>
                 </div>
             <div className='DatePicker-from-to__container'>
