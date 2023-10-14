@@ -157,8 +157,7 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 6px; /* Espacio de 6px entre los contenedores morado y verde */
-    
+      gap: 6px;
       .DatePicker-from__to {
         width: 507px;
         height: 100px;
@@ -170,7 +169,6 @@
         align-items: center;
         justify-items: center;
         grid-template-columns: auto auto auto;
-    
         .from {
           color: #DDE0E5;
           font-family: $font-source;
@@ -182,13 +180,11 @@
           margin-bottom: 30px;
           margin-inline-start: auto;
         }
-    
         .arrows {
           width: 20px;
           height: 20px;
           display: grid;
         }
-    
         .to {
           color: #DDE0E5;
           font-family: $font-source;
@@ -199,7 +195,6 @@
           margin-top: 20px;
           margin-bottom: 30px;
           margin-inline-start: auto;
-    
           p {
             color: #CDCDFE;
           }
@@ -211,13 +206,20 @@
         height: 100px;
         padding: 0px 13px;
         display: grid;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         .search {
           background-color: $secondary-color;
           border-radius: 6px;
-          width: 100%;
+          width: 46px;
           height: 100%;
+        }
+        img{
+          width: 20px;
+          height: 20px;
+          align-content: center;
+          margin-top: 35px;
+          margin-left: 15px;
         }
       }
       .container-date-global {
@@ -229,19 +231,38 @@
         background: #FEFEFE;
         margin-top: 20px;
         margin-right: 300px;
-    
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: end;
+        justify-items: center;
+        @include flexCenter(row, space-around , center);
         span {
-          color: $input-background;
+          color: #8F949F;
           font-family: $font-source;
           font-size: 14px;
-          font-style: normal;
           font-weight: 400;
           line-height: 22px;
           display: grid;
           align-items: center;
-          margin-right: 10px;
-          justify-content: space-between;
-          grid-template-columns: 40px 1fr 2fr;
+          justify-content: space-evenly;
+          justify-items: center;
+          margin-top: 25px;
+        }
+        .horizon-line{
+          width: 185px;
+          height: 1px;
+          color: $input-background;
+          display: grid;
+          align-content: space-between;
+          align-items: center;
+          margin-bottom: 26px;
+          color: #8F949F;
+        }
+        .rectangle{
+          width: 28px;
+          height: 10px;
+          padding: 2px 4px;
+          background-color: #8F949F;
         }
         h1{
           color: $primary-color;
@@ -254,25 +275,25 @@
           display: grid;
           align-content: center;
           margin-top: 10px;
-          p{
-            color: $primary-color;
-            font-family: $font-source;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 22px; 
-          }
-          img{
-            width: 64px;
-            height: 64px;
-          }
+        }
+        p{
+          color: $primary-color;
+          font-family: $font-source;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px; 
+        }
+        img{
+          width: 64px;
+          height: 64px;
         }
       }
     }
-  }
+  }    
     .DatePicker-calendary__global{
       width: 580px;
       height: 387;
       display: grid;
     }
-  }
+}
