@@ -18,7 +18,6 @@ const Home = () => {
         {
           randomImages.map((image, index) => (
             <GalleryCard key={index} imageUrl={image?.urls.regular} />
-            
           ))
         }
       </Gallery>
