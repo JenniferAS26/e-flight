@@ -1,5 +1,4 @@
-
-/* import { Datepicker } from 'flowbite-react' */ 
+import { Datepicker } from 'flowbite-react' 
 import ImageRound from '../../assets/icons/round-tip.svg'
 import ImageOne from '../../assets/icons/one-way.svg'
 import ImageLine from '../../assets/icons/Line 1.svg'
@@ -67,9 +66,9 @@ const DatePicker = () => {
                         </div>
                     </div>
                     <div className='container-search'>
-                            <div className='search'>
+                            <button className='search'>
                               <img src={ImageSearch} alt='buscar'/>
-                           </div>
+                           </button>
                    </div>
             </div>
             <div className='container-date-climate'>
@@ -96,18 +95,18 @@ const DatePicker = () => {
              <div className='verde-oval'><img src={ImageVerdeOval} alt="" /></div>
             </div>
             <div className='DatePicker-calendary__global'>
-                 <div className='DatePicker__Departure'>
-                    <p>Departure date</p>
+                 <button className='DatePicker__Departure'>
                     <img src={ImageCalendarW} alt='calendario-blanco' />
-                </div>
-                <div className='DatePicker__Returndate'>
+                    <p>Departure date</p>
+                </button>
+                <butoon className='DatePicker__Returndate'>
                     <p>Return date</p>
                     <img src={ImageCalendaryO} alt='calendario-naranja' />
-                </div>     
+                </butoon>     
+                <Datepicker inline /> 
             </div>
         </div>
    
-        {/*  <Datepicker />  */}
     </section>
   )
 }
