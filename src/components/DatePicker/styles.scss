@@ -226,6 +226,10 @@
         width: 100%;
         display: grid;
         grid-auto-flow: column;
+        @media (min-width: $desktop-width) {
+          width: 100%;
+          height: 100%;
+        }
         .container-date-climate {
           width: 234px;
           height: 300px;
@@ -309,12 +313,22 @@
             margin-bottom: 23px;
   
           } 
+          @media (min-width: $desktop-width) {
+            margin-left: 790px;
+            margin-botton: 450px;
+            /* grid-template: none; */
+          }
         }
         .DatePicker__world {
           height: 797px;
           height: 370px;
           gap: 10px;
           position: relative; 
+          @media (min-width: $desktop-width) {
+            margin-left: 790px;
+            margin-botton: 450px;
+            /* grid-template: none; */
+          }
           .airplane {
             min-width: $mobile-width;
             height: 10%;
@@ -398,31 +412,48 @@
           .rojo-oval{
             width: 16px;
             height: 16px;
-            position: relative;
+            position: absolute;
             top: 250px;
             left: 220px;
           }
           .verde-oval{
             width: 16px;
             height: 16px;
-            position: relative;
+            position: absolute;
             top: px;
           }
           .azul-oval{
             width: 16px;
             height: 16px;
-            position: relative;
+            position: absolute;
             bottom: 10px;
             left: 375px;
           }
         }
+        @media (min-width: $desktop-width) {
+          width: 303px;
+          height: 295px;
+          margin-left: 790px;
+          margin-botton: 450px;
+          /* grid-template: none; */
+        } 
        }
+       @media (min-width: $desktop-width) {
+        grid-template-rows: 400px 130px;
+        grid-template-columns: 532px;
+        grid-template-areas: "text image"
+                            "image" "image";
       }
+    }
     .DatePicker-calendary__global{
       min-height: $mobile-width;
       height: 100%;
       display: grid;
       grid-auto-flow: column;
+      @media (min-width: $desktop-width) {
+        width: 100%;
+        height: 100%;
+      }
        .DatePicker__Departure{
         width: 114px;
         height: 36px;
@@ -465,11 +496,19 @@
           height: 20px;
         }
        }
+       @media (min-width: $desktop-width) {
+        margin: 30px;
+        grid: auto-flow 50px / 200px ;
+      }
      }
-     @media (min-width: $desktop-width) {
-      justify-content: flex-start;
-      margin: 30px;
-    }
+  }
+  @media (min-width: $desktop-width) {
+    background-size: cover;
+    background-position: center;
+    min-width: 100vw;
+    min-height: 100vh;
   }
 }
+
+
 
