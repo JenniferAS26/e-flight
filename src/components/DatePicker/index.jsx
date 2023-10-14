@@ -1,4 +1,5 @@
 import { Datepicker } from 'flowbite-react' 
+import { Flowbite } from 'flowbite-react';
 import ImageRound from '../../assets/icons/round-tip.svg'
 import ImageOne from '../../assets/icons/one-way.svg'
 import ImageLine from '../../assets/icons/Line 1.svg'
@@ -18,10 +19,16 @@ import ImageAzulOval from '../../assets/icons/Oval-azul.svg'
 import ImageVerdeOval from '../../assets/icons/Oval-verde.svg'
 import ImageCalendarW from '../../assets/icons/calendar-white.svg'
 import ImageCalendaryO from '../../assets/icons/calendar-orange.svg'
-
 import './styles.scss'
 
 const DatePicker = () => {
+    const customTheme = {
+        datepicker: {
+          color: {
+            primary: 'bg-violet-600 hover:bg-violet-600',
+          },
+        },
+      };
   return (
     <section className='DatePicker-page-container'>
         <div className='DatePicker-container-wrapper'>
@@ -104,10 +111,11 @@ const DatePicker = () => {
                     <p>Return date</p>
                     <img src={ImageCalendaryO} alt='calendario-naranja' />
                 </butoon>     
-                <Datepicker inline /> 
+                <Flowbite theme={customTheme}>
+                 <Datepicker inline />
+                </Flowbite>
             </div>
         </div>
-   
     </section>
   )
 }
