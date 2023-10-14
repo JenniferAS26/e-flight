@@ -1,6 +1,10 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
+$bg-color-date: #0EA676;
+$bg-color-date-active: #FEFEFE;
+$inactive-options: #AFF8E1;
+
 .flight-listing {
   height: 800px;
   &__filters{
@@ -109,6 +113,12 @@
             place-content: center;
           }
         }
+      }
+      &--filter-date {
+        width: 100%;
+        height: 70px;
+        display: block;
+        background-color: $bg-color-date;
       }
     }
   }

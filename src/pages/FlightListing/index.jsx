@@ -64,7 +64,15 @@ const FlightListing = () => {
             </button>
           </form>
         </div>
-        <div className='flight-listing__results--filter-date'>hola</div>
+        <div className='flight-listing__results--filter-date'>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
         <FlightResults>
           <FlightResultsCard />
           <FlightResultsCard />
