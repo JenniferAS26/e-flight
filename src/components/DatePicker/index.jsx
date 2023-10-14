@@ -10,7 +10,7 @@ import ImageChange from '../../assets/icons/change.svg'
 import ImageLineHorizontal from '../../assets/icons/Line horizontal.svg'
 import ImageSearch from '../../assets/icons/search.svg'
 import ImageGroup1 from '../../assets/icons/Group 1.svg'
-import ImageRectangle from '../../assets/icons/Rectangle 1svg.svg'
+/* import ImageRectangle from '../../assets/icons/Rectangle 1svg.svg' */
 import ImageOval from '../../assets/icons/Oval 1.svg'
 import ImageCalendarW from '../../assets/icons/calendar-white.svg'
 import ImageCalendaryO from '../../assets/icons/calendar-orange.svg'
@@ -70,13 +70,12 @@ const DatePicker = () => {
                    </div>
             </div>
             <div className='container-date-climate'>
-                
                     <span>today</span>
                     <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
-                    <img className='rectangle' src={ImageRectangle} alt='rectangulo' />
+                  {/* <img className='rectangle' src={ImageRectangle} alt='rectangulo' /> */ }
                     <h1>Houston</h1>
                     <p>Texas, United State</p>
-                    <img className='goup' src={ImageGroup1} alt='circulo-amariilo' />
+                    <img className='group' src={ImageGroup1} alt='circulo-amariilo' />
                     <img className='Oval' src={ImageOval} alt="ovalo" />
                     <p className='numero'>28</p>
                     <h2>mostly sunny</h2>
