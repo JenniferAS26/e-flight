@@ -277,7 +277,7 @@
           margin-left: 75px;
         }
         
-        .oval {
+     /*    .oval {
           width: 6px;
           height: 6px;
           display: grid;
@@ -285,7 +285,7 @@
           margin-right: 96px;
           margin: 30px auto;
           border-bottom-width: 4px;
-        }
+        } */
         
         .numero {
           color: $primary-text-color;
@@ -307,20 +307,24 @@
 
         } 
       }
-      .DatePicker__world{
+      .DatePicker__world {
         min-height: $mobile-width;
         height: 373px;
         transform: rotate(9.49deg);
-        .airplane{
-          img{
-            width: 230px;
-            height: 77px;
-            transform: rotate(6.27deg);
-            display: grid;
-            margin-right: 25px;
-          }
-        }
+        position: relative; 
       }
+      
+      .airplane {
+        img {
+          width: 230px;
+          height: 77px;
+          transform: rotate(6.27deg);
+          position: absolute; 
+          top: 120px; 
+          left: 290px; 
+          z-index: 1; 
+      }
+      
       .DatePicker-calendary__World{
         width: 580px;
         height: 387;
