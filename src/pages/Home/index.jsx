@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Gallery from '../../components/Gallery'
 import GalleryCard from '../../components/GalleryCard'
-
+import Explore from '../../components/Explore'
 const Home = () => {
   const [randomImages, setRandomImages] = useState([])
   useEffect(() => {
@@ -12,6 +12,7 @@ const Home = () => {
 
   return (
     <section className='home-container'>
+      <Explore />
       <Gallery>
         {
           randomImages.map((image, index) => (
