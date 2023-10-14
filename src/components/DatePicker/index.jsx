@@ -60,17 +60,20 @@ const DatePicker = () => {
                             <p>Where is your destination?</p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
                         </div>
-                        <button className='search'>
-                          <img src={ImageSearch} alt='buscar'/>
-                       </button>
-                       <div className='DataPicker__Today'>
-                             <span>today</span>
-                             <span>houston</span>
-                             <p>Texas, United State</p>
-                            <img src={ImageGroup1} alt='circulo-amariilo' />
-                       </div>
                     </div>
-                   
+                    <div className='container-search'>
+                            <div className='search'>
+                              <img src={ImageSearch} alt='buscar'/>
+                           </div>
+                   </div>
+                   <div className='container-date-global'>
+                            <div className='DatePicker__Today'>
+                                <span>today</span>
+                                <h1>Houston</h1>
+                                <p>Texas, United State</p>
+                                <img  src={ImageGroup1} alt='circulo-amariilo' />
+                        </div>
+                    </div>
                 </div>
                 <div className='DatePicker-calendary__global'>
                     <div className='DatePicker__Departure'>

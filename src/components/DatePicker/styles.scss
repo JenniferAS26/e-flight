@@ -151,15 +151,18 @@
           }
       }
     }
-    .DatePicker-from-to__container{
+    .DatePicker-from-to__container {
       min-width: $mobile-width;
       height: 150px;
-      display: grid;
-      gap: 10px;
-      .DatePicker-from__to{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px; /* Espacio de 6px entre los contenedores morado y verde */
+    
+      .DatePicker-from__to {
         width: 507px;
         height: 100px;
-        padding: 7px ;
+        padding: 7px;
         background-color: $primary-color;
         border-radius: 10px;
         display: grid;
@@ -167,7 +170,8 @@
         align-items: center;
         justify-items: center;
         grid-template-columns: auto auto auto;
-        .from{
+    
+        .from {
           color: #DDE0E5;
           font-family: $font-source;
           font-size: 14px;
@@ -178,12 +182,14 @@
           margin-bottom: 30px;
           margin-inline-start: auto;
         }
-       .arrows{
-        width: 20px;
-        height: 20px;
-       display: grid;
-       }
-        .to{
+    
+        .arrows {
+          width: 20px;
+          height: 20px;
+          display: grid;
+        }
+    
+        .to {
           color: #DDE0E5;
           font-family: $font-source;
           font-size: 14px;
@@ -193,27 +199,80 @@
           margin-top: 20px;
           margin-bottom: 30px;
           margin-inline-start: auto;
-          p{
+    
+          p {
             color: #CDCDFE;
           }
         }
-        .search{
+      }
+    
+      .container-search {
+        width: 46px;
+        height: 100px;
+        padding: 0px 13px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        .search {
           background-color: $secondary-color;
           border-radius: 6px;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .container-date-global {
+        width: 234px;
+        height: 300px;
+        display: grid;
+        border-radius: 117px;
+        border: 2px solid #F2F3F5;
+        background: #FEFEFE;
+        margin-top: 20px;
+        margin-right: 300px;
+    
+        span {
+          color: $input-background;
+          font-family: $font-source;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
           display: grid;
-          width: 44px;
-          height: 100px;
-          justify-content: center;
           align-items: center;
-          margin-right: 20px;
-          margin-bottom: 30px;
-          grid-template-columns: auto auto auto;
-          justify-content: center;
+          margin-right: 10px;
+          justify-content: space-between;
+          grid-template-columns: 40px 1fr 2fr;
+        }
+        h1{
+          color: $primary-color;
+          text-align: center;
+          font-family: $font-source;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px; 
+          display: grid;
+          align-content: center;
+          margin-top: 10px;
+          p{
+            color: $primary-color;
+            font-family: $font-source;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; 
+          }
+          img{
+            width: 64px;
+            height: 64px;
+          }
         }
       }
     }
+  }
     .DatePicker-calendary__global{
-      background-color: red;
+      width: 580px;
+      height: 387;
+      display: grid;
     }
   }
-} 
