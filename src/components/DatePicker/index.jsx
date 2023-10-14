@@ -46,37 +46,37 @@ const DatePicker = () => {
                    <img className='triangulo' src={ ImageTriangulo} alt='triangulo' />
                 </div>
                 </div>
-            <div className='DatePicker-from-to__container'>
-                <div className='DatePicker__from-to'>
-                    <div><span>Form</span></div>
-                    <div><span>To</span></div>
-                    <img src={ImageChange} alt='doble-flecha'/>
-                    <img src={ImageLineHorizontal} alt='linea-horizontal' />
+                <div className='DatePicker-from-to__container'>
+                    <div className='DatePicker-from__to'>
+                        <div className='from'><span>Form</span></div>
+                        <div className='to'><span>To</span></div>
+                        <img className='arrows' src={ImageChange} alt='doble-flecha'/>
+                        <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
+                    </div>
+                    <div className='search'>
+                        <img src={ImageSearch} alt='buscar'/>
+                    </div>
+                    <div className='DataPicker__Today'>
+                        <span>today</span>
+                        <span>houston</span>
+                        <p>Texas, United State</p>
+                        <img src={ImageGroup1} alt='circulo-amariilo' />
+                    </div>
                 </div>
-                <div className='search'>
-                  <img src={ImageSearch} alt='buscar'/>
+                <div className='DatePicker-calendary__global'>
+                    <div className='DatePicker__Departure'>
+                        <p>Departure date</p>
+                        <img src={ImageCalendarW} alt='calendario-blanco' />
+                    </div>
+                    <div className='DatePicker__Returndate'>
+                        <p>Return date</p>
+                        <img src={ImageCalendaryO} alt='calendario-naranja' />
+                    </div>
+                    <div className='DatePicker__world'>
+                        <img src={ImageWorld} alt='mundo' />
+                    </div>
+                    <div><img src={ImageAirplane} alt='avion' /></div>
                 </div>
-                <div className='DataPicker__Today'>
-                   <span>today</span>
-                   <span>houston</span>
-                   <p>Texas, United State</p>
-                   <img src={ImageGroup1} alt='circulo-amariilo' />
-                </div>
-            </div>
-            <div className='DatePicker-calendary__global'>
-                <div className='DatePicker__Departure'>
-                    <p>Departure date</p>
-                    <img src={ImageCalendarW} alt='calendario-blanco' />
-                </div>
-                <div className='DatePicker__Returndate'>
-                    <p>Return date</p>
-                    <img src={ImageCalendaryO} alt='calendario-naranja' />
-                </div>
-                <div className='DatePicker__world'>
-                    <img src={ImageWorld} alt='mundo' />
-                </div>
-                <div><img src={ImageAirplane} alt='avion' /></div>
-            </div>
             </div>
         </div>
    
