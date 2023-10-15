@@ -3,6 +3,7 @@ import Gallery from '../../components/Gallery'
 import GalleryCard from '../../components/GalleryCard'
 import DatePicker from '../../components/DatePicker'
 
+import Explore from '../../components/Explore'
 const Home = () => {
   const [randomImages, setRandomImages] = useState([])
   useEffect(() => {
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <section className='home-container'>
       <DatePicker />
+      <Explore />
       <Gallery>
         {
           randomImages.map((image, index) => (
