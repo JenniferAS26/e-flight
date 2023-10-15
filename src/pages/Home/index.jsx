@@ -4,6 +4,7 @@ import GalleryCard from '../../components/GalleryCard'
 const Home = () => {
   return (
     <section className='home-container'>
+      <DetailsPrice />
       <Gallery>
         <GalleryCard />
         <GalleryCard />
