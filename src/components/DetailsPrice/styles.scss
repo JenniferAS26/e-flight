@@ -3,19 +3,179 @@
 
 .Price-Houston-container-major{
     background-position: center;
-    max-width: 100vw;
+    width: 100%;
     height: 100%;
     display: grid;
-    gap: 10px;
-   .Details-Pice-major{
-    min-height: $mobile-height;
-    height: 100%;
-    background-color: aqua;
-    gap: 10px;
-    .deatail-container-box{
-        width: 328px;
-        height: 280px;
-        background-color: blueviolet;
+    margin-left: 180px;
+    .Details-Pice-major{
+        width: 296px;
+        height: 188px;
+        margin-left: 10px;
+        background-color: $input-background;
+        border-radius: 8px;
+        box-shadow: 4px 2px 10px 3px rgba(194,189,189,0.44);
+        -webkit-box-shadow: 4px 2px 10px 3px rgba(194,189,189,0.44);
+        -moz-box-shadow: 4px 2px 10px 3px rgba(194,189,189,0.44);        
+        .Details-header-Price{
+            width: 275px;
+            height: 35px;
+            display: grid;
+            @include flexCenter(row, center,center);
+           .Deatail-Title{
+            width: 100%;
+            height: 100%;
+            @include flexCenter(row, left, center);
+            font-family: $font-source;
+            img{
+                width: 20px;
+                height: 20px;
+                color: $secondary-color;
+            }
+            h1{
+                color: $tertiary-text-color;
+                font-family: $font-source;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 30px; 
+            }
+           } 
+           .lineahorizontal{
+            width: 288px;
+            height: 1px;
+            align-items: center;
+           }
+           .Details-price__wrapper{
+            min-width: $mobile-width;
+            display: grid;
+            gap: 20px;
+            .Details-basic{
+                width: 100%;
+                height: 100%;
+                display: grid;
+                @include flexCenter(row, left, center);
+                .Adult{
+                    width: 91px;
+                    height: 22px;
+                    display: grid;
+                    p{
+                     color: $tertiary-text-color;
+                     font-family: $font-source;
+                     font-size: 14px;
+                     font-weight: 500;
+                     line-height: 22px;
+                     margin-left: 20px;
+                    } 
+                }
+                .cien{
+                    width: 31px;
+                    height: 22px;
+                    display: grid;
+                    p{
+                    color: $tertiary-text-color;
+                    text-align: right;
+                    font-family: $font-source;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px; 
+                    }
+                }
+                .tax{
+                    width: 21px;
+                    height: 22px;
+                    display: grid;
+                    p{
+                        color: $tertiary-text-color;
+                        font-family: $font-source;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 22px; 
+                    }
+                }
+                .Regular{
+                    width: 115px;
+                    height: 22px;
+                    display: grid;
+                    p{
+                        color: $tertiary-text-color;
+                        font-family: $font-source;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 22px; 
+                    }
+                }
+                .ciento-cincuenta{
+                    width: 31px;
+                    height: 22px;
+                    display: grid;
+                    p{
+                    color: $tertiary-text-color;
+                    text-align: right;
+                    font-family: $font-source;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px; 
+                    }
+                }
+                .save{
+                    width: 29px;
+                    height: 22px;
+                    display: grid;
+                    p{
+                        color: $tertiary-color;
+                        font-family: $font-source;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 22px; 
+                    }
+                }
+                .uno-punto{
+                    width: 36px;
+                    height: 22px;
+                    display: grid;
+                    p{
+                        color: $tertiary-color;
+                        text-align: right;
+                        font-family: $font-source;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 22px; 
+                    }
+                }
+             }
+           }
+           .lineahorizontal{
+            width: 288px;
+            height: 1px;
+            align-items: center;
+           }
+           .Details-total{
+            width: 110;
+            height: 58px;
+            .total{
+                width: 32px;
+                height: 32px;
+                p{
+                    color: $tertiary-text-color;
+                    font-family: $font-source;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px;
+                }
+            }
+            .price{
+                width: 49px;
+                height: 26px;
+                p{
+                    color: $secondary-color;
+                    text-align: right;
+                    font-family: Sarabun;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 26px; 
+                }
+            }
+           }
+        }
     }
-   }
 }

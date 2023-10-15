@@ -13,31 +13,29 @@ const DetailsPrice = () => {
   return (
    <section className='Price-Houston-container-major'>
     <div className="Details-Pice-major">
-        <div className='deatail-container-box'>
-            <div className='Deatails-header-Price'>
+            <div className='Details-header-Price'>
                 <div className='Deatail-Title'>
                     <img src={ImegePrice} alt="precio" />
                     <h1>Price details</h1>
-                    <img className='lineahorizontal' src={ImegeLine9} alt="linea" />
                 </div>
             </div>
+           <div className='lineahorizontal'> <img  src={ImegeLine9} alt="linea" /></div>
             <div className="Details-price__wrapper">
-                <div className="Datails-basic">
-                    <p className="Adult">adult basic fee</p>
-                    <p className="cien">$150</p>
-                    <p className="tax">Tax</p>
-                    <p className="Regulaqr">Regular total price</p>
-                    <p className="ciento-cincuenta">$150</p>
-                    <p className="Save">Save</p>
-                    <p className="uno-punto">$1.5</p>
-                    <img className='lineahorizontal' src={ImegeLine9} alt="linea" />
+                <div className="Details-basic">
+                    <div className="Adult"><p >Adult basic fee</p></div>
+                    <div className="cien"><p >$150</p></div>
+                    <div  className="tax"><p>Tax</p></div>
+                    <div className="Regular"><p >Regular total price</p></div>
+                    <div className="ciento-cincuenta"><p >$150</p></div>
+                    <div className="Save"><p >Save</p></div>
+                    <div className="uno-punto"><p>-$1.5</p></div>
                 </div>
+                <div><img className='lineahorizontal' src={ImegeLine9} alt="linea" /></div>
                 <div className="Details-total">
-                    <p className="total">Total</p>
-                    <p className="price">$148.5</p>
+                    <div className="total"><p >Total</p></div>
+                    <div className="price"><p >$148.5</p></div>
                 </div>
             </div>
-        </div>
     </div>
     <div className="Huoston-container-major">
         <div className="houston-header">
