@@ -7,6 +7,8 @@ import ImegeLandinAir2 from '../../assets/icons/landing-airplane2.svg'
 import ImegeGroup9 from '../../assets/icons/Group 9.svg'
 import ImegeLine9 from '../../assets/icons/Line 9.svg'
 import ImegePrice from '../../assets/icons/Price.svg'
+import './styles.scss'
+
 const DetailsPrice = () => {
   return (
    <section className='Price-Houston-container-major'>

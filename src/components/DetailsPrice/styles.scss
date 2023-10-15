@@ -7,5 +7,15 @@
     height: 100%;
     display: grid;
     gap: 10px;
-    background-color: brown;
+   .Details-Pice-major{
+    min-height: $mobile-height;
+    height: 100%;
+    background-color: aqua;
+    gap: 10px;
+    .deatail-container-box{
+        width: 328px;
+        height: 280px;
+        background-color: blueviolet;
+    }
+   }
 }
