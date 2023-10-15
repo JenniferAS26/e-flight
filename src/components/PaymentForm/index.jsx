@@ -35,21 +35,20 @@
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
         <div className="payment-method">
-            <label className="label">
+            <label className="label-cards">
             <input type="radio" value="Visa" checked={paymentMethod === "Visa"} onChange={() => setPaymentMethod("Visa")} />
-            Visa
             <img src={visaIcon} alt="Visa" />
             <img src={mastercardIcon} alt="Mastercard" />
             <img src={amexIcon} alt="Amex" />
             </label>
-            <label>
+            <label className="label-paypal">
             <input type="radio" value="PayPal" checked={paymentMethod === "PayPal"} onChange={() => setPaymentMethod("PayPal")} />
-            PayPal
             <img src={paypalIcon} alt="PayPal" />
             </label>
         </div>
+        <div className="form-inputs">
         <div>
             <label>
             Name on Card
@@ -64,15 +63,21 @@
         </div>
         <div>
             <label>
-            CVV
-            <input type="text" placeholder="Enter CVV" value={cvv} onChange={(e) => setCvv(e.target.value)} />
+            Expiration Date
+            <input type="date" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
+            </label>
+        <div>
+            <label className="checkbox-label">
+            <input className="chec" type="checkbox" checked={sameAddress} onChange={() => setSameAddress(!sameAddress)} />
+            Use same address as billing info
             </label>
         </div>
         <div>
             <label>
-            Expiration Date
-            <input type="date" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
+            CVV
+            <input type="text" placeholder="Enter CVV" value={cvv} onChange={(e) => setCvv(e.target.value)} />
             </label>
+        </div>
         </div>
         <div>
             <label>
@@ -88,12 +93,6 @@
         </div>
         <div>
             <label>
-            Use same address
-            <input type="checkbox" checked={sameAddress} onChange={() => setSameAddress(!sameAddress)} />
-            </label>
-        </div>
-        <div>
-            <label>
             Nationality
             <select value={nationality} onChange={(e) => setNationality(e.target.value)}>
                 <option value="">Select...</option>
@@ -101,6 +100,7 @@
                 {/* Agrega más opciones de nacionalidad aquí */}
             </select>
             </label>
+        </div>
         </div>
         <button type="submit">Submit</button>
         </form>
