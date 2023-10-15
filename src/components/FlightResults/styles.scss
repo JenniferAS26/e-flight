@@ -1,0 +1,13 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.cards-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+  }
+}
