@@ -4,7 +4,7 @@
     import visaIcon from '../../assets/icons/visa.svg';
     import mastercardIcon from '../../assets/icons/mastercard.svg';
     import amexIcon from '../../assets/icons/amex.svg';
-
+    import cardIcon from '../../assets/icons/card.svg';
     const PaymentForm = () => {
     const [paymentMethod, setPaymentMethod] = useState("");
     const [sameAddress, setSameAddress] = useState(false);
@@ -36,6 +36,10 @@
 
     return (
         <form className="form" onSubmit={handleSubmit}>
+            <div className="card-payment">
+                <img src={cardIcon} alt="card" />
+                    <h1>Payment method</h1>
+            </div>
         <div className="payment-method">
             <label className="label-cards">
             <input type="radio" value="Visa" checked={paymentMethod === "Visa"} onChange={() => setPaymentMethod("Visa")} />
@@ -73,22 +77,22 @@
             </label>
         </div>
         <div>
-            <label>
-            CVV
-            <input type="text" placeholder="Enter CVV" value={cvv} onChange={(e) => setCvv(e.target.value)} />
-            </label>
-        </div>
-        </div>
-        <div>
-            <label>
-            Zip/Postal Code
-            <input type="text" placeholder="Enter Zip/Postal code" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} />
-            </label>
-        </div>
-        <div>
-            <label>
+            <label className="adress">
             Address
             <input type="text" placeholder="Enter address" value={address} onChange={(e) => setAddress(e.target.value)} />
+            </label>
+        </div>
+        </div>
+        <div>
+            <label>
+            Cvv
+            <input type="text" placeholder="Enter CVV" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} />
+            </label>
+        </div>
+        <div>
+        <label>
+            Zip/Postal Code
+            <input type="text" placeholder="Enter Zip/Postal code" value={cvv} onChange={(e) => setCvv(e.target.value)} />
             </label>
         </div>
         <div>
@@ -101,6 +105,7 @@
             </select>
             </label>
         </div>
+        <h2>By selecting the button below, I agree to the Property Rules, Terms and Conditions, and Privacy Policy </h2>
         </div>
         <button type="submit">Submit</button>
         </form>
