@@ -2,7 +2,7 @@ import ImegeAirline from '../../assets/icons/airline3.svg'
 import ImegeTime from '../../assets/icons/time.svg'
 import ImegeCalendar from '../../assets/icons/calendar.svg'
 import ImegeLandingAir from '../../assets/icons/landing-airplane.svg'
-import ImegeLogo from '../../assets/icons/logo.svg'
+import ImegeLogo from '../../assets/icons/airplane-verdeh.svg'
 import ImegeLandinAir2 from '../../assets/icons/landing-airplane2.svg'
 import ImegeGroup9 from '../../assets/icons/Group 9.svg'
 import ImegeLine9 from '../../assets/icons/Line 9.svg'
@@ -14,7 +14,7 @@ const DetailsPrice = () => {
    <section className='Price-Houston-container-major'>
         <div className="Details-Pice-major">
                 <div className='Details-header-Price'>
-                    <div className='Deatail-Title'>
+                    <div className='Detail-Title'>
                         <img src={ImegePrice} alt="precio" />
                         <h1>Price details</h1>
                     </div>
@@ -40,39 +40,42 @@ const DetailsPrice = () => {
         <div className="Huoston-container-major">
             <div className="houston-header">
                 <div className="houston-tittle">
-                    <h1>Houston-Los Ageles</h1>
                     <img src={ImegeLogo} alt="logo" />
+                    <h1>Houston-Los Angeles</h1>
                 </div>
                 <div><img className='lineahorizontal' src={ImegeLine9} alt="linea" /></div>
                 <div className="houston-container__wrapper">
                     <div className="Houston-cloudy-container-1">
                     <div className="houston-airlines">
-                        <h1>Coludy Airlines</h1>
-                        <span>HOU - LAS</span>
-                        <div className="economy">
-                            <p>economy</p>
-                            <img src={ImegeAirline} alt="avion" />
-                        </div>
+                        <img src={ImegeAirline} alt="nube" />
+                        <h1>Cloudy Airlines</h1>
                     </div>
-                        <div className="container-nueve">
-                            <span>9</span>
-                            <p>Feb, 2023</p>
-                        </div>
-                        <div className="houston-hours">
-                            <h1>23:15 - 1:25</h1>
-                            <img src={ImegeTime} alt="ciculo" />
-                            <h2>2h10m</h2>
-                        </div>
-                        <div className="direct">
-                            <img src={ImegeGroup9} alt="lineapunto" />
-                            <p>Direct</p>
-                            <img src={ImegeLandinAir2 } alt="avion" />
-                        </div>
+                    <div className='HOU'> <span>HOU - LAS</span></div>
+                    <div className="economy">
+                            <img src={ImegeLandingAir} alt="avion" />
+                            <p>economy</p>
+                    </div>
+                    <div className="container-nueve">
+                        <span>9</span>
+                        <p>Feb, 2023</p>
+                    </div>
+                    <div className="houston-hours">
+                        <h1>23:15 - 1:25</h1>
+                    </div>
+                    <div className='hours-circle'>
+                        <img src={ImegeTime} alt="ciculo" />
+                        <h2>2h10m</h2>
+                    </div>   
+                    <div className='direct'> <img src={ImegeGroup9} alt="lineapunto" /></div>
+                    <div className="direct-airplane">
+                        <img src={ImegeLandinAir2 } alt="avion" />
+                        <p>Direct</p>
+                    </div>
                     </div>
                     <div className='linea-horizontal'><img  src={ImegeLine9} alt="linea" /></div>
                     <div className="houston-Refundable-container-1">
                         <div className="refundable">
-                            <span>$</span>
+                            <img src={ImegePrice} alt="precio" />
                             <p>Refundable</p>
                         </div>
                         <div className="reschedule">
@@ -82,8 +85,8 @@ const DetailsPrice = () => {
                     </div>
                     <div className="Houston-cloudy-container-2">
                     <div className="houston-airlines">
-                        <h1>Coludy Airlines</h1>
-                        <span>LAS -LAX</span>
+                        <h1>Cloudy Airlines</h1>
+                        <span>LAS - LAX</span>
                         <div className="economy">
                             <p>economy</p>
                             <img src={ImegeLandingAir} alt="avion" />
@@ -119,7 +122,6 @@ const DetailsPrice = () => {
             </div>
         </div>
    </section>
-
   )
 }
 
