@@ -60,7 +60,7 @@
     margin-right: 5px;
 }
 
-button[type="submit"] {
+.form > .submit {
     background: #11D295;
     color: #FEFEFE;
     border-radius: 14px;
@@ -117,7 +117,7 @@ button[type="submit"] {
         margin-right: 5px;
     }
 
-    button[type="submit"] {
+    .form > .submit {
         background: #11D295;
         color: #FEFEFE;
         border-radius: 14px;

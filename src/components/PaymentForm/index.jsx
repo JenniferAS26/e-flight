@@ -107,7 +107,7 @@
         </div>
         <h2>By selecting the button below, I agree to the Property Rules, Terms and Conditions, and Privacy Policy </h2>
         </div>
-        <button type="submit">Submit</button>
+        <button className="submit" type="submit">Submit</button>
         </form>
     );
     };
