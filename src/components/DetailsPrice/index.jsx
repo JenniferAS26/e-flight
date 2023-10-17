@@ -19,20 +19,20 @@ const DetailsPrice = () => {
                     <h1>Price details</h1>
                 </div>
             </div>
-            <div className='lineahorizontal'> <img  src={ImegeLine9} alt="linea" /></div>
+            <div className='Details-price__lineahorizontal'> <img  src={ImegeLine9} alt="linea" /></div>
             <div className="Details-price__wrapper">
-                <div className="Details-basic">
+                <div className="Details-price_basic">
                     <div className="Adult"><p >Adult basic fee</p></div>
                     <div className="cien"><p >$150</p></div>
                     <div  className="tax"><p>Tax</p></div>
-                    <div  className="included"><p>Tax</p></div>
+                    <div  className="included"><p>Included</p></div>
                     <div className="Regular"><p >Regular total price</p></div>
                     <div className="ciento-cincuenta"><p >$150</p></div>
                     <div className="Save"><p >Save</p></div>
                     <div className="uno-punto"><p>-$1.5</p></div>
                 </div>
                 <div><img className='lineahorizontal' src={ImegeLine9} alt="linea" /></div>
-                <div className="Details-total">
+                <div className="Details-price__total">
                     <div className="total"><p >Total</p></div>
                     <div className="price"><p >$148.5</p></div>
                 </div>
@@ -73,7 +73,6 @@ const DetailsPrice = () => {
                         <p>Direct</p>
                     </div>
                     </div>
-                    <div className='linea-horizontal'><img  src={ImegeLine9} alt="linea" /></div>
                     <div className="houston-Refundable-container-1">
                         <div className="refundable">
                             <img src={ImegePrice} alt="precio" />

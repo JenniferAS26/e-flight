@@ -19,30 +19,28 @@
     .Details-Pice-major{
         width: 328px;
         height: 280px;
-        padding: 8px;
+        padding: 8px 6px;
         display: grid;
-        grid-auto-rows: auto;
+      /*   grid-auto-rows: auto; */
         align-content: space-evenly;
         justify-content: space-around;
         align-items: center;
         justify-items: center;
-        background-color: $input-background;
+        border: 1px solid $input-background;
         border-radius: 8px;
-        box-shadow: 4px 2px 10px 3px rgba(194,189,189,0.44);
-        -webkit-box-shadow: 4px 2px 10px 3px rgba(194,189,189,0.44);
-        -moz-box-shadow: 4px 2px 10px 3px rgba(194,189,189,0.44);        
+               
         .Details-header-Price{
-            width: 275px;
-            height: 35px;
+            width: 297px;
+            height: -29px;
             display: grid;
-            @include flexCenter(row, center,center);
             gap: 6px;
+            margin-bottom: 12px;
            .Detail-Title{
-            width: 100%;
-            height: 100%;
+            width: 134px;
+            height: 18px;
+            display: grid;
+            margin-bottom: -21px;
             @include flexCenter(row, left, center);
-            font-family: $font-source;
- 
             img{
                 width: 20px;
                 height: 20px;
@@ -58,149 +56,166 @@
            } 
         }
         .Details-price__wrapper{
-                min-width: $mobile-width; 
-                width: 300px;
-                height: 300px;
-                display: grid;
-                gap: 10px;
-                .Details-basic{
-                    width: 100%;
-                    height: 100%;
-                    display: grid; 
-                    gap: 6px;
-                    .Adult{
-                        width: 91px;
-                        height: 22px;
-                        display: grid;
-                        p{
-                         color: $tertiary-text-color;
-                         font-family: $font-source;
-                         font-size: 14px;
-                         font-weight: 500;
-                         line-height: 22px;
-                         margin-left: 20px;
-                        } 
-                    }
-                    .cien{
-                        width: 31px;
-                        height: 22px;
-                        display: grid;
-                        p{
-                        color: $tertiary-text-color;
-                        text-align: right;
-                        font-family: $font-source;
-                        font-size: 14px;
-                        font-weight: 500;
-                        line-height: 22px; 
-                        }
-                    }
-                    .tax{
-                        width: 21px;
-                        height: 22px;
-                        display: grid;
-                        p{
-                            color: $tertiary-text-color;
-                            font-family: $font-source;
-                            font-size: 14px;
-                            font-weight: 500;
-                            line-height: 22px; 
-                        }
-                    }
-                    .included{
-                        width: 55px;
-                        height: 22px;
-                        p{
-                            color: $tertiary-text-color;
-                            text-align: right;
-                            font-family: Sarabun;
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: 22px;
-                        }
-                    }
-                    .Regular{
-                        width: 115px;
-                        height: 22px;
-                        display: grid;
-                        p{
-                            color: $tertiary-text-color;
-                            font-family: $font-source;
-                            font-size: 14px;
-                            font-weight: 500;
-                            line-height: 22px; 
-                        }
-                    }
-                    .ciento-cincuenta{
-                        width: 31px;
-                        height: 22px;
-                        display: grid;
-                        p{
-                        color: $tertiary-text-color;
-                        text-align: right;
-                        font-family: $font-source;
-                        font-size: 14px;
-                        font-weight: 500;
-                        line-height: 22px; 
-                        }
-                    }
-                    .Save{
-                        width: 29px;
-                        height: 22px;
-                        display: grid;
-                        p{
-                            color: $tertiary-color;
-                            font-family: $font-source;
-                            font-size: 14px;
-                            font-weight: 500;
-                            line-height: 22px; 
-                        }
-                    }
-                    .uno-punto{
-                        width: 36px;
-                        height: 22px;
-                        display: grid;
-                        p{
-                            color: $tertiary-color;
-                            text-align: right;
-                            font-family: $font-source;
-                            font-size: 14px;
-                            font-weight: 600;
-                            line-height: 22px; 
-                        }
-                    }
-                 }
-         }
-         .Details-total{
-            width: 110px;
-            height: 58px;
+           width: 293px;
+           height: 185px;
+           display: grid; 
+           .Details-price_basic{
+            width: 280px;
+            height: 165px;
+            padding: 6px;
             display: grid;
-            .total{
-                width: 32px;
-                height: 32px;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 2px;
+            .Adult{
+                width: 91px;
+                height: 22px;
+                display: grid;
                 p{
                     color: $tertiary-text-color;
                     font-family: $font-source;
                     font-size: 14px;
-                    font-weight: 500;
+                    font-weight: 400;
+                    line-height: 22px; 
+                }
+            }
+            .cien{
+                width: 31px;
+                height: 22px;
+                display: grid;
+                grid-column: 2;
+                margin-left: 120px;
+                p{
+                    color: #323842;
+                    text-align: right;
+                    font-family: Sarabun;
+                    font-size: 11px;
+                    font-weight: 400;
                     line-height: 22px;
+                }
+            }
+            .tax{
+                width: 21px;
+                height: 22px;
+                p{
+                    color: #323842;
+                    font-family: Sarabun;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 22px; /* 157.143% */
+                }
+            }
+            .included{
+                width: 54px;
+                height: 22px;
+                display: grid;
+                grid-column: 2;
+                margin-left: 104px;
+                p{
+                    color: #323842;
+                    text-align: right;
+                    font-family: Sarabun;
+                    font-size: 11px;
+                    font-weight: 400;
+                    line-height: 22px; /* 157.143% */
+                }
+            }
+            .Regular{
+                width: 115px;
+                height: 22PX;
+                display: grid;
+                P{
+                    color: #323842;
+                    font-family: Sarabun;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 22px; 
+                }
+            }
+            .ciento-cincuenta{
+                width: 31px;
+                height: 22px;
+                display: grid;
+                grid-column: 2;
+                margin-left: 120px;
+                p{
+                    color: #323842;
+                    text-align: right;
+                    font-family: Sarabun;
+                    font-size: 11px;
+                    font-weight: 400;
+                    line-height: 22px; 
+                }
+            }
+            .Save{
+                width: 29px;
+                height: 22px;
+                p{
+                    color: #FE902B;
+                    font-family: Sarabun;
+                    font-size: 11px;
+                    font-weight: 400;
+                    line-height: 22px; 
+                }
+            }
+            .uno-punto{
+                width: 36px;
+                height: 22px;
+                display: grid;
+                grid-column: 2;
+                margin-left: 120px;
+                p{
+                    color: #FE902B;
+                    text-align: right;
+                    font-family: Sarabun;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 22px; 
+                }
+             }
+           }
+        .Details-price__total{
+            width: 282px;
+            height: 1px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 2px;
+            margin-left: 26px;
+            /* top: 23px; */
+            .total{
+                width: 32px;
+                height: 22px;
+                display: grid;
+                p{
+                    color: #323842;
+                    font-family: Sarabun;
+                    font-size: 11px;
+                    font-weight: 400;
+                    line-height: 22px; 
                 }
             }
             .price{
                 width: 49px;
-                height: 26px;
+                height: 22px;
+                display: grid;
+                margin-left: 64px;
                 p{
-                    color: $secondary-color;
+                    color: #0EA676;
                     text-align: right;
                     font-family: Sarabun;
                     font-size: 16px;
+                    font-style: normal;
                     font-weight: 600;
                     line-height: 26px; 
                 }
             }
         }
+        
+        }
     }
-    .Huoston-container-major{
+    .Houston-container-major{
         width: 328px;
         height: 596px;
        /*  padding: 10px; */
@@ -209,11 +224,9 @@
         justify-content: start;
         gap: 6px;
         top: 10px;
-        background-color: $input-background;
+        border: 1px solid $input-background;
         border-radius: 8px;
-        box-shadow: 4px 2px 10px 3px rgba(194,189,189,0.44);
-        -webkit-box-shadow: 4px 2px 10px 3px rgba(194,189,189,0.44);
-        -moz-box-shadow: 4px 2px 10px 3px rgba(194,189,189,0.44);
+
         font-family: $font-source;
         .houston-header{
             width: 275px;
@@ -245,7 +258,7 @@
                 height: 384px;
                 display: grid;
                 grid-template-rows: 1fr 1fr;
-                gap: 16px;
+                gap: 0px;
                 .Houston-cloudy-container-1, .Houston-cloudy-container-2 {
                     margin-bottom: 16px; 
                 }
@@ -268,7 +281,7 @@
                 }
                 .houston-airlines{
                     width: 111px;
-                    height: 9px;
+                    height: 13px;
                     display: grid;
                     @include flexCenter(row,left,center);
                     img{
@@ -322,7 +335,7 @@
                 }
                 .container-nueve{
                     width: 110px;
-                    height: 38px;
+                    height: 64px;
                     background-color: #F8F3F3 ;
                     display: flex;
                     padding: 9px 25px;
@@ -388,7 +401,7 @@
                     width: 60px;
                     height: 2px;
                     display: grid;
-                    margin-left: 16px;
+                    margin-left: 43px;
                     img{
                         width: 52px;
                         height: 4px;
@@ -398,22 +411,23 @@
                     width: 49px;
                     height: 10px;
                     display: grid;
-                    margin-left: 16px;
+                    margin-left: 40px;
                     gap: 6px;
-                    @include flexCenter(row,left,center)
+                    @include flexCenter(row,left,center);
+                    img{
+                        width: 12px;
+                        height: 12px; 
+                     }
+                     p{
+                         color: #2424FE;
+                         font-family: Sarabun;
+                         font-size: 14px;
+                         font-style: normal;
+                         font-weight: 400;
+                         line-height: 22px;  
+                     }
                 }
-                img{
-                   width: 12px;
-                   height: 12px; 
-                }
-                p{
-                    color: #2424FE;
-                    font-family: Sarabun;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 22px;  
-                }
+              
               }
               .houston-Refundable-container-1{
                 width: 181px;
@@ -454,14 +468,12 @@
                         font-size: 12px;
                         font-style: normal;
                         font-weight: 400;
-                 
-
                     }
                 }
               }
               .Houston-cloudy-container-2{
                 width: 100%;
-                height: 150px;
+                height: 172px;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 2px;
@@ -478,7 +490,7 @@
                 }
                 .houston-airlines{
                     width: 111px;
-                    height: 9px;
+                    height: 13px;
                     display: grid;
                     @include flexCenter(row,left,center);
                     img{
@@ -532,7 +544,7 @@
                 }
                 .container-nueve{
                     width: 110px;
-                    height: 38px;
+                    height: 64px;
                     background-color: #F8F3F3 ;
                     display: flex;
                     padding: 9px 25px;
@@ -598,7 +610,7 @@
                     width: 60px;
                     height: 2px;
                     display: grid;
-                    margin-left: 16px;
+                    margin-left: 43px;
                     img{
                         width: 52px;
                         height: 4px;
@@ -608,22 +620,23 @@
                     width: 49px;
                     height: 10px;
                     display: grid;
-                    margin-left: 16px;
+                    margin-left: 40px;
                     gap: 6px;
-                    @include flexCenter(row,left,center)
+                    @include flexCenter(row,left,center);
+                    img{
+                        width: 12px;
+                        height: 12px; 
+                     }
+                     p{
+                         color: #2424FE;
+                         font-family: Sarabun;
+                         font-size: 14px;
+                         font-style: normal;
+                         font-weight: 400;
+                         line-height: 22px;  
+                     }
                 }
-                img{
-                   width: 12px;
-                   height: 12px; 
-                }
-                p{
-                    color: #2424FE;
-                    font-family: Sarabun;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 22px;  
-                }
+              
               }
               .houston-Refundable-container-2{
                 width: 181px;
@@ -644,8 +657,6 @@
                         font-size: 12px;
                         font-style: normal;
                         font-weight: 400;
-                      
-
                     }
                 }
                 .reschedule{
