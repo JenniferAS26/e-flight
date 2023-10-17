@@ -91,7 +91,8 @@ const DatePicker = () => {
                 <h2>mostly sunny</h2>         
             </div>
             <div className='DatePicker__world'>
-                <div className='airplane'><img src={ImageAirplane} alt='avion' />
+                <div className='airplane'>
+                    <div className='plane'><img src={ImageAirplane} alt='avion' /></div>
                     <div className='bestPrice'><h2>#bestpriceforyou</h2></div>
                     <div className='eco'><p>#eco-plane</p></div>
                     <div className='fly'><h3>#flywitheflight</h3></div>
@@ -111,9 +112,10 @@ const DatePicker = () => {
                     <p>Return date</p>
                     <img src={ImageCalendaryO} alt='calendario-naranja' />
                 </butoon>     
+                <div className='Calendary'>
                 <Flowbite theme={customTheme}>
-                 <Datepicker inline />
-                </Flowbite>
+                   <Datepicker inline />
+                </Flowbite></div>
             </div>
         </div>
     </section>
