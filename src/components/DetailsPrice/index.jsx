@@ -85,32 +85,35 @@ const DetailsPrice = () => {
                     </div>
                     <div className="Houston-cloudy-container-2">
                     <div className="houston-airlines">
+                        <img src={ImegeAirline} alt="nube" />
                         <h1>Cloudy Airlines</h1>
-                        <span>LAS - LAX</span>
-                        <div className="economy">
-                            <p>economy</p>
-                            <img src={ImegeLandingAir} alt="avion" />
-                        </div>
                     </div>
-                        <div className="container-nueve">
-                            <span>10</span>
-                            <p>Feb, 2023</p>
-                        </div>
-                        <div className="houston-hours">
-                            <h1>2:25 - 7:40</h1>
-                            <img src={ImegeTime} alt="ciculo" />
-                            <h2>5h15m</h2>
-                        </div>
-                        <div className="direct">
-                            <img src={ImegeGroup9} alt="lineapunto" />
-                            <p>Direct</p>
-                            <img src={ImegeLandinAir2 } alt="avion" />
-                        </div>
+                    <div className='HOU'> <span>LAS - LAX</span></div>
+                    <div className="economy">
+                            <img src={ImegeLandingAir} alt="avion" />
+                            <p>economy</p>
+                    </div>
+                    <div className="container-nueve">
+                        <span>10</span>
+                        <p>Feb, 2023</p>
+                    </div>
+                    <div className="houston-hours">
+                        <h1>2:25 - 7:40</h1>
+                    </div>
+                    <div className='hours-circle'>
+                        <img src={ImegeTime} alt="ciculo" />
+                        <h2>5h15m</h2>
+                    </div>   
+                    <div className='direct'> <img src={ImegeGroup9} alt="lineapunto" /></div>
+                    <div className="direct-airplane">
+                        <img src={ImegeLandinAir2 } alt="avion" />
+                        <p>Direct</p>
+                    </div>
                     </div>
                     <div className='linea-horizontal'><img  src={ImegeLine9} alt="linea" /></div>
                     <div className="houston-Refundable-container-2">
                         <div className="refundable">
-                            <span>$</span>
+                            <img src={ImegePrice} alt="precio" />
                             <p>Refundable</p>
                         </div>
                         <div className="reschedule">

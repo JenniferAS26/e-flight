@@ -6,6 +6,7 @@
     min-width: $mobile-width;
     height: 100%;
     display: grid;
+    grid-template-rows: 0.5fr 1fr;
     align-content: space-evenly;
     justify-content: space-between;
     margin-left: 180px;
@@ -13,6 +14,7 @@
     .Details-Pice-major{
         width: 328px;
         height: 280px;
+        padding: 8px;
         display: grid;
         grid-auto-rows: auto;
         align-content: space-evenly;
@@ -192,6 +194,7 @@
     .Huoston-container-major{
         width: 328px;
         height: 596px;
+       /*  padding: 10px; */
         display: grid;
         align-content: space-between;
         justify-content: start;
@@ -229,17 +232,34 @@
                 }
             }
             .houston-container__wrapper{
-                width: 329px;
-                height: 543px;
+                width: 316px;
+                height: 384px;
                 display: grid;
+                grid-template-rows: 1fr 1fr;
+                gap: 16px;
+                .Houston-cloudy-container-1, .Houston-cloudy-container-2 {
+                    margin-bottom: 16px; 
+                }
                .Houston-cloudy-container-1{
-                width: 300px;
-                height: 155px;
+                width: 100%;
+                height: 172px;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                gap: 2px;
+                .left-section, .right-section {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0; // Para que los elementos estén más pegados uno del otro
+                }
+                .houston-airlines, .HOU,.economy, .houston-hours, .hours-circle {
+                    grid-column: 1; // Estos elementos estarán en la columna de la izquierda
+                }
+                .container-nueve, .direct, .direct-airplane {
+                    grid-column: 2; // Estos elementos estarán en la columna de la derecha
+                }
                 .houston-airlines{
-                    width: 122px;
-                    height: 28px;
+                    width: 111px;
+                    height: 9px;
                     display: grid;
                     @include flexCenter(row,left,center);
                     img{
@@ -261,7 +281,7 @@
                 }
                 .HOU{
                     width: 63px;
-                    height: 22px;
+                    height: 16px;
                     display: grid;
                     span{
                         color: $secondary-text-color;
@@ -274,7 +294,7 @@
                 }
                 .economy{
                     width: 36px;
-                    height: 22px;
+                    height: 19px;
                     display: grid;
                     gap: 6px;
                     @include flexCenter(row,left,center);
@@ -293,7 +313,7 @@
                 }
                 .container-nueve{
                     width: 110px;
-                    height: 70px;
+                    height: 38px;
                     background-color: #F8F3F3 ;
                     display: flex;
                     padding: 9px 25px;
@@ -301,7 +321,6 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-        
                     gap: 2px;
                     span{
                         color: $primary-color;
@@ -324,8 +343,9 @@
                 }
                 .houston-hours{
                   width: 100px;
-                  height: 46px;
-                  display: grid; 
+                  height: 24px;
+                  display: grid;
+                  margin: 0px;
                   h1{
                     color: $primary-text-color;
                     font-family: $font-source;
@@ -338,9 +358,10 @@
                 }
                 .hours-circle{
                     width: 34px;
-                    height: 22px;
+                    height: 1px;
                     display: grid;
                     @include flexCenter(row,left,center);
+                    margin: 0px;
                     img{
                         width: 12px;
                         height: 12px;
@@ -358,8 +379,7 @@
                     width: 60px;
                     height: 2px;
                     display: grid;
-                    margin-left: 190px;
-                    @include flexCenter(row,left,left);
+                    margin-left: 16px;
                     img{
                         width: 52px;
                         height: 4px;
@@ -367,8 +387,10 @@
                 }
                 .direct-airplane{
                     width: 49px;
-                    height: 22px;
+                    height: 10px;
                     display: grid;
+                    margin-left: 16px;
+                    gap: 6px;
                     @include flexCenter(row,left,center)
                 }
                 img{
@@ -385,13 +407,12 @@
                 }
               }
               .houston-Refundable-container-1{
-                width: 170px;
-                height: 63px;
-                display: grid;
-                @include flexCenter(row,left,center);
+                width: 181px;
+                height: 43px;
+                display: grid; 
                 .refundable{
-                    width: 165px;
-                    height: 40px;
+                    width: 151px;
+                    height: 21px;
                     display: grid;
                     @include flexCenter(row,left,center);
                     img{
@@ -401,16 +422,207 @@
                     p{
                         color: $secondary-color;
                         font-family: $font-source;
-                        font-size: 14px;
+                        font-size: 12px;
                         font-style: normal;
-                        font-weight: 500;
-                        line-height: 22px; 
+                        font-weight: 400;
+                      
 
                     }
                 }
                 .reschedule{
                     width: 165px;
-                    height: 40px;
+                    height: 20px;
+                    display: grid;
+                    gap: 6px;
+                    @include flexCenter(row,left,center);
+                    img{
+                        width: 16px;
+                        height: 16px;
+                    }
+                    p{
+                        color: $secondary-color;
+                        font-family: $font-source;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                 
+
+                    }
+                }
+              }
+              .Houston-cloudy-container-2{
+                width: 100%;
+                height: 150px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2px;
+                .left-section, .right-section {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0; // Para que los elementos estén más pegados uno del otro
+                }
+                .houston-airlines, .HOU,.economy, .houston-hours, .hours-circle {
+                    grid-column: 1; // Estos elementos estarán en la columna de la izquierda
+                }
+                .container-nueve, .direct, .direct-airplane {
+                    grid-column: 2; // Estos elementos estarán en la columna de la derecha
+                }
+                .houston-airlines{
+                    width: 111px;
+                    height: 9px;
+                    display: grid;
+                    @include flexCenter(row,left,center);
+                    img{
+                        width: 28px;
+                        height: 28px;
+                        padding: 5px;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    h1{
+                        color: $tertiary-text-color;
+                        font-family: $font-source;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 22px; 
+                    }
+                }
+                .HOU{
+                    width: 63px;
+                    height: 16px;
+                    display: grid;
+                    span{
+                        color: $secondary-text-color;
+                        font-family: $font-source;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 22px; 
+                    }
+                }
+                .economy{
+                    width: 36px;
+                    height: 19px;
+                    display: grid;
+                    gap: 6px;
+                    @include flexCenter(row,left,center);
+                  img{
+                    width: 16px;
+                    height: 16px;
+                  }  
+                  p{
+                    color: $tertiary-color;
+                    font-family: $font-source;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px;
+                  }
+                }
+                .container-nueve{
+                    width: 110px;
+                    height: 38px;
+                    background-color: #F8F3F3 ;
+                    display: flex;
+                    padding: 9px 25px;
+                    flex-grow: 0;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2px;
+                    span{
+                        color: $primary-color;
+                        text-align: center;
+                        font-family: Sarabun;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px; 
+                    }
+                    p{
+                        color: $secondary-text-color;
+                        text-align: center;
+                        font-family: $font-source;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 22px;
+                    }
+                }
+                .houston-hours{
+                  width: 100px;
+                  height: 24px;
+                  display: grid;
+                  margin: 0px;
+                  h1{
+                    color: $primary-text-color;
+                    font-family: $font-source;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 26px;  
+                  } 
+
+                }
+                .hours-circle{
+                    width: 34px;
+                    height: 1px;
+                    display: grid;
+                    @include flexCenter(row,left,center);
+                    margin: 0px;
+                    img{
+                        width: 12px;
+                        height: 12px;
+                    }
+                    h2{
+                        color: #2424FE;
+                        font-family: $font-source;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 22px; 
+                    }
+                }
+                .direct{
+                    width: 60px;
+                    height: 2px;
+                    display: grid;
+                    margin-left: 16px;
+                    img{
+                        width: 52px;
+                        height: 4px;
+                    }
+                }
+                .direct-airplane{
+                    width: 49px;
+                    height: 10px;
+                    display: grid;
+                    margin-left: 16px;
+                    gap: 6px;
+                    @include flexCenter(row,left,center)
+                }
+                img{
+                   width: 12px;
+                   height: 12px; 
+                }
+                p{
+                    color: #2424FE;
+                    font-family: Sarabun;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px;  
+                }
+              }
+              .houston-Refundable-container-2{
+                width: 181px;
+                height: 43px;
+                display: grid; 
+                .refundable{
+                    width: 151px;
+                    height: 21px;
                     display: grid;
                     @include flexCenter(row,left,center);
                     img{
@@ -420,10 +632,30 @@
                     p{
                         color: $secondary-color;
                         font-family: $font-source;
-                        font-size: 14px;
+                        font-size: 12px;
                         font-style: normal;
-                        font-weight: 500;
-                        line-height: 22px; 
+                        font-weight: 400;
+                      
+
+                    }
+                }
+                .reschedule{
+                    width: 165px;
+                    height: 20px;
+                    display: grid;
+                    gap: 6px;
+                    @include flexCenter(row,left,center);
+                    img{
+                        width: 16px;
+                        height: 16px;
+                    }
+                    p{
+                        color: $secondary-color;
+                        font-family: $font-source;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                 
 
                     }
                 }
