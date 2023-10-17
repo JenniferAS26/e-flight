@@ -11,6 +11,11 @@
     justify-content: space-between;
     margin-left: 180px;
     margin-bottom: 30px;
+    @media (min-width: $desktop-width) {
+       position: absolute;
+        right: 40px; 
+        grid-template-rows: 0.2fr 1fr;
+    }
     .Details-Pice-major{
         width: 328px;
         height: 280px;
@@ -50,12 +55,7 @@
                 line-height: 30px; 
             }
            } 
-           /* .lineahorizontal{
-            width: 180px;
-            height: 1px;
-            display: grid;
-            align-items: center;
-           } */
+           
            .Details-price__wrapper{
             min-width: $mobile-width;
             display: grid;
@@ -129,7 +129,7 @@
                     line-height: 22px; 
                     }
                 }
-                .save{
+                .Save{
                     width: 29px;
                     height: 22px;
                     display: grid;
@@ -156,13 +156,9 @@
                 }
              }
            }
-          /*  .lineahorizontal{
-            width: 288px;
-            height: 1px;
-            align-items: center;
-           } */
+          
            .Details-total{
-            width: 110;
+            width: 110px;
             height: 58px;
             display: grid;
             .total{
@@ -663,4 +659,5 @@
             }
         }  
     }
+  
 }
