@@ -25,6 +25,7 @@ const DetailsPrice = () => {
                     <div className="Adult"><p >Adult basic fee</p></div>
                     <div className="cien"><p >$150</p></div>
                     <div  className="tax"><p>Tax</p></div>
+                    <div  className="included"><p>Tax</p></div>
                     <div className="Regular"><p >Regular total price</p></div>
                     <div className="ciento-cincuenta"><p >$150</p></div>
                     <div className="Save"><p >Save</p></div>

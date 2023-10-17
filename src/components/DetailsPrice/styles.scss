@@ -53,43 +53,12 @@
                 font-family: $font-source;
                 font-size: 20px;
                 font-weight: 700;
-                line-height: 30px;
-                
+                line-height: 30px;  
             }
            } 
-           
-          
-           .Details-total{
-            width: 110px;
-            height: 58px;
-            display: grid;
-            .total{
-                width: 32px;
-                height: 32px;
-                p{
-                    color: $tertiary-text-color;
-                    font-family: $font-source;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 22px;
-                }
-            }
-            .price{
-                width: 49px;
-                height: 26px;
-                p{
-                    color: $secondary-color;
-                    text-align: right;
-                    font-family: Sarabun;
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 26px; 
-                }
-            }
-           }
         }
         .Details-price__wrapper{
-            /*     min-width: $mobile-width; */
+                min-width: $mobile-width; 
                 width: 300px;
                 height: 300px;
                 display: grid;
@@ -99,7 +68,6 @@
                     height: 100%;
                     display: grid; 
                     gap: 6px;
-                    @include flexCenter(row, left, center);
                     .Adult{
                         width: 91px;
                         height: 22px;
@@ -136,6 +104,19 @@
                             font-size: 14px;
                             font-weight: 500;
                             line-height: 22px; 
+                        }
+                    }
+                    .included{
+                        width: 55px;
+                        height: 22px;
+                        p{
+                            color: $tertiary-text-color;
+                            text-align: right;
+                            font-family: Sarabun;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 22px;
                         }
                     }
                     .Regular{
@@ -189,7 +170,35 @@
                         }
                     }
                  }
-               }
+         }
+         .Details-total{
+            width: 110px;
+            height: 58px;
+            display: grid;
+            .total{
+                width: 32px;
+                height: 32px;
+                p{
+                    color: $tertiary-text-color;
+                    font-family: $font-source;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px;
+                }
+            }
+            .price{
+                width: 49px;
+                height: 26px;
+                p{
+                    color: $secondary-color;
+                    text-align: right;
+                    font-family: Sarabun;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 26px; 
+                }
+            }
+        }
     }
     .Huoston-container-major{
         width: 328px;
@@ -249,13 +258,13 @@
                 .left-section, .right-section {
                     display: flex;
                     flex-direction: column;
-                    gap: 0; // Para que los elementos estén más pegados uno del otro
+                    gap: 0; 
                 }
                 .houston-airlines, .HOU,.economy, .houston-hours, .hours-circle {
-                    grid-column: 1; // Estos elementos estarán en la columna de la izquierda
+                    grid-column: 1; 
                 }
                 .container-nueve, .direct, .direct-airplane {
-                    grid-column: 2; // Estos elementos estarán en la columna de la derecha
+                    grid-column: 2; 
                 }
                 .houston-airlines{
                     width: 111px;
@@ -459,13 +468,13 @@
                 .left-section, .right-section {
                     display: flex;
                     flex-direction: column;
-                    gap: 0; // Para que los elementos estén más pegados uno del otro
+                    gap: 0; 
                 }
                 .houston-airlines, .HOU,.economy, .houston-hours, .hours-circle {
-                    grid-column: 1; // Estos elementos estarán en la columna de la izquierda
+                    grid-column: 1; 
                 }
                 .container-nueve, .direct, .direct-airplane {
-                    grid-column: 2; // Estos elementos estarán en la columna de la derecha
+                    grid-column: 2; 
                 }
                 .houston-airlines{
                     width: 111px;
