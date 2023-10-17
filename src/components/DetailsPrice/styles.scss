@@ -42,6 +42,7 @@
             height: 100%;
             @include flexCenter(row, left, center);
             font-family: $font-source;
+ 
             img{
                 width: 20px;
                 height: 20px;
@@ -52,110 +53,11 @@
                 font-family: $font-source;
                 font-size: 20px;
                 font-weight: 700;
-                line-height: 30px; 
+                line-height: 30px;
+                
             }
            } 
            
-           .Details-price__wrapper{
-            min-width: $mobile-width;
-            display: grid;
-            gap: 10px;
-            .Details-basic{
-                width: 100%;
-                height: 100%;
-                display: grid; 
-                gap: 6px;
-                @include flexCenter(row, left, center);
-                .Adult{
-                    width: 91px;
-                    height: 22px;
-                    display: grid;
-                    p{
-                     color: $tertiary-text-color;
-                     font-family: $font-source;
-                     font-size: 14px;
-                     font-weight: 500;
-                     line-height: 22px;
-                     margin-left: 20px;
-                    } 
-                }
-                .cien{
-                    width: 31px;
-                    height: 22px;
-                    display: grid;
-                    p{
-                    color: $tertiary-text-color;
-                    text-align: right;
-                    font-family: $font-source;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 22px; 
-                    }
-                }
-                .tax{
-                    width: 21px;
-                    height: 22px;
-                    display: grid;
-                    p{
-                        color: $tertiary-text-color;
-                        font-family: $font-source;
-                        font-size: 14px;
-                        font-weight: 500;
-                        line-height: 22px; 
-                    }
-                }
-                .Regular{
-                    width: 115px;
-                    height: 22px;
-                    display: grid;
-                    p{
-                        color: $tertiary-text-color;
-                        font-family: $font-source;
-                        font-size: 14px;
-                        font-weight: 500;
-                        line-height: 22px; 
-                    }
-                }
-                .ciento-cincuenta{
-                    width: 31px;
-                    height: 22px;
-                    display: grid;
-                    p{
-                    color: $tertiary-text-color;
-                    text-align: right;
-                    font-family: $font-source;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 22px; 
-                    }
-                }
-                .Save{
-                    width: 29px;
-                    height: 22px;
-                    display: grid;
-                    p{
-                        color: $tertiary-color;
-                        font-family: $font-source;
-                        font-size: 14px;
-                        font-weight: 500;
-                        line-height: 22px; 
-                    }
-                }
-                .uno-punto{
-                    width: 36px;
-                    height: 22px;
-                    display: grid;
-                    p{
-                        color: $tertiary-color;
-                        text-align: right;
-                        font-family: $font-source;
-                        font-size: 14px;
-                        font-weight: 600;
-                        line-height: 22px; 
-                    }
-                }
-             }
-           }
           
            .Details-total{
             width: 110px;
@@ -186,6 +88,108 @@
             }
            }
         }
+        .Details-price__wrapper{
+            /*     min-width: $mobile-width; */
+                width: 300px;
+                height: 300px;
+                display: grid;
+                gap: 10px;
+                .Details-basic{
+                    width: 100%;
+                    height: 100%;
+                    display: grid; 
+                    gap: 6px;
+                    @include flexCenter(row, left, center);
+                    .Adult{
+                        width: 91px;
+                        height: 22px;
+                        display: grid;
+                        p{
+                         color: $tertiary-text-color;
+                         font-family: $font-source;
+                         font-size: 14px;
+                         font-weight: 500;
+                         line-height: 22px;
+                         margin-left: 20px;
+                        } 
+                    }
+                    .cien{
+                        width: 31px;
+                        height: 22px;
+                        display: grid;
+                        p{
+                        color: $tertiary-text-color;
+                        text-align: right;
+                        font-family: $font-source;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 22px; 
+                        }
+                    }
+                    .tax{
+                        width: 21px;
+                        height: 22px;
+                        display: grid;
+                        p{
+                            color: $tertiary-text-color;
+                            font-family: $font-source;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 22px; 
+                        }
+                    }
+                    .Regular{
+                        width: 115px;
+                        height: 22px;
+                        display: grid;
+                        p{
+                            color: $tertiary-text-color;
+                            font-family: $font-source;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 22px; 
+                        }
+                    }
+                    .ciento-cincuenta{
+                        width: 31px;
+                        height: 22px;
+                        display: grid;
+                        p{
+                        color: $tertiary-text-color;
+                        text-align: right;
+                        font-family: $font-source;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 22px; 
+                        }
+                    }
+                    .Save{
+                        width: 29px;
+                        height: 22px;
+                        display: grid;
+                        p{
+                            color: $tertiary-color;
+                            font-family: $font-source;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 22px; 
+                        }
+                    }
+                    .uno-punto{
+                        width: 36px;
+                        height: 22px;
+                        display: grid;
+                        p{
+                            color: $tertiary-color;
+                            text-align: right;
+                            font-family: $font-source;
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 22px; 
+                        }
+                    }
+                 }
+               }
     }
     .Huoston-container-major{
         width: 328px;
