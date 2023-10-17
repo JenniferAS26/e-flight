@@ -153,7 +153,8 @@ $inactive-options: #AFF8E1;
       }
       &--pagination {
         width: 330px;
-        height: auto;
+        height: 40px;
+        display: block;
         justify-self: flex-end;
       }
     }
