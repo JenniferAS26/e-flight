@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Filters from '../../components/Filters'
 import SortBy from '../../components/SortBy'
 import FlightResults from '../../components/FlightResults'
@@ -10,9 +11,13 @@ import pointer from '../../assets/icons/pointer.svg'
 import switching from '../../assets/icons/switch.svg'
 import calendar from '../../assets/icons/calendar-black.svg'
 import glass from '../../assets/icons/glass.svg'
+import { Pagination } from 'flowbite-react'
 import './styles.scss'
 
 const FlightListing = () => {
+  const [currentPage, setCurrentPage] = useState(1)
+  const onPageChange = (page) => setCurrentPage(page)
+
   return (
     <section className='flight-listing'>
       <div className='flight-listing__filters'>
@@ -65,12 +70,37 @@ const FlightListing = () => {
           </form>
         </div>
         <div className='flight-listing__results--filter-date'>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+          <ul className='list-date'>
+            <li className='list-date__option'>
+              <div className='list-date__option--wrapper active'>
+                <span>Fri, 18 Feb</span>
+                <span>148 USD</span>
+              </div>
+            </li>
+            <li className='list-date__option'>
+              <div className='list-date__option--wrapper'>
+                <span>Fri, 18 Feb</span>
+                <span>148 USD</span>
+              </div>
+            </li>
+            <li className='list-date__option'>
+              <div className='list-date__option--wrapper'>
+                <span>Fri, 18 Feb</span>
+                <span>148 USD</span>
+              </div>
+            </li>
+            <li className='list-date__option'>
+              <div className='list-date__option--wrapper'>
+                <span>Fri, 18 Feb</span>
+                <span>148 USD</span>
+              </div>
+            </li>
+            <li className='list-date__option'>
+              <div className='list-date__option--wrapper'>
+                <span>Fri, 18 Feb</span>
+                <span>148 USD</span>
+              </div>
+            </li>
           </ul>
         </div>
         <FlightResults>
@@ -79,6 +109,14 @@ const FlightListing = () => {
           <FlightResultsCard />
           <FlightResultsCard />
         </FlightResults>
+        <div className='flight-listing__results--pagination'>
+          <Pagination
+            currentPage={currentPage}
+            onPageChange={onPageChange}
+            showIcons
+            totalPages={100}
+          />
+        </div>
       </div>
     </section>
   )
