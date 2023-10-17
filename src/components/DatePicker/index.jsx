@@ -115,7 +115,8 @@ const DatePicker = () => {
                 <div className='Calendary'>
                 <Flowbite theme={customTheme}>
                    <Datepicker inline />
-                </Flowbite></div>
+                </Flowbite>
+                </div>
             </div>
         </div>
     </section>
