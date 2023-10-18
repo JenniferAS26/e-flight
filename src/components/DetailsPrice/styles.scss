@@ -14,7 +14,7 @@
     @media (min-width: $desktop-width) {
        position: absolute;
         right: 40px; 
-        grid-template-rows: 0.2fr 1fr;
+        grid-template-rows: 0.3fr 1fr;
     }
     .Details-Pice-major{
         width: 328px;
@@ -86,9 +86,9 @@
                 grid-column: 2;
                 margin-left: 120px;
                 p{
-                    color: #323842;
-                    text-align: right;
-                    font-family: Sarabun;
+                    color: $tertiary-text-color;
+                   
+                    font-family: $font-source;
                     font-size: 11px;
                     font-weight: 400;
                     line-height: 22px;
@@ -97,13 +97,13 @@
             .tax{
                 width: 21px;
                 height: 22px;
+                display: grid;
                 p{
-                    color: #323842;
-                    font-family: Sarabun;
+                    color: $tertiary-text-color;
+                    font-family: $font-source;
                     font-size: 14px;
-                    font-style: normal;
                     font-weight: 500;
-                    line-height: 22px; /* 157.143% */
+                    line-height: 22px;
                 }
             }
             .included{
@@ -113,12 +113,12 @@
                 grid-column: 2;
                 margin-left: 104px;
                 p{
-                    color: #323842;
-                    text-align: right;
-                    font-family: Sarabun;
+                    color: $tertiary-text-color;
+                   
+                    font-family: $font-source;
                     font-size: 11px;
                     font-weight: 400;
-                    line-height: 22px; /* 157.143% */
+                    line-height: 22px; 
                 }
             }
             .Regular{
@@ -126,10 +126,9 @@
                 height: 22PX;
                 display: grid;
                 P{
-                    color: #323842;
-                    font-family: Sarabun;
+                    color: $tertiary-text-color;
+                    font-family: $font-source;
                     font-size: 14px;
-                    font-style: normal;
                     font-weight: 500;
                     line-height: 22px; 
                 }
@@ -141,9 +140,8 @@
                 grid-column: 2;
                 margin-left: 120px;
                 p{
-                    color: #323842;
-                    text-align: right;
-                    font-family: Sarabun;
+                    color: $tertiary-text-color;
+                    font-family: $font-source;
                     font-size: 11px;
                     font-weight: 400;
                     line-height: 22px; 
@@ -152,9 +150,10 @@
             .Save{
                 width: 29px;
                 height: 22px;
+                display: grid;
                 p{
-                    color: #FE902B;
-                    font-family: Sarabun;
+                    color: $tertiary-color;
+                    font-family: $font-source;
                     font-size: 11px;
                     font-weight: 400;
                     line-height: 22px; 
@@ -167,11 +166,9 @@
                 grid-column: 2;
                 margin-left: 120px;
                 p{
-                    color: #FE902B;
-                    text-align: right;
-                    font-family: Sarabun;
+                    color: $tertiary-color;
+                    font-family: $font-source;
                     font-size: 14px;
-                    font-style: normal;
                     font-weight: 600;
                     line-height: 22px; 
                 }
@@ -190,8 +187,8 @@
                 height: 22px;
                 display: grid;
                 p{
-                    color: #323842;
-                    font-family: Sarabun;
+                    color: $tertiary-text-color;
+                    font-family: $font-source;
                     font-size: 11px;
                     font-weight: 400;
                     line-height: 22px; 
@@ -203,11 +200,9 @@
                 display: grid;
                 margin-left: 64px;
                 p{
-                    color: #0EA676;
-                    text-align: right;
-                    font-family: Sarabun;
+                    color: $secondary-color;
+                    font-family: $font-source;
                     font-size: 16px;
-                    font-style: normal;
                     font-weight: 600;
                     line-height: 26px; 
                 }
@@ -298,7 +293,7 @@
                         color: $tertiary-text-color;
                         font-family: $font-source;
                         font-size: 12px;
-                        font-style: normal;
+                        
                         font-weight: 600;
                         line-height: 22px; 
                     }
@@ -311,7 +306,7 @@
                         color: $secondary-text-color;
                         font-family: $font-source;
                         font-size: 14px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                         line-height: 22px; 
                     }
@@ -330,7 +325,7 @@
                     color: $tertiary-color;
                     font-family: $font-source;
                     font-size: 14px;
-                    font-style: normal;
+                    
                     font-weight: 400;
                     line-height: 22px;
                   }
@@ -349,9 +344,9 @@
                     span{
                         color: $primary-color;
                         text-align: center;
-                        font-family: Sarabun;
+                        font-family: $font-source;
                         font-size: 18px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                         line-height: 28px; 
                     }
@@ -360,7 +355,7 @@
                         text-align: center;
                         font-family: $font-source;
                         font-size: 14px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                         line-height: 22px;
                     }
@@ -374,7 +369,7 @@
                     color: $primary-text-color;
                     font-family: $font-source;
                     font-size: 16px;
-                    font-style: normal;
+                    
                     font-weight: 600;
                     line-height: 26px;  
                   } 
@@ -394,7 +389,7 @@
                         color: #2424FE;
                         font-family: $font-source;
                         font-size: 14px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                         line-height: 22px; 
                     }
@@ -422,9 +417,9 @@
                      }
                      p{
                          color: #2424FE;
-                         font-family: Sarabun;
+                         font-family: $font-source;
                          font-size: 14px;
-                         font-style: normal;
+                         
                          font-weight: 400;
                          line-height: 22px;  
                      }
@@ -449,10 +444,8 @@
                         color: $secondary-color;
                         font-family: $font-source;
                         font-size: 12px;
-                        font-style: normal;
+                        
                         font-weight: 400;
-                      
-
                     }
                 }
                 .reschedule{
@@ -469,14 +462,14 @@
                         color: $secondary-color;
                         font-family: $font-source;
                         font-size: 12px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                     }
                 }
               }
               .Houston-cloudy-container-2{
                 width: 100%;
-                height: 139px;
+                height: 148px;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 2px;
@@ -509,7 +502,7 @@
                         color: $tertiary-text-color;
                         font-family: $font-source;
                         font-size: 12px;
-                        font-style: normal;
+                        
                         font-weight: 600;
                         line-height: 22px; 
                     }
@@ -522,7 +515,7 @@
                         color: $secondary-text-color;
                         font-family: $font-source;
                         font-size: 14px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                         line-height: 22px; 
                     }
@@ -541,7 +534,7 @@
                     color: $tertiary-color;
                     font-family: $font-source;
                     font-size: 14px;
-                    font-style: normal;
+                    
                     font-weight: 400;
                     line-height: 22px;
                   }
@@ -560,9 +553,9 @@
                     span{
                         color: $primary-color;
                         text-align: center;
-                        font-family: Sarabun;
+                        font-family: $font-source;
                         font-size: 18px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                         line-height: 28px; 
                     }
@@ -571,7 +564,7 @@
                         text-align: center;
                         font-family: $font-source;
                         font-size: 14px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                         line-height: 22px;
                     }
@@ -585,7 +578,7 @@
                     color: $primary-text-color;
                     font-family: $font-source;
                     font-size: 16px;
-                    font-style: normal;
+                    
                     font-weight: 600;
                     line-height: 26px;  
                   } 
@@ -605,7 +598,7 @@
                         color: #2424FE;
                         font-family: $font-source;
                         font-size: 14px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                         line-height: 22px; 
                     }
@@ -614,7 +607,7 @@
                     width: 60px;
                     height: 2px;
                     display: grid;
-                    margin-left: 43px;
+                    margin-left: 39px;
                     img{
                         width: 52px;
                         height: 4px;
@@ -622,9 +615,9 @@
                 }
                 .direct-airplane{
                     width: 49px;
-                    height: 10px;
+                    height: 13px;
                     display: grid;
-                    margin-left: 40px;
+                    margin-left: 36px;
                     gap: 6px;
                     @include flexCenter(row,left,center);
                     img{
@@ -633,9 +626,9 @@
                      }
                      p{
                          color: #2424FE;
-                         font-family: Sarabun;
+                         font-family: $font-source;
                          font-size: 14px;
-                         font-style: normal;
+                         
                          font-weight: 400;
                          line-height: 22px;  
                      }
@@ -659,7 +652,7 @@
                         color: $secondary-color;
                         font-family: $font-source;
                         font-size: 12px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                     }
                 }
@@ -677,7 +670,7 @@
                         color: $secondary-color;
                         font-family: $font-source;
                         font-size: 12px;
-                        font-style: normal;
+                        
                         font-weight: 400;
                  
 
