@@ -2,7 +2,7 @@ import { Datepicker } from 'flowbite-react'
 import { Flowbite } from 'flowbite-react';
 import ImageRound from '../../assets/icons/round-tip.svg'
 import ImageOne from '../../assets/icons/one-way.svg'
-import ImageLine from '../../assets/icons/Line 1.svg'
+import ImageLine from '../../assets/icons/Line-retangle.png'
 import ImagePasseger from '../../assets/icons/passeger.svg'
 import ImageTriangulo from '../../assets/icons/triangulo-invertido.svg'
 import ImageTicket from '../../assets/icons/ticket.svg'
