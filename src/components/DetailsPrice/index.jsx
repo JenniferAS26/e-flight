@@ -73,6 +73,7 @@ const DetailsPrice = () => {
                         <p>Direct</p>
                     </div>
                     </div>
+                    <div className='linea-horizontal'><img  src={ImegeLine9} alt="linea" /></div>
                     <div className="houston-Refundable-container-1">
                         <div className="refundable">
                             <img src={ImegePrice} alt="precio" />

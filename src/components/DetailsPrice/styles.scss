@@ -263,8 +263,8 @@
                 height: 154px;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 2px;
-                margin-bottom: -4px;
+                gap: 3px;
+                margin-bottom: 3px;
                 .left-section, .right-section {
                     display: flex;
                     flex-direction: column;
@@ -369,7 +369,6 @@
                     color: $primary-text-color;
                     font-family: $font-source;
                     font-size: 16px;
-                    
                     font-weight: 600;
                     line-height: 26px;  
                   } 
@@ -388,8 +387,7 @@
                     h2{
                         color: #2424FE;
                         font-family: $font-source;
-                        font-size: 14px;
-                        
+                        font-size: 11px;
                         font-weight: 400;
                         line-height: 22px; 
                     }
@@ -406,7 +404,7 @@
                 }
                 .direct-airplane{
                     width: 49px;
-                    height: 10px;
+                    height: 13px;
                     display: grid;
                     margin-left: 40px;
                     gap: 6px;
@@ -428,7 +426,7 @@
               }
               .houston-Refundable-container-1{
                 width: 181px;
-                height: 43px;
+                height: 26px;
                 display: grid; 
                 margin-bottom: 126px;
                 .refundable{
@@ -502,7 +500,6 @@
                         color: $tertiary-text-color;
                         font-family: $font-source;
                         font-size: 12px;
-                        
                         font-weight: 600;
                         line-height: 22px; 
                     }
@@ -515,7 +512,6 @@
                         color: $secondary-text-color;
                         font-family: $font-source;
                         font-size: 14px;
-                        
                         font-weight: 400;
                         line-height: 22px; 
                     }
@@ -534,7 +530,6 @@
                     color: $tertiary-color;
                     font-family: $font-source;
                     font-size: 14px;
-                    
                     font-weight: 400;
                     line-height: 22px;
                   }
@@ -555,7 +550,6 @@
                         text-align: center;
                         font-family: $font-source;
                         font-size: 18px;
-                        
                         font-weight: 400;
                         line-height: 28px; 
                     }
@@ -564,7 +558,6 @@
                         text-align: center;
                         font-family: $font-source;
                         font-size: 14px;
-                        
                         font-weight: 400;
                         line-height: 22px;
                     }
@@ -578,7 +571,6 @@
                     color: $primary-text-color;
                     font-family: $font-source;
                     font-size: 16px;
-                    
                     font-weight: 600;
                     line-height: 26px;  
                   } 
@@ -597,8 +589,7 @@
                     h2{
                         color: #2424FE;
                         font-family: $font-source;
-                        font-size: 14px;
-                        
+                        font-size: 11px;
                         font-weight: 400;
                         line-height: 22px; 
                     }
@@ -628,7 +619,6 @@
                          color: #2424FE;
                          font-family: $font-source;
                          font-size: 14px;
-                         
                          font-weight: 400;
                          line-height: 22px;  
                      }
@@ -652,7 +642,6 @@
                         color: $secondary-color;
                         font-family: $font-source;
                         font-size: 12px;
-                        
                         font-weight: 400;
                     }
                 }
@@ -670,7 +659,6 @@
                         color: $secondary-color;
                         font-family: $font-source;
                         font-size: 12px;
-                        
                         font-weight: 400;
                  
 
