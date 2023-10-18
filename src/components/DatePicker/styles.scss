@@ -257,11 +257,11 @@
               }
           }
           .horizon-line {
-            width: 200px;
-            height: 02px;
+            width: 211px;
+            height: 3px;
             color: $input-background;
-            margin-left: 15px;
-            margin-top: 8px;
+            margin-left: 10px;
+            margin-top: 6px;
             @media (min-width: $desktop-width) {
               color: $input-background;
               position: absolute;
@@ -269,12 +269,6 @@
               left: 1px;
               }
           }
-          /* .rectangle {
-            width: 28px;
-            height: 10px;
-            display: flex;
-            align-content: stretch;
-          } */
           h1 {
             width: 69px;
             color: $primary-color;
@@ -316,27 +310,16 @@
               top: 131px;
               left: 7px;
               }
-          }
-      /*    
-          .oval {
-            width: 6px;
-            height: 6px;
-            top: 210px; 
-            left: 150px;
-          } */
-          
+          }     
           .numero {
-            color: $primary-text-color;
-            font-family: $font-source;
-            font-size: 24px;
-            font-weight: $regular-weight;
-            line-height: 36px;
-            margin-left: 95px;
-            margin-top: 20px;
+            width: 28px;
+            height: 21px; 
+            margin-left: 97px;
+            margin-top: 3px;
             @media (min-width: $desktop-width) {
               position: absolute;
-              top: 193px;
-              left: 6px;
+              top: 214px;
+              left: 5px;
               }
           }
           
@@ -356,7 +339,7 @@
           @media (min-width: $desktop-width) {
           position: absolute;
           top: 130px;
-          right: 749px;
+          right: 316px;
           }
         }
         .DatePicker__world {
@@ -517,10 +500,9 @@
         }
         @media (min-width: $desktop-width) {
           position: absolute;  
-          right: 529px;            
+          right: 200px;            
           top: 125Xpx;           
-        /*  width: 303px; */
-        /*   height: 295px;   */ 
+      
       }
     }
 
@@ -532,10 +514,9 @@
         grid-auto-flow: column;
         margin-top: 163px;
         @media (min-width: $desktop-width) {
-          margin: 30px;
-          grid-template-columns: 1fr auto; // Una columna consume el espacio restante y la otra tiene el tamaño de su contenido
+          margin: 20px;
+          grid-template-columns: 1fr auto; 
       }
-      
          .DatePicker__Departure{
           width: 114px;
           height: 36px;
@@ -589,17 +570,18 @@
           display:grid;
           @media (min-width: $desktop-width) {
             position: absolute;
-            right: 1085px;
+            right: 780px;
         }
         }
-        @media (min-width: $desktop-width) {
-          background-size: cover;
-          background-position: center;
-          min-width: 100vw;
-          min-height: 100vh;
-        }
+    
        }
-    } 
+    }
+  /*   @media (min-width: $desktop-width) {
+      background-size: cover;
+      background-position: center;
+      min-width: 100vw;
+      min-height: 100vh;
+    }  */
   }
    
     
