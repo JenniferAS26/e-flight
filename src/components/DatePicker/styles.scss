@@ -16,7 +16,7 @@
       justify-content: space-between;
       gap: 30px;
       margin-left: 20px;
-      .DataPicker-page-tittle {
+      .DatePicker-container-page-tittle{
         width: 100%;
         height: 100%;
         @include flexCenter(row, left, left);
@@ -29,15 +29,15 @@
           line-height: 56px;
         }
       }
-      .DataPicker-header__wrapper {
-        width: 100%;
+      .DatePicker-container-header__wrapper{
+        width: 65%;
         height: 100%;
         display: grid;
         align-content: center;
         justify-content: space-around;
         align-items: center;
-        .DatePicker__informacion {
-          width: 508px;
+        .DatePicker-container-header__informacion{
+          width: 418px;
           height: 44px;
           display: grid;
           align-items: left;
@@ -47,21 +47,26 @@
           grid-auto-flow: column;
           gap: 10px;
           .round-trip{
-            width: 114px;
-            height: 36px;
+            width: 104px;
+            height: 30px;
             padding: 7px 12px;
             background-color: $input-background;
             border-radius: 20px;
             display: grid;
             @include flexCenter(row-reverse,space-between, center);
-            span{
+            .texto{
               width: 64px;
               height: 22px;
-              color: $primary-text-color;     
+             /*  color: $primary-text-color;  */    
               font-family: $font-source;
-              font-size: 12px;
+              font-size: 10px;
               display: grid;
               justify-content: center;
+              background-color: transparent;
+              border: 0;
+              &::placeholder{
+                color: $primary-text-color;
+              }
               img{
                 width: 20px;
                 height: 20px;
@@ -72,19 +77,24 @@
             }
           }
           .one-way{
-            width: 114px;
-            height: 36px;
+            width: 107px;
+            height: 31px;
             padding: 7px 12px;
             display: grid;
             background-color:  #ECFDF7;
             border-radius: 20px;
             @include flexCenter(row-reverse, space-around, center);
-            span{
-              width: 51px;
+            .texto{
+              width: 62px;
               height: 22px;
               font-family: $font-source;
               font-size: 12px;
               color: #0A7956;
+              background-color: transparent;
+              border: 0;
+              &::placeholder{
+                color: #0A7956;
+              }
               img{
                 width: 20px;
                 height: 20px;
@@ -92,8 +102,8 @@
             }
           }
           .line{
-            width: 100%;
-            height: 100%;
+            width: 2px;
+            height: 32px;
             color: $secondary-text-color;
             display: grid;
             justify-content: space-evenly;
@@ -101,7 +111,7 @@
           }
           .passager{
             width: 84px;
-            height: 36px;
+            height: 30px;
             padding: 7px 12px;
             background-color: #EEE1FB;
             border-radius: 20px;
@@ -112,6 +122,7 @@
             span{
               width: 8px;
               height: 22px;
+              display: grid;
               color: $primary-color;
               align-items: center;
             }
@@ -121,8 +132,8 @@
             }
           }
           .economy{
-            width: 132px;
-            height: 36px;
+            width: 111px;
+            height: 30px;
             padding: 7px 12px;
             background-color: #EEE1FB;
             border-radius: 20px;
@@ -154,7 +165,7 @@
           justify-content: flex-start; 
       }
       }
-      .DatePicker-from-to__container {
+      .DatePicker-container-from-to__container {
       min-width: $mobile-width;
       height: 150px;
       display: flex;
@@ -188,6 +199,9 @@
             .texto{
               border: 0;
               background-color: transparent; 
+              &::placeholder{
+                color: #FEFEFE;
+              }
              } 
           }
         }
@@ -209,11 +223,13 @@
           p {
             width: 161px;
             height: 25px;
-            color: #CDCDFE;
             display: grid;
            .texto{
             border: 0;
             background-color: transparent; 
+            &::placeholder{
+              color: #CDCDFE;
+            }
            } 
           }
         }
@@ -523,11 +539,12 @@
     }
 
       }
-      .DatePicker-calendary__global{
+      .DatePicker-container-calendary__global{
         min-height: $mobile-width;
         height: 100%;
         display: grid;
         grid-auto-flow: column;
+        column-gap: 19px;
         margin-top: 163px;
         @media (min-width: $desktop-width) {
           margin: 20px;
@@ -541,19 +558,26 @@
           border-radius: 20px;
           position: relative;
           display: grid;
-        /*   gap: 6px; */
-          @include flexCenter(row, space-between, center);
-          p{
-            color: #FEFEFE;
-            font-family: $font-source;
-            font-weight: 400;
-            font-size: 10px;
-            line-height: 26px; /* 162.5% */
-          }
-          img{
-            width: 20px;
-            height: 20px;
-          }
+           /*   gap: 6px; */
+           @include flexCenter(row, space-between, center);
+           p{
+             color: $input-background;
+             font-family: $font-source;
+             font-size: 13px;
+             font-weight: 400;
+             line-height: 26px; 
+             .departure{
+              width: 80px;
+              height: 30px;
+               border: 0;
+               background-color: transparent;
+               display: grid;
+             }
+           }
+           img{
+             width: 20px;
+             height: 20px;
+           }
          }
          .DatePicker__Returndate{
           width: 114px;
@@ -562,6 +586,7 @@
           background-color:$input-background;
           border-radius: 20px;
           display: grid;
+          
         /*   gap: 6px; */
           @include flexCenter(row-reverse, space-between, center);
           p{
@@ -569,11 +594,20 @@
             font-family: $font-source;
             font-size: 13px;
             font-weight: 400;
-            line-height: 26px; /* 162.5% */
+            line-height: 26px; 
+            display: grid;
+            .departure{
+               width: 80px;
+               height: 30px;
+               border: 0px;
+               display: grid;
+               /* background-color: transparent;  */
           }
           img{
             width: 20px;
             height: 20px;
+            display: gris;
+            margin-left: 12px;
           }
          }
          @media (min-width: $desktop-width) {
@@ -588,17 +622,11 @@
             position: absolute;
             right: 780px;
         }
-        }
-    
-       }
-    }
-  /*   @media (min-width: $desktop-width) {
-      background-size: cover;
-      background-position: center;
-      min-width: 100vw;
-      min-height: 100vh;
-    }  */
+     }
   }
+     }
+  }
+}
    
     
 

@@ -1,3 +1,4 @@
+import  { useState } from 'react';
 import { Datepicker } from 'flowbite-react' 
 import { Flowbite } from 'flowbite-react';
 import ImageRound from '../../assets/icons/round-tip.svg'
@@ -21,7 +22,14 @@ import ImageCalendarW from '../../assets/icons/calendar-white.svg'
 import ImageCalendaryO from '../../assets/icons/calendar-orange.svg'
 import './styles.scss'
 
+
 const DatePicker = () => {
+    const [selectedDate, setSelectedDate] = useState(new Date());
+
+    const handleDatepickerChange = (date) => {
+        setSelectedDate(date);
+    };
+
     const customTheme = {
         datepicker: {
           color: {
@@ -32,38 +40,39 @@ const DatePicker = () => {
   return (
     <section className='DatePicker-page-container'>
         <div className='DatePicker-container-wrapper'>
-            <div className='DataPicker-page-tittle'>
+            <div className='DatePicker-container-page-tittle'>
                 <span>Find your flight</span>
             </div>
-            <div className='DataPicker-header__wrapper'>
-                <div className='DatePicker__informacion'>
-                <div className='round-trip'>
-                    <span>Round Trip</span>
-                    <img src={ImageRound} alt='doble-flechas' />
-                </div>
-                <div className='one-way'>
-                    <span>One Way</span>
-                    <img src={ImageOne} alt='flecha' />
-                </div>
-                <div className='line'><img src={ImegeLine} alt='linea'/></div>
-                <div className='passager'>
-                    <img src={ImagePasseger} alt='pasajero' />
-                    <span>1</span>
-                    <img src={ImageTriangulo} alt='triangulo' />
-                </div>
-                <div className='economy'>
-                    <img className='ticket' src={ImageTicket} alt="tiquete" />
-                    <span>Economy</span>
-                   <img className='triangulo' src={ ImageTriangulo} alt='triangulo' />
-                </div>
+            <div className='DatePicker-container-header__wrapper'>
+                <div className='DatePicker-container-header__informacion'>
+                    <div className='round-trip'>
+                       <input type="text" className='texto' placeholder='Round trip'/* onChange={handleChange} */ />
+                        <img src={ImageRound} alt='doble-flechas' />
+                    </div>
+                    <div className='one-way'>
+                    <input type="text" className='texto' placeholder='One Way'/* onChange={handleChange} */ />
+                        <img src={ImageOne} alt='flecha' />
+                    </div>
+                    <div className='line'><img src={ImegeLine} alt='linea'/>
+                    </div>
+                    <div className='passager'>
+                        <img src={ImagePasseger} alt='pasajero' />
+                        <span>1</span>
+                        <img src={ImageTriangulo} alt='triangulo' />
+                    </div>
+                    <div className='economy'>
+                        <img className='ticket' src={ImageTicket} alt="tiquete" />
+                        <span>Economy</span>
+                        <img className='triangulo' src={ ImageTriangulo} alt='triangulo' />
+                    </div>
                 </div>
             </div>
-            <div className='DatePicker-from-to__container'>
+            <div className='DatePicker-container-from-to__container'>
                     <div className='DatePicker-from__to'>
                         <div className='from'>
                             <span>Form</span>
                             <p>
-                              <input type="text" className="texto" value="Houston (HOU)" />
+                              <input type="text" className="texto" placeholder='Houston (HOU)' />
                             </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
                         </div>
@@ -71,7 +80,7 @@ const DatePicker = () => {
                         <div className='to'>
                             <span>To</span>
                             <p>
-                              <input type="text" className="texto" value="Where is your destination?" />
+                              <input type="text" className="texto" placeholder='Where is your destination? ' />
                             </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
                         </div>
@@ -105,18 +114,28 @@ const DatePicker = () => {
                 <img src={ImageWorld} alt='mundo' />
                 </div>
            </div>
-            <div className='DatePicker-calendary__global'>
-                 <button className='DatePicker__Departure'>
+            <div className='DatePicker-container-calendary__global'>
+                 <div className='DatePicker__Departure'>
                     <img src={ImageCalendarW} alt='calendario-blanco' />
-                    <p>Departure date</p>
-                </button>
-                <butoon className='DatePicker__Returndate'>
-                    <p>Return date</p>
+                    <p>
+                    <input type="date" id="Departure" className='departure' placeholder='departure'  name="departure date" />
+                    </p>
+                </div>
+                <div className='DatePicker__Returndate'>
+                    <p>
+                        <input 
+                            type="date" 
+                            id="Returndate" 
+                            /* value={SelectedDate.toISOString().split('T'[0])}  */
+                            className='Returndate' 
+                            placeholder='Returndate'  
+                            name="Returndate" />
+                    </p>
                     <img src={ImageCalendaryO} alt='calendario-naranja' />
-                </butoon>     
+                </div>     
                 <div className='Calendary'>
                 <Flowbite theme={customTheme}>
-                   <Datepicker inline />
+                   <Datepicker inline selected={selectedDate} onChange={handleDatepickerChange} />
                 </Flowbite>
                 </div>
             </div>
