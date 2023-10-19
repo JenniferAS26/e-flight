@@ -2,7 +2,8 @@ import { Datepicker } from 'flowbite-react'
 import { Flowbite } from 'flowbite-react';
 import ImageRound from '../../assets/icons/round-tip.svg'
 import ImageOne from '../../assets/icons/one-way.svg'
-import ImageLine from '../../assets/icons/Line-retangle.png'
+import ImageLineRe from '../../assets/icons/Line-retangle.png'
+import ImegeLine from '../../assets/icons/LineVerti.svg'
 import ImagePasseger from '../../assets/icons/passeger.svg'
 import ImageTriangulo from '../../assets/icons/triangulo-invertido.svg'
 import ImageTicket from '../../assets/icons/ticket.svg'
@@ -44,7 +45,7 @@ const DatePicker = () => {
                     <span>One Way</span>
                     <img src={ImageOne} alt='flecha' />
                 </div>
-                <div className='line'><img src={ImageLine} alt='linea'/></div>
+                <div className='line'><img src={ImegeLine} alt='linea'/></div>
                 <div className='passager'>
                     <img src={ImagePasseger} alt='pasajero' />
                     <span>1</span>
@@ -61,13 +62,17 @@ const DatePicker = () => {
                     <div className='DatePicker-from__to'>
                         <div className='from'>
                             <span>Form</span>
-                            <p>Houston (HOU)</p>
+                            <p>
+                              <input type="text" className="texto" value="Houston (HOU)" />
+                            </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
                         </div>
                         <img className='arrows' src={ImageChange} alt='doble-flecha'/>
                         <div className='to'>
                             <span>To</span>
-                            <p>Where is your destination?</p>
+                            <p>
+                              <input type="text" className="texto" value="Where is your destination?" />
+                            </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
                         </div>
                     </div>
@@ -80,7 +85,7 @@ const DatePicker = () => {
            <div className='Datepicker-container__climate-world'>
             <div className='container-date-climate'>
                 <span>today</span>
-                <img className='horizon-line' src={ImageLine} alt='linea-horizontal' />
+                <img className='horizon-line' src={ImageLineRe} alt='linea-horizontal' />
                 <h1>Houston</h1>
                 <p>Texas, United State</p>
                 <img className='group' src={ImageGroup1} alt='circulo-amariilo' />

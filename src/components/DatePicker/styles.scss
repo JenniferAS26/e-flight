@@ -181,6 +181,15 @@
           margin-top: 20px;
           margin-bottom: 30px;
           margin-inline-start: auto;
+          p{
+            width: 92px;
+            height: 26px;
+            display: grid;
+            .texto{
+              border: 0;
+              background-color: transparent; 
+             } 
+          }
         }
         .arrows {
           width: 20px;
@@ -198,7 +207,14 @@
           margin-bottom: 30px;
           margin-inline-start: auto;
           p {
+            width: 161px;
+            height: 25px;
             color: #CDCDFE;
+            display: grid;
+           .texto{
+            border: 0;
+            background-color: transparent; 
+           } 
           }
         }
       }
