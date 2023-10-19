@@ -45,7 +45,8 @@
           align-items: start;
           justify-items: center;
           grid-auto-flow: column;
-          gap: 10px;
+          margin-left: 81px;
+          gap: 8px;
           .round-trip{
             width: 104px;
             height: 30px;
@@ -169,9 +170,10 @@
       min-width: $mobile-width;
       height: 150px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column; 
+      align-items: center; 
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 3px;
       .DatePicker-from__to {
         width: 507px;
         height: 100px;
@@ -180,8 +182,8 @@
         border-radius: 10px;
         display: grid;
         align-items: center;
-        justify-items: center;
-        grid-template-columns: auto auto auto;
+        justify-content: center;
+        grid-template-columns: auto 0.5fr auto;
         .from {
           color: #DDE0E5;
           font-family: $font-source;
@@ -206,8 +208,8 @@
           }
         }
         .arrows {
-          width: 20px;
-          height: 20px;
+          width: 23px;
+          height: 29px;
           display: grid;
         }
         .to {
@@ -219,7 +221,7 @@
           margin-right: 20px;
           margin-top: 20px;
           margin-bottom: 30px;
-          margin-inline-start: auto;
+          
           p {
             width: 161px;
             height: 25px;
@@ -379,6 +381,16 @@
           height: 370px;
           gap: 10px;
           position: relative; 
+          .world-map{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            @media (min-width: $desktop-width) {
+              position: absolute;  
+              bottom: 7px;
+              left: 35px;
+          }
+          }
           .airplane {
             min-width: $mobile-width;
             height: 10%;
@@ -546,10 +558,15 @@
         grid-auto-flow: column;
         column-gap: 19px;
         margin-top: 163px;
-        @media (min-width: $desktop-width) {
-          margin: 20px;
-          grid-template-columns: 1fr auto; 
-      }
+          @media (min-width: $desktop-width) {
+            margin: 20px;
+            grid-template-columns: auto 360px; 
+          }
+          .Dates {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; // Espacio entre Departure y ReturnDate
+        }
          .DatePicker__Departure{
           width: 114px;
           height: 36px;
@@ -569,8 +586,8 @@
              .departure{
               width: 80px;
               height: 30px;
-               border: 0;
                background-color: transparent;
+               border: 0;
                display: grid;
              }
            }
@@ -578,55 +595,71 @@
              width: 20px;
              height: 20px;
            }
-         }
-         .DatePicker__Returndate{
-          width: 114px;
-          height: 36px;
-          padding: 7px 12px;
-          background-color:$input-background;
-          border-radius: 20px;
-          display: grid;
-          
-        /*   gap: 6px; */
-          @include flexCenter(row-reverse, space-between, center);
-          p{
-            color: $tertiary-color;
-            font-family: $font-source;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 26px; 
+           @media (min-width: $desktop-width) {
+            margin: 30px;
+            grid: auto-flow 50px / 200px ;
+          }
+          }
+          .DatePicker__Returndate{
+            width: 114px;
+            height: 36px;
+            padding: 7px 12px;
+            background-color:$input-background;
+            border-radius: 20px;
+            display: grid;  
+          /*   gap: 6px; */
+            @include flexCenter(row-reverse, space-between, center);
+            p{
+              color: $tertiary-color;
+              font-family: $font-source;
+              font-size: 13px;
+              font-weight: 400;
+        /*       line-height: 26px;  */
+              display: grid;
+              .Returndate{
+                width: 80px;
+                height: 30px;
+                 background-color: transparent;
+                 border: 0;
+                 display: grid;
+               }
+            img{
+              width: 20px;
+              height: 20px;
+              display: gris;
+              margin-left: 12px;
+            }
+           }
+           @media (min-width: $desktop-width) {
+            margin: 31px;
+            margin-top: 85px;
+            margin-left: -169px;
+            grid: auto-flow 50px / 200px ;
+          }
+          .Calendary{
+            width: 100%;
+            height: 100%;
             display: grid;
-            .departure{
-               width: 80px;
-               height: 30px;
-               border: 0px;
-               display: grid;
-               /* background-color: transparent;  */
+            margin-left: 80px;
+            bottom: 30px;
+            .date{
+              width: 360px;
+              height: 330px;
+              display: grid;
+            }
+            @media (min-width: $desktop-width) {
+              width: 360px;
+              height: 330px;
+              position: absolute;
+              margin-left: -396px;
+              margin-top: 32px;
           }
-          img{
-            width: 20px;
-            height: 20px;
-            display: gris;
-            margin-left: 12px;
-          }
-         }
-         @media (min-width: $desktop-width) {
-          margin: 30px;
-          grid: auto-flow 50px / 200px ;
         }
-        .Calendary{
-          width: 360px;
-          height: 330px;
-          display:grid;
-          @media (min-width: $desktop-width) {
-            position: absolute;
-            right: 780px;
         }
+      }  
      }
-  }
-     }
-  }
-}
+ }
+
    
     
 

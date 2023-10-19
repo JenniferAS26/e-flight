@@ -1,6 +1,6 @@
 import  { useState } from 'react';
-import { Datepicker } from 'flowbite-react' 
-import { Flowbite } from 'flowbite-react';
+/* import { Datepicker } from 'flowbite-react' 
+import { Flowbite } from 'flowbite-react'; */
 import ImageRound from '../../assets/icons/round-tip.svg'
 import ImageOne from '../../assets/icons/one-way.svg'
 import ImageLineRe from '../../assets/icons/Line-retangle.png'
@@ -24,19 +24,29 @@ import './styles.scss'
 
 
 const DatePicker = () => {
-    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [from, setFrom] = useState('');
+    const [to, setTo] = useState('');
+  
 
-    const handleDatepickerChange = (date) => {
-        setSelectedDate(date);
-    };
+   
+    const handleFromChange = (e) => setFrom(e.target.value);
+    const handleToChange = (e) => setTo(e.target.value);
+   
 
-    const customTheme = {
+
+    const handleSubmit = () => {
+        const flightData = { from, to };
+        console.log('Flight Data:', flightData);
+      };
+      
+
+   /*  const customTheme = {
         datepicker: {
           color: {
             primary: 'bg-violet-600 hover:bg-violet-600',
           },
         },
-      };
+      }; */
   return (
     <section className='DatePicker-page-container'>
         <div className='DatePicker-container-wrapper'>
@@ -72,7 +82,13 @@ const DatePicker = () => {
                         <div className='from'>
                             <span>Form</span>
                             <p>
-                              <input type="text" className="texto" placeholder='Houston (HOU)' />
+                              <input 
+                              type="text" 
+                              className="texto" 
+                              placeholder='Houston (HOU)' 
+                              value={from}
+                              onChange={handleFromChange}
+                              />
                             </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
                         </div>
@@ -80,13 +96,19 @@ const DatePicker = () => {
                         <div className='to'>
                             <span>To</span>
                             <p>
-                              <input type="text" className="texto" placeholder='Where is your destination? ' />
+                              <input 
+                               type="text" 
+                               className="texto" 
+                               placeholder='Where is your destination?'
+                               value={to} 
+                               onChange={handleToChange}
+                              />
                             </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
                         </div>
                     </div>
                     <div className='container-search'>
-                            <button className='search'>
+                            <button className='search' onClick={handleSubmit}>
                               <img src={ImageSearch} alt='buscar'/>
                            </button>
                    </div>
@@ -102,6 +124,7 @@ const DatePicker = () => {
                 <h2>mostly sunny</h2>         
             </div>
             <div className='DatePicker__world'>
+                <div className='world-map'><img src={ImageWorld} alt='mundo' /></div>
                 <div className='airplane'>
                     <div className='plane'><img src={ImageAirplane} alt='avion' /></div>
                     <div className='bestPrice'><h2>#bestpriceforyou</h2></div>
@@ -111,14 +134,19 @@ const DatePicker = () => {
                     <div className='azul-oval'><img src={ImageAzulOval} alt="" /></div>
                     <div className='verde-oval'><img src={ImageVerdeOval} alt="" /></div>
                 </div>
-                <img src={ImageWorld} alt='mundo' />
                 </div>
            </div>
             <div className='DatePicker-container-calendary__global'>
                  <div className='DatePicker__Departure'>
                     <img src={ImageCalendarW} alt='calendario-blanco' />
                     <p>
-                    <input type="date" id="Departure" className='departure' placeholder='departure'  name="departure date" />
+                    <input 
+                        type="date" 
+                        id="Departure" 
+                        /* value={} */
+                        className='departure' 
+                        placeholder='departure'  
+                        name="departure date" />
                     </p>
                 </div>
                 <div className='DatePicker__Returndate'>
@@ -126,7 +154,7 @@ const DatePicker = () => {
                         <input 
                             type="date" 
                             id="Returndate" 
-                            /* value={SelectedDate.toISOString().split('T'[0])}  */
+                        /*     value={} */
                             className='Returndate' 
                             placeholder='Returndate'  
                             name="Returndate" />
@@ -134,10 +162,10 @@ const DatePicker = () => {
                     <img src={ImageCalendaryO} alt='calendario-naranja' />
                 </div>     
                 <div className='Calendary'>
-                <Flowbite theme={customTheme}>
-                   <Datepicker inline selected={selectedDate} onChange={handleDatepickerChange} />
-                </Flowbite>
-                </div>
+                    {/* <label for="Calendary">Calendary:</label> */}
+                  <input type="date" id="birthday" name="birthday" className='Date' />
+                
+                </div> 
             </div>
         </div>
     </section>
