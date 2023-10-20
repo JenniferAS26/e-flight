@@ -168,7 +168,7 @@ const DatePicker = () => {
                 </div>     
                 <div className='Calendary'>
                     {/* <label for="Calendary">Calendary:</label> */}
-                  <input type="date" id="birthday" name="birthday" className='Date' />
+                  <input type="date" id="Calendary" name="Calendary" className='Date' />
                 
                 </div> 
             </div>
