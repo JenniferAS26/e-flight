@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  { useState, useEffect } from 'react';
 /* import { Datepicker } from 'flowbite-react' 
 import { Flowbite } from 'flowbite-react'; */
 import ImageRound from '../../assets/icons/round-tip.svg'
@@ -33,8 +33,18 @@ const DatePicker = () => {
     const handleSubmit = () => {
         const flightData = { from, to };
         console.log('Flight Data:', flightData);
+
+        localStorage.setItem('flightData', JSON.stringify(flightData));
       };
-      
+    
+      useEffect(() => {
+        const storedFlightData = localStorage.getItem('flightData');
+        if (storedFlightData) {
+            const parsedData = JSON.parse(storedFlightData);
+            setFrom(parsedData.from);
+            setTo(parsedData.to);
+        }
+    }, []);
 
    /*  const customTheme = {
         datepicker: {
