@@ -4,7 +4,7 @@
   border-top-right-radius: $top-right;
   border-top-left-radius: $top-left;
   border-bottom-right-radius: $bottom-right;
-  border-bottom-left-radius: 15px;
+  border-bottom-left-radius: $bottom-left;
 }
 
 @mixin flexCenter($direction, $justify, $align) {
