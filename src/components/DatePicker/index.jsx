@@ -27,13 +27,9 @@ const DatePicker = () => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
   
-
-   
     const handleFromChange = (e) => setFrom(e.target.value);
     const handleToChange = (e) => setTo(e.target.value);
    
-
-
     const handleSubmit = () => {
         const flightData = { from, to };
         console.log('Flight Data:', flightData);
@@ -56,11 +52,20 @@ const DatePicker = () => {
             <div className='DatePicker-container-header__wrapper'>
                 <div className='DatePicker-container-header__informacion'>
                     <div className='round-trip'>
-                       <input type="text" className='texto' placeholder='Round trip'/* onChange={handleChange} */ />
+                       <input 
+                          type="text" 
+                          className='texto' 
+                          placeholder='Round trip'
+                          /* onChange={handleChange} */ 
+                       />
                         <img src={ImageRound} alt='doble-flechas' />
                     </div>
                     <div className='one-way'>
-                    <input type="text" className='texto' placeholder='One Way'/* onChange={handleChange} */ />
+                    <input 
+                        type="text" 
+                        className='texto' 
+                        placeholder='One Way'
+                        /* onChange={handleChange} */ />
                         <img src={ImageOne} alt='flecha' />
                     </div>
                     <div className='line'><img src={ImegeLine} alt='linea'/>
