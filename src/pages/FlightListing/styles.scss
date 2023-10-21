@@ -161,7 +161,7 @@ $inactive-options: #AFF8E1;
   }
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+.date-input::-webkit-calendar-picker-indicator {
   display: none;
   // -webkit-appearance: none;
 }
