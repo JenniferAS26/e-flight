@@ -25,7 +25,7 @@ const Home = () => {
     getFlights()
   }, [getFlights])
 
-  console.log(flightList)
+/*   console.log(flightList) */
   return (
     <section className='home-container'>
       <DatePicker />

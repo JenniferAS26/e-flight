@@ -1,6 +1,6 @@
 import axios from 'axios'
 import endpoints from './endpoints'
-const ACCESS_TOKEN = 'Nf4aZJ98F7G8B7t1Msux7dBMXCTO'
+const ACCESS_TOKEN = 'nvEiv6er5gsR34qqsNVKidp3ObwP'
 
 const getListOfFlights = async (origin, destination, departureDate, passengers, stops) => {
   const config = {

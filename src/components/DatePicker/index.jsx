@@ -1,4 +1,5 @@
-import  { useState, useEffect } from 'react';
+import { useForm } from "react-hook-form"
+/* import { getFlights } from '../../services/flightService' */
 /* import { Datepicker } from 'flowbite-react' 
 import { Flowbite } from 'flowbite-react'; */
 import ImageRound from '../../assets/icons/round-tip.svg'
@@ -24,29 +25,16 @@ import './styles.scss'
 
 
 const DatePicker = () => {
-    const [from, setFrom] = useState('');
-    const [to, setTo] = useState('');
-  
-    const handleFromChange = (e) => setFrom(e.target.value);
-    const handleToChange = (e) => setTo(e.target.value);
-   
-    const handleSubmit = () => {
-        const flightData = { from, to };
-        console.log('Flight Data:', flightData);
+    const { register: searchFlight, handleSubmit } = useForm()
 
-        localStorage.setItem('flightData', JSON.stringify(flightData));
-      };
-    
-      useEffect(() => {
-        const storedFlightData = localStorage.getItem('flightData');
-        if (storedFlightData) {
-            const parsedData = JSON.parse(storedFlightData);
-            setFrom(parsedData.from);
-            setTo(parsedData.to);
-        }
-    }, []);
+    const onSubmit = (searchDetail, event) => {
+        event.preventDefault()
+        console.log(searchDetail)
+      }
 
-   /*  const customTheme = {
+
+
+   /*  const customT0heme = {
         datepicker: {
           color: {
             primary: 'bg-violet-600 hover:bg-violet-600',
@@ -55,7 +43,7 @@ const DatePicker = () => {
       }; */
   return (
     <section className='DatePicker-page-container'>
-        <div className='DatePicker-container-wrapper'>
+        <form onSubmit={handleSubmit(onSubmit)} className='DatePicker-container-wrapper'>
             <div className='DatePicker-container-page-tittle'>
                 <span>Find your flight</span>
             </div>
@@ -66,7 +54,8 @@ const DatePicker = () => {
                           type="text" 
                           className='texto' 
                           placeholder='Round trip'
-                          /* onChange={handleChange} */ 
+                          {...searchFlight('roundTrip')}
+                          name="roundTrip"
                        />
                         <img src={ImageRound} alt='doble-flechas' />
                     </div>
@@ -75,8 +64,11 @@ const DatePicker = () => {
                         type="text" 
                         className='texto' 
                         placeholder='One Way'
-                        /* onChange={handleChange} */ />
+                        {...searchFlight('oneWay')}
+                        name="oneWay"
+                        />
                         <img src={ImageOne} alt='flecha' />
+                        
                     </div>
                     <div className='line'><img src={ImegeLine} alt='linea'/>
                     </div>
@@ -95,14 +87,16 @@ const DatePicker = () => {
             <div className='DatePicker-container-from-to__container'>
                     <div className='DatePicker-from__to'>
                         <div className='from'>
-                            <span>Form</span>
+                            <span>From</span>
                             <p>
                               <input 
                               type="text" 
                               className="texto" 
                               placeholder='Houston (HOU)' 
-                              value={from}
-                              onChange={handleFromChange}
+                              {...searchFlight('origin')}
+                              name="origin"
+                             /*  value={origin}
+                              onChange={handleFromChange} */
                               />
                             </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
@@ -115,15 +109,17 @@ const DatePicker = () => {
                                type="text" 
                                className="texto" 
                                placeholder='Where is your destination?'
-                               value={to} 
-                               onChange={handleToChange}
+                               {...searchFlight('destination')}
+                               name="destination"
+                               /* value={destination} 
+                               onChange={handleToChange} */
                               />
                             </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
                         </div>
                     </div>
                     <div className='container-search'>
-                            <button className='search' onClick={handleSubmit}>
+                            <button className='search' type="onSumit">
                               <img src={ImageSearch} alt='buscar'/>
                            </button>
                    </div>
@@ -153,15 +149,17 @@ const DatePicker = () => {
            </div>
             <div className='DatePicker-container-calendary__global'>
                  <div className='DatePicker__Departure'>
-                    <img src={ImageCalendarW} alt='calendario-blanco' />
+                    <img src={ImageCalendarW} alt='calendario-naranja' />
                     <p>
                     <input 
                         type="date" 
                         id="Departure" 
-                        /* value={} */
+                       /*  value={departureDate}
+                        onChange={handleDepartureDateChange} */
                         className='departure' 
-                        placeholder='departure'  
-                        name="departure date" />
+                        placeholder='departure'
+                        {...searchFlight('departure')}  
+                        name="departureDate" />
                     </p>
                 </div>
                 <div className='DatePicker__Returndate'>
@@ -169,12 +167,14 @@ const DatePicker = () => {
                         <input 
                             type="date" 
                             id="Returndate" 
-                        /*     value={} */
+                            /* value={returnDate}
+                            onChange={handleReturnDateChange} */
                             className='Returndate' 
-                            placeholder='Returndate'  
-                            name="Returndate" />
+                            placeholder='Returndate'
+                            {...searchFlight('ReturnDate')}  
+                            name="ReturnDate" />
                     </p>
-                    <img src={ImageCalendaryO} alt='calendario-naranja' />
+                    <img src={ImageCalendaryO} alt='calendario-blanco' />
                 </div>     
                 <div className='Calendary'>
                     {/* <label for="Calendary">Calendary:</label> */}
@@ -182,7 +182,7 @@ const DatePicker = () => {
                 
                 </div> 
             </div>
-        </div>
+        </form>
     </section>
   )
 }
