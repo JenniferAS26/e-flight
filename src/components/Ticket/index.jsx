@@ -5,7 +5,7 @@ import imgmaleta from '../../assets/icons/bag.svg'
 import imgavion from '../../assets/icons/landing-airplane.svg'
 import imgavion2 from '../../assets/icons/logo-white.svg'
 
-import '../FlightListing/Ticket-styles.scss'
+import './styles.scss'
 
 
 const Ticket = () => {

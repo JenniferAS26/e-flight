@@ -1,63 +1,54 @@
-import iconmap from '../../assets/icons/maps.svg'
-import sol from '../../assets/icons/sun.svg'
-import mapworld from '../../assets/images/world-map2.svg'
+import location from '../../assets/icons/maps.svg'
+import map from '../../assets/images/world-map2.svg'
+import sunIcon from '../../assets/icons/sun.svg'
 import NY from '../../assets/images/new-york.svg'
 import holly from '../../assets/images/hollywood.svg'
 import './styles.scss'
-import React from 'react'
-import Ticket from '../../pages/FlightListing/Ticket-index.jsx'
 
 const Explore = () => {
   return (
-    <div className='explore-container'> 
-    <div className='explore-container__top--container'>
-
-    <div className='explore-container__title'>
-        <div className='explore-container__img-title'>
-        <img src={iconmap} alt="" />
-        <h1>Trip from <span>Houston</span></h1>
+    <section className='explore-container'>
+      <div className='explore-container__top-container'>
+        <div className='explore-container__top-container--title-container'>
+          <img className='map-image' src={location} alt='location icon' />
+          <h2 className='title'>Trip from <span>Houston</span></h2>
         </div>
-
-        <div className='explore-container__boton'><button>Explore destination</button>
-        </div>
-      </div>     
-      <div className='explore-container__img--map'>
-        <img src={mapworld} alt="" /> 
+        <button className='explore-container__top-container--button'>Explore destination</button>
       </div>
-      <div className='explore-container__cards'>
-        <div className='explore-container__new-york'>
-          <div className='explore-container__img-new-york'>
-          <img src={NY} alt="" />
+      <div className='explore-container__image-container'>
+        <img src={map} alt="map picture" />
+      </div>
+      <div className='explore-container__cards-container'>
+        <article className='explore-container__cards-container--card'>
+          <div className='image-container'>
+            <img src={NY} alt="" />
           </div>
-          <div className='explore-container__info-new-york'>
-            <h2>NEW YORK</h2>
-            <div> 9 - 10 Feb, 2023</div>
-            <div className='flex items-center'>
-              <img src={sol} alt=""/>
-              <h3>7hr 15m</h3>
+          <div className='details-container'>
+            <h3 className='details-container__title'>New York</h3>
+            <span className='details-container__date'>9 - 10 Feb, 2023</span>
+            <div className='details-container__icon-time'>
+              <img src={sunIcon} alt='sun icon' />
+              <span>7hr 15m</span>
             </div>
-            <span className='valor'>$294</span>
+            <span className='details-container__price'>$294</span>
           </div>
-        </div>
-        <div className='explore-container__los-angeles'>
-          <div className='explore-container__img-los-angeles'>
+        </article>
+        <article className='explore-container__cards-container--card'>
+          <div className='image-container'>
             <img src={holly} alt="" />
           </div>
-          <div className='explore-container__info-los-angeles'>
-            <h2>LOS ANGELES</h2>
-            <div> 9 - 10 Feb, 2023</div>
-            <div>
-              <img src={sol} alt=""/>
-              <h3>6hr 18m</h3>
+          <div className='details-container'>
+            <h3 className='details-container__title'>Los Angeles</h3>
+            <span className='details-container__date'>9 - 10 Feb, 2023</span>
+            <div className='details-container__icon-time'>
+              <img src={sunIcon} alt='sun icon' />
+              <span>6hr 18m</span>
             </div>
-            <span className='valor'>$399</span>
+            <span className='details-container__price'>$399</span>
           </div>
-        </div>
+        </article>
       </div>
-    </div>
-    <Ticket/> 
-  </div>   
- 
+    </section>
   )
 }
 
