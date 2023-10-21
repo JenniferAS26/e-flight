@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Filters from '../../components/Filters'
 import SortBy from '../../components/SortBy'
 import FlightResults from '../../components/FlightResults'
@@ -13,11 +13,13 @@ import calendar from '../../assets/icons/calendar-black.svg'
 import glass from '../../assets/icons/glass.svg'
 import { Pagination } from 'flowbite-react'
 import './styles.scss'
+import { FlightSearchContext } from '../../context/FlightSearchContext'
 
 const FlightListing = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const onPageChange = (page) => setCurrentPage(page)
-
+  const { flightList } = useContext(FlightSearchContext)
+  console.log(flightList)
   return (
     <section className='flight-listing'>
       <div className='flight-listing__filters'>
@@ -104,10 +106,11 @@ const FlightListing = () => {
           </ul>
         </div>
         <FlightResults>
-          <FlightResultsCard />
-          <FlightResultsCard />
-          <FlightResultsCard />
-          <FlightResultsCard />
+          {
+            flightList.map( (flightSearch, index) => (
+              <FlightResultsCard key={index} data={flightSearch} />
+            ))
+          }
         </FlightResults>
         <div className='flight-listing__results--pagination'>
           <Pagination
