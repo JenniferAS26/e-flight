@@ -60,9 +60,9 @@ const FlightListing = () => {
             </div>
             <div className='switch-flight__date-wrapper flex justify-between items-center'>
               <img src={calendar} alt='pointer icon' />
-              <input type='date' />
+              <input className='date-input' type='date' />
               <div className='separator'></div>
-              <input type='date' />
+              <input className='date-input' type='date' />
             </div>
             <button className='switch-flight__button' type='submit'>
               <img src={glass} alt='glass icon' />
