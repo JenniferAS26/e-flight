@@ -50,19 +50,21 @@ const DatePicker = () => {
             <div className='DatePicker-container-header__wrapper'>
                 <div className='DatePicker-container-header__informacion'>
                     <div className='round-trip'>
+                        <p>Round Trip</p>
                        <input 
-                          type="text" 
-                          className='texto' 
-                          placeholder='Round trip'
+                          type="radio" 
+                          id="javascript"
+                          className='radio' 
                           {...searchFlight('roundTrip')}
                           name="roundTrip"
                        />
                         <img src={ImageRound} alt='doble-flechas' />
                     </div>
                     <div className='one-way'>
+                        <p>One Way</p>
                     <input 
-                        type="text" 
-                        className='texto' 
+                        type="radio" 
+                        className='radio' 
                         placeholder='One Way'
                         {...searchFlight('oneWay')}
                         name="oneWay"
@@ -73,9 +75,13 @@ const DatePicker = () => {
                     <div className='line'><img src={ImegeLine} alt='linea'/>
                     </div>
                     <div className='passager'>
+                        <button className="dropbtn">
+                        <img src={ImageTriangulo} alt='triangulo' />
+                          <i className="fa fa-caret-down"></i>
+                        </button>
                         <img src={ImagePasseger} alt='pasajero' />
                         <span>1</span>
-                        <img src={ImageTriangulo} alt='triangulo' />
+                       {/*   */}
                     </div>
                     <div className='economy'>
                         <img className='ticket' src={ImageTicket} alt="tiquete" />

@@ -9,7 +9,7 @@
     gap: 10px;
     .DatePicker-container-wrapper {
       min-width: $mobile-width;
-      height: 100%;
+      min-height: $mobile-height;
       display: grid;
       flex-wrap: inherit;
       align-items: center;
@@ -55,18 +55,23 @@
             border-radius: 20px;
             display: grid;
             @include flexCenter(row-reverse,space-between, center);
-            .texto{
-              width: 64px;
-              height: 22px;
-             /*  color: $primary-text-color;  */    
+            p{
               font-family: $font-source;
-              font-size: 10px;
+              color: $tertiary-text-color;
+            }
+            .radiobtn{   
+              background-color: hsl(0, 0%, 56%)!important;
+              padding: 6px;
+              border: none;
+              color: $input-background;
               display: grid;
-              justify-content: center;
               background-color: transparent;
-              border: 0;
-              &::placeholder{
-                color: $primary-text-color;
+              &:hover{
+                color: #D0D0D0;
+                opacity: 0.5;
+              &:active{
+                opacity: 1;
+              }
               }
               img{
                 width: 20px;
@@ -85,16 +90,14 @@
             background-color:  #ECFDF7;
             border-radius: 20px;
             @include flexCenter(row-reverse, space-around, center);
-            .texto{
-              width: 62px;
-              height: 22px;
+            p{
               font-family: $font-source;
               font-size: 12px;
               color: #0A7956;
+            }
+            .radio{
               background-color: transparent;
               border: 0;
-              &::placeholder{
-                color: #0A7956;
               }
               img{
                 width: 20px;
@@ -112,14 +115,14 @@
           }
           .passager{
             width: 84px;
-            height: 30px;
+            height: 29px;
             padding: 7px 12px;
             background-color: #EEE1FB;
             border-radius: 20px;
             display: grid;
             align-items: flex-start;
             gap: 6px;
-            @include flexCenter(row, center, center);
+            @include flexCenter(row-reverse, center, center);
             span{
               width: 8px;
               height: 22px;
@@ -130,6 +133,7 @@
             .triangulo{
               width: 20px;
               height: 20px;
+            
             }
           }
           .economy{
@@ -658,8 +662,7 @@
         }
       }  
      }
- }
-
+ 
    
     
 
