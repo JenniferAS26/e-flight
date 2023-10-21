@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-/* import { getFlights } from '../../services/flightService' */
+
 /* import { Datepicker } from 'flowbite-react' 
 import { Flowbite } from 'flowbite-react'; */
 import ImageRound from '../../assets/icons/round-tip.svg'
@@ -25,6 +25,7 @@ import './styles.scss'
 
 
 const DatePicker = () => {
+
     const { register: searchFlight, handleSubmit } = useForm()
 
     const onSubmit = (searchDetail, event) => {
@@ -32,7 +33,7 @@ const DatePicker = () => {
         console.log(searchDetail)
       }
 
-
+     
 
    /*  const customT0heme = {
         datepicker: {
@@ -75,13 +76,10 @@ const DatePicker = () => {
                     <div className='line'><img src={ImegeLine} alt='linea'/>
                     </div>
                     <div className='passager'>
-                        <button className="dropbtn">
-                        <img src={ImageTriangulo} alt='triangulo' />
-                          <i className="fa fa-caret-down"></i>
-                        </button>
                         <img src={ImagePasseger} alt='pasajero' />
                         <span>1</span>
-                       {/*   */}
+                          <img src={ImageTriangulo} alt='triangulo' />
+                      
                     </div>
                     <div className='economy'>
                         <img className='ticket' src={ImageTicket} alt="tiquete" />
@@ -128,7 +126,7 @@ const DatePicker = () => {
                             <button className='search' type="onSumit">
                               <img src={ImageSearch} alt='buscar'/>
                            </button>
-                   </div>
+                        </div>
             </div>
            <div className='Datepicker-container__climate-world'>
             <div className='container-date-climate'>

@@ -3,7 +3,7 @@
 
 .DatePicker-page-container {
     min-width: $mobile-width;
-    height: 100%;
+    min-height: $mobile-height;
     background-position: center;
     display: grid;
     gap: 10px;
@@ -17,8 +17,8 @@
       gap: 30px;
       margin-left: 20px;
       .DatePicker-container-page-tittle{
-        width: 100%;
-        height: 100%;
+        width: 280px;
+        height: 35%;
         @include flexCenter(row, left, left);
         font-family: $font-source;
         span{
@@ -26,30 +26,35 @@
           font-family: $font-source;
           font-weight: 700;
           font-size: 40px;
-          line-height: 56px;
+          line-height: 35px;
+          display: grid;
         }
       }
       .DatePicker-container-header__wrapper{
-        width: 65%;
-        height: 100%;
+        width: 59px;
+        height: 13px;
         display: grid;
         align-content: center;
         justify-content: space-around;
         align-items: center;
+        @media screen and (min-width: $desktop-width) {
+          width: 518px;
+          height: 49px;
+      }
         .DatePicker-container-header__informacion{
-          width: 418px;
-          height: 44px;
+          width: 53px;
+          height: 13px;
           display: grid;
           align-items: left;
           align-content: space-between;
           align-items: start;
           justify-items: center;
           grid-auto-flow: column;
-          margin-left: 81px;
-          gap: 8px;
+         /*  margin-left: 0px; */
+          gap: 2px;
           .round-trip{
-            width: 104px;
-            height: 30px;
+            width: 85px;
+            height: 27px;
             padding: 7px 12px;
             background-color: $input-background;
             border-radius: 20px;
@@ -57,611 +62,691 @@
             @include flexCenter(row-reverse,space-between, center);
             p{
               font-family: $font-source;
+              font-size: 7.6px;
               color: $tertiary-text-color;
-            }
-            .radiobtn{   
-              background-color: hsl(0, 0%, 56%)!important;
-              padding: 6px;
-              border: none;
-              color: $input-background;
               display: grid;
+            }
+            .radio{   
               background-color: transparent;
-              &:hover{
-                color: #D0D0D0;
-                opacity: 0.5;
-              &:active{
-                opacity: 1;
-              }
+              border: 0;
+              display: grid;
               }
               img{
                 width: 20px;
                 height: 20px;
                 display: grid;
-                margin-left: 5px;
+                margin-left: -6px;
                 color: $primary-text-color;
               }
             }
-          }
-          .one-way{
-            width: 107px;
-            height: 31px;
-            padding: 7px 12px;
-            display: grid;
-            background-color:  #ECFDF7;
-            border-radius: 20px;
-            @include flexCenter(row-reverse, space-around, center);
-            p{
-              font-family: $font-source;
-              font-size: 12px;
-              color: #0A7956;
+            .one-way{
+              width: 80px;
+              height: 27px;
+              padding: 7px 12px;
+              display: grid;
+              background-color:  #ECFDF7;
+              border-radius: 20px;
+              @include flexCenter(row-reverse, space-around, center);
+              p{
+                font-family: $font-source;
+                font-size: 8px;
+                color: #0A7956;
+                display: grid;
+              }
+              .radio{
+                background-color: transparent;
+                border: 0;
+                }
+                img{
+                  width: 15px;
+                  height: 16px;
+                  display: grid;
+                }
+              }
+            .line{
+              width: 2px;
+              height: 32px;
+              color: $secondary-text-color;
+              display: grid;
+              justify-content: space-evenly;
+              align-items: center;
             }
-            .radio{
-              background-color: transparent;
-              border: 0;
+            .passager{
+              width: 80px;
+              height: 27px;
+              padding: 7px 12px;
+              background-color: #EEE1FB;
+              border-radius: 20px;
+              display: grid; 
+              align-items: flex-start;
+              gap: 6px;
+              @include flexCenter(row, center, center);
+              span{
+                width: 8px;
+                height: 22px;
+                display: grid;
+                color: $primary-color;
+                align-items: center;
+              }
+              .triangulo{
+                width: 20px;
+                height: 20px;
+                float: left;
+                overflow: hidden;
+              }
+              }
+              .economy{
+                width: 85px;
+                height: 27px;
+                padding: 7px 12px;
+                background-color: #EEE1FB;
+                border-radius: 20px;
+                gap: 6px;
+                display: grid;
+                @include flexCenter(row, center, center);            
+                span{
+                  width: 56px;
+                  height: 22px;
+                  font-weight: 400;
+                  font-size: 9px;
+                  color: $primary-color;
+                  display: grid;
+                  align-items: center;
+                }
+                .ticket{
+                  width: 12px;
+                  height: 12px;
+                  align-items: center;
+                  align-content: space-around;
+                  align-items: center;
+                }
+                .triangulo{
+                  width: 10px;
+                  height: 10px;
+                }
+              }
+            }
+            @media screen and (min-width: $desktop-width) {
+              width: 320px;
+              height: 90px;
+              justify-content: flex-start; 
+          }
+          }
+      .DatePicker-container-from-to__container {
+            width: 289px;
+            height: 92px;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            flex-wrap: wrap;
+            gap: 10px;
+          
+            .DatePicker-from__to {
+              width: 279px;
+              height: 90px;
+              padding: 7px;
+              background-color: $primary-color;
+              border-radius: 10px;
+              display: grid;
+              margin-right: auto;
+              gap: 10px;
+           /*    align-items: center;
+              justify-content: center; */
+              grid-template-columns: auto auto auto;
+              .from {
+                width: 3px;
+                height: 22px;
+                color: #DDE0E5;
+                font-family: $font-source;
+                font-size: 14px;
+                font-weight: $regular-weight;
+                display: grid;
+                margin-right: 70px;
+                margin-top: 20px;
+                margin-bottom: 30px;
+               /*  margin-inline-start: auto; */
+                p{
+                  width: 92px;
+                  height: 26px;
+                  display: grid;
+                  .texto{
+                    border: 0;
+                    background-color: transparent; 
+                    &::placeholder{
+                      color: #FEFEFE;
+                    }
+                   } 
+                }
+              }
+              .arrows {
+                width: 23px;
+                height: 29px;
+                display: grid;
+                align-self: center;
+                margin-bottom: -4px;
+                margin-left: -35px;
+              }
+              .to {
+                width: 34px;
+                height: 22px;
+                color: #DDE0E5;
+                font-family: $font-source;
+                font-size: 14px;
+                font-weight: $regular-weight;
+                display: grid;
+                margin-left: -69px;
+                margin-top: 20px;
+                margin-bottom: 30px;
+                p {
+                  width: 129px;
+                  height: 25px;
+                  display: grid;
+                 .texto{
+                  border: 0;
+                  background-color: transparent; 
+                  &::placeholder{
+                    color: #CDCDFE;
+                  }
+                 } 
+                }
+              }
+            }
+            .container-search {
+              width: 46px;
+              height: 90px;
+              padding: 0px 13px;
+              display: grid;
+              align-items: flex-start;
+              justify-content: center;
+              .search {
+                background-color: $secondary-color;
+                border-radius: 6px;
+                width: 46px;
+                height: 100%;
               }
               img{
                 width: 20px;
                 height: 20px;
+                align-content: center;
+                margin-top: 9px;
+                margin-left: 15px;
               }
             }
+            @media screen and (min-width: $desktop-width) {
+              justify-content: flex-start; 
           }
-          .line{
-            width: 2px;
-            height: 32px;
-            color: $secondary-text-color;
-            display: grid;
-            justify-content: space-evenly;
-            align-items: center;
-          }
-          .passager{
-            width: 84px;
-            height: 29px;
-            padding: 7px 12px;
-            background-color: #EEE1FB;
-            border-radius: 20px;
-            display: grid;
-            align-items: flex-start;
-            gap: 6px;
-            @include flexCenter(row-reverse, center, center);
-            span{
-              width: 8px;
-              height: 22px;
-              display: grid;
-              color: $primary-color;
-              align-items: center;
-            }
-            .triangulo{
-              width: 20px;
-              height: 20px;
-            
-            }
-          }
-          .economy{
-            width: 111px;
-            height: 30px;
-            padding: 7px 12px;
-            background-color: #EEE1FB;
-            border-radius: 20px;
-            gap: 6px;
-            display: grid;
-            @include flexCenter(row, center, center);            
-            span{
-              width: 56px;
-              height: 22px;
-              font-weight: 400;
-              font-size: 14px;
-              color: $primary-color;
-              display: grid;
-            }
-            .ticket{
-              width: 20px;
-              height: 20px;
-              align-items: center;
-              align-content: space-around;
-              align-items: center;
-            }
-            .triangulo{
-              width: 10px;
-              height: 10px;
-            }
-          }
-        }
-        @media screen and (min-width: $desktop-width) {
-          justify-content: flex-start; 
-      }
-      }
-      .DatePicker-container-from-to__container {
-      min-width: $mobile-width;
-      height: 150px;
-      display: flex;
-      flex-direction: column; 
-      align-items: center; 
-      flex-wrap: wrap;
-      gap: 3px;
-      .DatePicker-from__to {
-        width: 507px;
-        height: 100px;
-        padding: 7px;
-        background-color: $primary-color;
-        border-radius: 10px;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-template-columns: auto 0.5fr auto;
-        .from {
-          color: #DDE0E5;
-          font-family: $font-source;
-          font-size: 14px;
-          font-weight: $regular-weight;
-          display: grid;
-          margin-right: 20px;
-          margin-top: 20px;
-          margin-bottom: 30px;
-          margin-inline-start: auto;
-          p{
-            width: 92px;
-            height: 26px;
-            display: grid;
-            .texto{
-              border: 0;
-              background-color: transparent; 
-              &::placeholder{
-                color: #FEFEFE;
-              }
-             } 
-          }
-        }
-        .arrows {
-          width: 23px;
-          height: 29px;
-          display: grid;
-        }
-        .to {
-          color: #DDE0E5;
-          font-family: $font-source;
-          font-size: 14px;
-          font-weight: $regular-weight;
-          display: grid;
-          margin-right: 20px;
-          margin-top: 20px;
-          margin-bottom: 30px;
-          
-          p {
-            width: 161px;
-            height: 25px;
-            display: grid;
-           .texto{
-            border: 0;
-            background-color: transparent; 
-            &::placeholder{
-              color: #CDCDFE;
-            }
-           } 
-          }
-        }
-      }
-      .container-search {
-        width: 46px;
-        height: 100px;
-        padding: 0px 13px;
-        display: grid;
-        align-items: flex-start;
-        justify-content: center;
-        .search {
-          background-color: $secondary-color;
-          border-radius: 6px;
-          width: 46px;
-          height: 100%;
-        }
-        img{
-          width: 20px;
-          height: 20px;
-          align-content: center;
-          margin-top: 9px;
-          margin-left: 15px;
-        }
-      }
-      @media screen and (min-width: $desktop-width) {
-        justify-content: flex-start; 
-    }
-      }
+           }
       .Datepicker-container__climate-world{
-        min-width: $mobile-width;
-        width: 100%;
-        display: grid;
-        grid-auto-flow: column;
-        @media (min-width: $desktop-width) {
-          width: 100%;
-          height: 100%;
-        }
-        .container-date-climate {
-          width: 234px;
-          height: 300px;
-          border-radius: 117px;
-          border: 2px solid $input-background;
-          display: grid;
-          position: relative;
-          span {
-            color: $secondary-text-color;
-            font-family: $font-source;
-            font-size: 14px;
-            font-weight: 400;
-            margin-left: 95px;
-            margin-top: 28px;
-            @media (min-width: $desktop-width) {
-              position: absolute;
-              top: -2px;
-              left: 4px;
+              width: 160px;
+              height: 140px;
+              display: grid;
+              grid-auto-flow: column;
+              @media (min-width: $desktop-width) {
+                width: 100%;
+                height: 100%;
               }
-          }
-          .horizon-line {
-            width: 211px;
-            height: 3px;
-            color: $input-background;
-            margin-left: 10px;
-            margin-top: 6px;
-            @media (min-width: $desktop-width) {
-              color: $input-background;
-              position: absolute;
-              top: 55px;
-              left: 1px;
+              .container-date-climate {
+                width: 88px;
+                height: 120px;
+                border-radius: 117px;
+                border: 2px solid $input-background;
+                display: grid;
+                position: relative;
+                span {
+                  width: 29px;
+                  height: 22px;
+                  color: $secondary-text-color;
+                  font-family: $font-source;
+                  font-size: 14px;
+                  font-weight: 400;
+                  display: grid;
+                  margin-left: 23px;
+                  margin-top: 3px;
+                  @media (min-width: $desktop-width) {
+                    position: absolute;
+                    align-items: center;
+                    top: 20px;
+                    left: 76px;
+                    }
+                }
+                .horizon-line {
+                  width: 80px;
+                  height: 3px;
+                  color: $input-background;
+                  display: grid;
+                  margin-left: 2px;
+                  margin-top: 0px;
+                  @media (min-width: $desktop-width) {
+                    width: 196px;
+                    color: $input-background;
+                    display: grid;
+                    position: absolute;
+                    top: 52px;
+                    left: 16px;
+                    }
+                }
+                h1 {
+                  width: 16px;
+                  height: 16px;
+                  color: $primary-color;
+                  font-family: $font-source;
+                  font-size: 9px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 28px;
+                  display: grid;
+                  margin-top: -7px;
+                  text-align: center;
+                  margin-left: 22px;
+                  @media (min-width: $desktop-width) {
+                    width: 69px;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 74px;
+                    left: 46px;
+                    }
+                }
+                p {
+                  width: 85px;
+                  height: 15px;
+                  color: $primary-color;
+                  font-family: $font-source;
+                  font-size: 9px;
+                  font-style: normal;
+                  /* font-weight: 400; */
+              /*     line-height: 22px; */
+                  display: grid;
+                  margin-left: 4px;
+                  margin-top: 3px;
+                  @media (min-width: $desktop-width) {
+                    position: absolute;
+                    top: 87px;
+                    left: 69px;
+                    }
+                }
+                .group {
+                  width: 28px;
+                  height: 22px;
+                  display: grid;
+                  margin-left: 27px;
+                  @media (min-width: $desktop-width) {
+                    width: 64px;
+                    height: 64px;
+                    position: absolute;
+                    top: 119px;
+                    left: 56px;
+                    }
+                }     
+                .numero {
+                  width: 15px;
+                  height: 11px; 
+                  display: grid;
+                  margin-left: 35px;
+                  margin-top: 3px;
+                  @media (min-width: $desktop-width) {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 193px;
+                    left: 67px;
+                    }
+                }
+                h2 {
+                  width: 8px;
+                  height: px;
+                  color: $secondary-text-color;
+                  font-family: $font-source;
+                  font-weight: $regular-weight;
+                  line-height: 10px;
+                  display: grid;
+                  margin-left: 27px;
+                  margin-bottom: 23px;
+                  @media (min-width: $desktop-width) {
+                    width: 80px;
+                    height: 22px; 
+                    position: absolute;
+                    top: 239px;
+                    left: 59px;
+                    }
+                } 
+                @media (min-width: $desktop-width) {
+                width: 234px;
+                height: 300px;
+                position: absolute;
+                top: 130px;
+                right: 316px;
+                }
               }
-          }
-          h1 {
-            width: 69px;
-            color: $primary-color;
-            font-family: $font-source;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 28px;
-            margin-top: 10px;
-            text-align: center;
-            margin-left: 75px;
-            @media (min-width: $desktop-width) {
-              position: absolute;
-              top: 74px;
-              left: -20px;
+              .DatePicker__world {
+                width: 79px;
+                height: 55px;
+                display: grid;
+                gap: 10px;
+                position: relative; 
+                .world-map{
+                  width: 62%;
+                  height: 100%;
+                  display: grid;
+                  @media (min-width: $desktop-width) {
+                    width: 797px;
+                    height: 373px;
+                    position: absolute;  
+                    left: 782px;
+                    bottom: -387px;
+                }
+                }
+                .airplane {
+                  min-width: $mobile-width;
+                  height: 10%;
+                  display: grid;
+                .plane{
+                  width: 100%;
+                  height: 100%;
+                  display: grid;
+                  img {
+                    width: 110px;
+                    height: 77px;
+                    transform: rotate(6.27deg);
+                    position: absolute; 
+                    display: grid;
+                    top: 14px;
+                    left: 104px; 
+                    z-index: 1; 
+                    @media (min-width: $desktop-width) {
+                      width: 230px;
+                      height: 77px;
+                      transform: rotate(6.27deg);
+                      position: absolute;  
+                      top: 143px;
+                      left: 1582px;
+                  }
+                  }
+                }
+                .bestPrice{
+                  width: 70px;
+                  height: 19px;
+                  display: inline-flex;
+                  padding: 7px 17.5px;
+                  justify-content: center;
+                  background-color: #FEF1DC;
+                  align-items: center;
+                  border-radius: 18px;
+                  position: absolute;
+                  bottom: -60px;
+                  left: 29px;
+                  h2{
+                    color: #9C6100;
+                    font-family: $font-source;
+                    font-size: 8px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px;
+                    @media (min-width: $desktop-width) {
+                      color: #9C6100;
+                      font-family: Sarabun;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 22px;
+                  }
+                  }
+                  @media (min-width: $desktop-width) {
+                    width: 140px;
+                    height: 36px;
+                    position: absolute;  
+                    top: 329px;
+                    left: 1506px;
+                }
+                }
+                .eco{
+                  width: 75px;
+                  height: 19px;
+                  display: inline-flex;
+                  padding: 7px 17.5px;
+                  justify-content: center;
+                  background-color: #FEF6EF;
+                  border-radius: 18px;
+                  align-items: center;
+                  position: absolute;
+                  bottom: -33px;
+                  left: 165px;
+                  p{
+                    color: #FE902B;
+                    font-family: $font-source;
+                    font-size: 8px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px;
+                    @media (min-width: $desktop-width) {
+                      color: #FE902B;
+                      font-family: Sarabun;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 22px;
+                  } 
+                  }
+                  @media (min-width: $desktop-width) {
+                    width: 140px;
+                    height: 36px;
+                    position: absolute;  
+                    bottom: -275px;
+                    left: 1862px;
+                }
+                }
+                .fly{
+                  width: 70px;
+                  height: 19px;
+                  display: inline-flex;
+                  padding: 7px 17.5px;
+                  justify-content: center;
+                  background-color: #F2FAF9;
+                  align-items: center;
+                  border-radius: 18px;
+                  position: absolute;
+                  top: 40px;
+                  right: -7px;
+                  h3{
+                    color:  #246B5E;
+                    font-family: $font-source;
+                    font-size: 8px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px;
+                    @media (min-width: $desktop-width) {
+                      color: #246B5E;
+                      font-family: Sarabun;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 22px;
+                  } 
+                  }
+                  @media (min-width: $desktop-width) {
+                    width: 140px;
+                    height: 36px;
+                    position: absolute;  
+                    top: 159px;
+                    left: 1380px;     
+                }
+                }
+                .rojo-oval{
+                  width: 8px;
+                  height: 8px;
+                  position: absolute;
+                  display: grid;
+                  bottom: -77px;
+                  left: 169px;
+                  @media (min-width: $desktop-width) {
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;  
+                    bottom: -387px;
+                    left: 1829px;      
+                }
+                }
+                .verde-oval{
+                  width: 8px;
+                  height: 8px;
+                  display: grid;
+                  position: absolute;
+                  top: 74px;
+                  left: 70px;
+                  @media (min-width: $desktop-width) {
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;  
+                    left: 1497px;
+                    top: 247px;          
+                }
+                }
+                .azul-oval{
+                  width: 8px;
+                  height: 8px;
+                  position: absolute;
+                  display: grid;
+                  bottom: 7px;
+                  left: 228px;        
+                  @media (min-width: $desktop-width) {
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;  
+                    left: 1936px;            
+                    top: 137px;           
+                }
               }
-          }
-          p {
-            color: $primary-color;
-            font-family: $font-source;
-            font-size: 1.2rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 22px;
-            margin-left: 60px;
-            @media (min-width: $desktop-width) {
-              position: absolute;
-              top: 104px;
-              left: 4px;
+                @media (min-width: $desktop-width) {
+                  position: absolute;  
+                  right: 193px;            
+                  top: 31px;           
               }
-          }
-          
-          .group {
-            width: 64px;
-            height: 64px;
-            margin-left: 75px;
-            @media (min-width: $desktop-width) {
-              position: absolute;
-              top: 131px;
-              left: 7px;
               }
-          }     
-          .numero {
-            width: 28px;
-            height: 21px; 
-            margin-left: 97px;
-            margin-top: 3px;
-            @media (min-width: $desktop-width) {
-              position: absolute;
-              top: 214px;
-              left: 5px;
-              }
-          }
-          
-          h2 {
-            color: $secondary-text-color;
-            font-family: $font-source;
-            font-weight: $regular-weight;
-            line-height: 22px;
-            margin-left: 80px;
-            margin-bottom: 23px;
-            @media (min-width: $desktop-width) {
-              position: absolute;
-              top: 251px;
-              left: 6px;
-              }
-          } 
-          @media (min-width: $desktop-width) {
-          position: absolute;
-          top: 130px;
-          right: 316px;
-          }
-        }
-        .DatePicker__world {
-          width: 797px;
-          height: 370px;
-          gap: 10px;
-          position: relative; 
-          .world-map{
-            width: 100%;
-            height: 100%;
-            display: grid;
-            @media (min-width: $desktop-width) {
-              position: absolute;  
-              bottom: 7px;
-              left: 35px;
-          }
-          }
-          .airplane {
-            min-width: $mobile-width;
-            height: 10%;
-            display: grid;
-          .plane{
-            width: 100%;
-            height: 100%;
-            display: grid;
-            img {
-              width: 230px;
-              height: 77px;
-              transform: rotate(6.27deg);
-              position: absolute; 
-              top: 93px;
-              left: 264px; 
-              z-index: 1; 
+              @media (min-width: $desktop-width) {
+                         
             }
-            @media (min-width: $desktop-width) {
-              position: absolute;  
-              bottom: 33px;
-              left: -161px;
           }
-          }
-          .bestPrice{
-            width: 109px;
-            height: 24px;
-            display: inline-flex;
-            padding: 7px 17.5px;
-            justify-content: center;
-            background-color: #FEF1DC;
-            align-items: center;
-            border-radius: 18px;
-            position: absolute;
-            bottom: 17px;
-            left: 179px;
-            h2{
-              color: #9C6100;
-              font-family: $font-source;
-              font-size: 10px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 22px;
-            }
-            @media (min-width: $desktop-width) {
-              position: absolute;  
-              bottom: -247px;
-              left: 71px;
-          }
-          }
-          .eco{
-            width: 109px;
-            height: 24px;
-            display: inline-flex;
-            padding: 7px 17.5px;
-            justify-content: center;
-            background-color: #FEF6EF;
-            border-radius: 18px;
-            align-items: center;
-            position: absolute;
-            bottom: 117px;
-            left: 451px;
-            p{
-              color: #FE902B;
-              font-family: $font-source;
-              font-size: 10px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 22px; /* 157.143% */
-            }
-            @media (min-width: $desktop-width) {
-              position: absolute;  
-              bottom: -144px;
-              left: 366px;
-          }
-          }
-          .fly{
-            width: 109px;
-            height: 24px;
-            display: inline-flex;
-            padding: 7px 17.5px;
-            justify-content: center;
-            background-color: #F2FAF9;
-            align-items: center;
-            border-radius: 18px;
-            position: absolute;
-            top: 181px;
-            right: 550px;
-            h3{
-              color:  #246B5E;
-              font-family: $font-source;
-              font-size: 10px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 22px; 
-              font-family: Sarabun;
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 22px; 
-            }
-            @media (min-width: $desktop-width) {
-              position: absolute;  
-              top: 124px;
-              right: 395px;     
-          }
-          }
-          .rojo-oval{
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            display: grid;
-            bottom: -37px;
-            left: 314px;
-            @media (min-width: $desktop-width) {
-              position: absolute;  
-              bottom: -269px;
-              left: 327px;      
-          }
-          }
-          .verde-oval{
-            width: 16px;
-            height: 16px;
-            display: grid;
-            position: absolute;
-            top: 258px;
-            left: 233px;
-            @media (min-width: $desktop-width) {
-              position: absolute;  
-              left: 26px;
-              top: 207px;          
-          }
-          }
-          .azul-oval{
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            display: grid;
-            bottom: 250px;
-            left: 495px;        
-            @media (min-width: $desktop-width) {
-              position: absolute;  
-              left: 426px;            
-              top: 73px;           
-          }
-        }
-          @media (min-width: $desktop-width) {
-            position: absolute;  
-            right: 193px;            
-            top: 31px;           
-        }
-        }
-        @media (min-width: $desktop-width) {
-          position: absolute;  
-          right: 200px;            
-          top: 125Xpx;           
-      
-      }
-    }
-
-      }
+            } 
       .DatePicker-container-calendary__global{
-        min-height: $mobile-width;
-        height: 100%;
-        display: grid;
-        grid-auto-flow: column;
-        column-gap: 19px;
-        margin-top: 163px;
-          @media (min-width: $desktop-width) {
-            margin: 20px;
-            grid-template-columns: auto 360px; 
-          }
-          .Dates {
-            display: flex;
-            flex-direction: column;
-            gap: 20px; // Espacio entre Departure y ReturnDate
-        }
-         .DatePicker__Departure{
-          width: 114px;
-          height: 36px;
-          padding: 7px 12px;
-          background-color: $tertiary-color;
-          border-radius: 20px;
-          position: relative;
-          display: grid;
-           /*   gap: 6px; */
-           @include flexCenter(row, space-between, center);
-           p{
-             color: $input-background;
-             font-family: $font-source;
-             font-size: 13px;
-             font-weight: 400;
-             line-height: 26px; 
-             .departure{
-              width: 80px;
-              height: 30px;
-               background-color: transparent;
-               border: 0;
-               display: grid;
-             }
-           }
-           img{
-             width: 20px;
-             height: 20px;
-           }
-           @media (min-width: $desktop-width) {
-            margin: 30px;
-            grid: auto-flow 50px / 200px ;
-          }
-          }
-          .DatePicker__Returndate{
-            width: 114px;
-            height: 36px;
-            padding: 7px 12px;
-            background-color:$input-background;
-            border-radius: 20px;
-            display: grid;  
-          /*   gap: 6px; */
-            @include flexCenter(row-reverse, space-between, center);
-            p{
-              color: $tertiary-color;
-              font-family: $font-source;
-              font-size: 13px;
-              font-weight: 400;
-        /*       line-height: 26px;  */
+              min-height: $mobile-width;
+              height: 133%;
               display: grid;
-              .Returndate{
-                width: 80px;
-                height: 30px;
-                 background-color: transparent;
-                 border: 0;
-                 display: grid;
-               }
-            img{
-              width: 20px;
-              height: 20px;
-              display: gris;
-              margin-left: 12px;
-            }
-           }
-           @media (min-width: $desktop-width) {
-            margin: 31px;
-            margin-top: 85px;
-            margin-left: -169px;
-            grid: auto-flow 50px / 200px ;
-          }
-          .Calendary{
-            width: 100%;
-            height: 100%;
-            display: grid;
-            margin-left: 80px;
-            bottom: 30px;
-            .date{
-              width: 360px;
-              height: 330px;
-              display: grid;
-            }
-            @media (min-width: $desktop-width) {
-              width: 360px;
-              height: 330px;
-              position: absolute;
-              margin-left: -396px;
-              margin-top: 32px;
-          }
-        }
-        }
-      }  
-     }
+              grid-auto-flow: column;
+              column-gap: 19px;
+              margin-top: 163px;
+                @media (min-width: $desktop-width) {
+                  margin: 20px;
+                  grid-template-columns: auto 63px; 
+                }
+                .Dates {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px; // Espacio entre Departure y ReturnDate
+              }
+               .DatePicker__Departure{
+                width: 106px;
+                height: 28px;
+                padding: 7px 12px;
+                background-color: $tertiary-color;
+                border-radius: 20px;
+                position: relative;
+                display: grid;
+                 /*   gap: 6px; */
+                 @include flexCenter(row, space-between, center);
+                 p{
+                   color: $input-background;
+                   font-family: $font-source;
+                   font-size: 13px;
+                   font-weight: 400;
+                   line-height: 26px; 
+                   .departure{
+                    width: 80px;
+                    height: 30px;
+                     background-color: transparent;
+                     border: 0;
+                     display: grid;
+                   }
+                 }
+                 img{
+                   width: 20px;
+                   height: 20px;
+                 }
+                 @media (min-width: $desktop-width) {
+                  width: 105px;
+                  height: 26px;
+                  margin-left: 30px;
+                  grid: auto-flow 50px / 200px ;
+                }
+                }
+                .DatePicker__Returndate{
+                  width: 106px;
+                  height: 28px;
+                  padding: 7px 12px;
+                  background-color:$input-background;
+                  border-radius: 20px;
+                  display: grid;  
+                  gap: 6px;
+                  @include flexCenter(row-reverse, flex-end, right);
+                  p{
+                    color: $tertiary-color;
+                    font-family: $font-source;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 26px; 
+                    display: grid;
+                    margin-left: -6px;
+                    .Returndate{
+                       width: 80px;
+                       height: 30px;
+                       background-color: transparent;
+                       border: 0;
+                       display: grid;
+                     }
+                  img{
+                    width: 20px;
+                    height: 20px;
+              
+                  }
+                 }
+                 @media (min-width: $desktop-width) {
+                  width: 105px;
+                  height: 26px;
+                  margin: 31px;
+                  margin-top: 37px;
+                  margin-left: -122px;
+                  grid: auto-flow 50px / 200px ;
+                }
+                .Calendary{
+                  width: 100%;
+                  height: 100%;
+                  display: grid;
+                  margin-left: 80px;
+                  bottom: 30px;
+                  border-color: transparent;
+                  .date{
+                    width: 360px;
+                    height: 330px;
+                    display: grid;
+                   border-color: transparent;
+                  }
+                  @media (min-width: $desktop-width) {
+                    width: 360px;
+                    height: 330px;
+                    display: grid;
+                    position: absolute;
+                    margin-left: -396px;
+                    margin-top: 32px;
+                }
+              }
+              }
+            } 
+    }
+  }
+       
+    
+     
+     
+        
+     
  
    
     
