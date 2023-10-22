@@ -1,22 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-import { createData } from '../../services/usersService'
+import { createData } from '../../../services/usersService.js'
 
 const SignUp = () => {
   const { register, handleSubmit } = useForm()
 
   const onSubmit = async ( userInfo  ) => {
-    // const user = {
-    //   username: userInfo.username,
-    //   userlastname: userInfo.userlastname,
-    //   phoneNumber: userInfo.phoneNumber,
-    //   documentType: userInfo.documentType,
-    //   documentNumber: userInfo.documentNumber,
-    //   email: userInfo.email,
-    //   genre: userInfo.genre,
-    //   password: userInfo.password,
-    //   birthdate: userInfo.birthdate
-    // }
     await createData(userInfo)
   }
 

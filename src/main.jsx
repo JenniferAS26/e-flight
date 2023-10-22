@@ -4,13 +4,16 @@ import ReactDOM from 'react-dom/client'
 import AppRoutes from './routes/AppRoutes'
 import './styles/global.scss'
 import FlightSearchProvider from './context/FlightSearchProvider'
+import AuthProvider from './auth/context/AuthProvider'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <FlightSearchProvider>
-        <AppRoutes />
-      </FlightSearchProvider>
+      <AuthProvider>
+        <FlightSearchProvider>
+          <AppRoutes />
+        </FlightSearchProvider>
+      </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )
