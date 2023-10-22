@@ -5,8 +5,17 @@ const createData = async (body) => {
   try {
     await axios.post(endpoints.users, body)
   } catch (error) {
-    console.log(error)
+    console.warn(error)
   }
 }
 
-export { createData }
+const getDataByParams = async (params) => {
+  try {
+    const { data } = await axios.get(endpoints.users, { params: params })
+    return data
+  } catch (error) {
+    console.warn(error)
+  }
+}
+
+export { createData, getDataByParams }
