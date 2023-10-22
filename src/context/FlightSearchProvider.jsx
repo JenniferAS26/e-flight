@@ -7,7 +7,7 @@ const FlightSearchProvider = ({ children }) => {
   const [flightList, setFlightList] = useState([])
   
   const getFlights = useCallback(() => {
-    getListOfFlights('BOG', 'MAD', '2023-10-21', '2', true)
+    getListOfFlights('BOG', 'MAD', '2023-10-23', '2', true)
       .then((response) => setFlightList(response))
   }, [])
   
