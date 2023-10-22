@@ -1,15 +1,12 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import Gallery from '../../components/Gallery'
 import GalleryCard from '../../components/GalleryCard'
 import DatePicker from '../../components/DatePicker'
-
 import Explore from '../../components/Explore'
-import { getListOfFlights } from '../../services/flightService'
-
+import Ticket from '../../components/Ticket'
 const Home = () => {
   const [randomImages, setRandomImages] = useState([])
-  const [flightList, setFlightList] = useState([])
-
+  
   useEffect(() => {
     fetch('https://api.unsplash.com/photos/?client_id=FP6o71rtFQqnYRrRXDvf7d07O49T7SH7OI7eUdugG0E')
       .then(response => response.json())
@@ -24,8 +21,8 @@ const Home = () => {
   useEffect(() => {
     getFlights()
   }, [getFlights])
+ /* console.log(flightList)  */
 
-/*   console.log(flightList) */
   return (
     <section className='home-container'>
       <DatePicker />
@@ -37,6 +34,7 @@ const Home = () => {
           ))
         }
       </Gallery>
+      <Ticket/>
     </section>
   )
 }
