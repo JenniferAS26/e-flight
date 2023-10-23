@@ -15,6 +15,7 @@ import glass from '../../assets/icons/glass.svg'
 import { Pagination } from 'flowbite-react'
 import { FlightSearchContext } from '../../context/FlightSearchContext'
 import SearchableDropdown from '../../components/SearchableDropdown'
+import { Button, Spinner } from 'flowbite-react'
 import './styles.scss'
 
 
@@ -161,9 +162,21 @@ const FlightListing = () => {
         </div>
         <FlightResults>
           {
-            flightList?.length ? flightList.map( (flightSearch, index) => (
+            flightList?.length 
+            ? flightList.map( (flightSearch, index) => (
               <FlightResultsCard key={index} data={flightSearch} />
-            )) : <div>Loading...</div>
+            )) 
+            : <div className='button-loading-container w-full grid justify-center items-center'>
+                <Button color="gray" className='spiner-button'>
+                    <Spinner
+                      aria-label="Alternate spinner button example"
+                      size="xl"
+                    />
+                    <span className="loading-span pl-3">
+                      Loading...
+                    </span>
+                  </Button>
+              </div>
           }
         </FlightResults>
         <div className='flight-listing__results--pagination'>
