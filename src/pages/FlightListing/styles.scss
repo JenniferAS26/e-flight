@@ -165,3 +165,19 @@ $inactive-options: #AFF8E1;
   display: none;
   // -webkit-appearance: none;
 }
+
+.button-loading-container {
+  height: 250px;
+}
+
+.spiner-button {
+  width: 200px;
+  height: 50px;
+}
+
+.loading-span {
+  font-size: 2rem;
+  font-weight: $bold-weight;
+  letter-spacing: 1px;
+  color: $bg-color-date;
+}

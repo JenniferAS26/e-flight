@@ -47,7 +47,7 @@ const FlightResultsCard = ({ data }) => {
           <div className='info'>
             <img src={luggage} alt='luggage icon' />
             {/* <span>{`${data.travelerPricings[0].fareDetailsBySegment[1].includedCheckedBags.weight}kg`}</span> */}
-            <span>{data.travelerPricings[0].fareDetailsBySegment[1].includedCheckedBags.quantity}</span>
+            <span>{data.travelerPricings[0].fareDetailsBySegment[1]?.includedCheckedBags?.quantity}</span>
           </div>
         </div>
       </section>
