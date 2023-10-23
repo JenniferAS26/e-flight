@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import logo from '../../assets/icons/logo.svg'; // Importa el logo SVG
 import globeIcon from '../../assets/icons/location.svg'; // Importa el icono de ubicación
 import bellIcon from '../../assets/icons/notifications.svg'; // Importa el icono de notificaciones
@@ -5,8 +6,14 @@ import avatarIcon from '../../assets/images/Rectangle.png'; // Importa la imagen
 import './Header.scss';
 
 const Header = () => {
+    const navigate = useNavigate()
+
+    const goToHome = () => {
+        navigate('/')
+    }
+
     return (
-        <header className="header">
+        <header className="header cursor-pointer" onClick={goToHome}>
             <div className="header-logo">
                 <img src={logo} alt="Logo" className="plane-icon" />
                 <span className="logo-text">E-flight</span>
