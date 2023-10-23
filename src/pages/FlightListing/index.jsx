@@ -1,4 +1,5 @@
-import { useCallback, useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
+import { useForm } from 'react-hook-form'
 import Filters from '../../components/Filters'
 import SortBy from '../../components/SortBy'
 import FlightResults from '../../components/FlightResults'
@@ -14,29 +15,32 @@ import glass from '../../assets/icons/glass.svg'
 import { Pagination } from 'flowbite-react'
 import { FlightSearchContext } from '../../context/FlightSearchContext'
 import SearchableDropdown from '../../components/SearchableDropdown'
-import airports from '../../data/airports.json' 
 import './styles.scss'
-import { getListOfFlights } from '../../services/flightService'
 
 
 
 const FlightListing = () => {
   const [departureValue, setDepartureValue] = useState()
   const [arrivalValue, setArrivalValue] = useState()
+  const { register, handleSubmit } = useForm()
+
+  const { filter, flightList } = useContext(FlightSearchContext)
+
   const [currentPage, setCurrentPage] = useState(1)
   const onPageChange = (page) => setCurrentPage(page)
-  const { filter } = useContext(FlightSearchContext)
 
-  // const [flightList, setFlightList] = useState([])
-  
-  // const getFlights = useCallback(() => {
-  //   getListOfFlights(departureValue, arrivalValue, '2023-10-29', '2', false, 'ECONOMY')
-  //     .then((response) => setFlightList(response))
-  // }, [])
+  const searchFlight = JSON.parse(localStorage.getItem('searchDetail'))
 
-  // useEffect(() => {
-  //   getFlights()
-  // }, [getFlights])
+  const onSubmit = ( changeFlightDetails ) => {
+    const newFlightDetails = {
+      ...searchFlight,
+      departureDateChange: changeFlightDetails.departureDateChange,
+      arrivalDateChange: changeFlightDetails.arrivalDateChange,
+      departure: departureValue,
+      arrival: arrivalValue
+    }
+    console.log(newFlightDetails)
+  }
   
   
 
@@ -66,7 +70,7 @@ const FlightListing = () => {
           </button>
         </div>
         <div className='flight-listing__results--change-flight'>
-          <form className='switch-flight'>
+          <form className='switch-flight' onSubmit={ handleSubmit(onSubmit) }>
             <div className='switch-flight__wrapper flex justify-between items-center'>
               <div className='input-wrapper'>
                 <img src={pointer} alt='pointer icon' />
@@ -102,9 +106,19 @@ const FlightListing = () => {
             </div>
             <div className='switch-flight__date-wrapper flex justify-between items-center'>
               <img src={calendar} alt='pointer icon' />
-              <input className='date-input' type='date' />
+              <input 
+                className='date-input' 
+                type='date' 
+                name='departureDateChange'
+                { ...register('departureDateChange') }
+              />
               <div className='separator'></div>
-              <input className='date-input' type='date' />
+              <input 
+                className='date-input' 
+                type='date' 
+                name='arrivalDateChange'
+                { ...register('arrivalDateChange') }
+              />
             </div>
             <button className='switch-flight__button' type='submit'>
               <img src={glass} alt='glass icon' />

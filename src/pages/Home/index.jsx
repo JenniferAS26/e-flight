@@ -1,9 +1,10 @@
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState } from 'react'
 import Gallery from '../../components/Gallery'
 import GalleryCard from '../../components/GalleryCard'
 import DatePicker from '../../components/DatePicker'
 import Explore from '../../components/Explore'
 import Ticket from '../../components/Ticket'
+import TransitionComponent from '../../components/TransitionComponent'
 const Home = () => {
   const [randomImages, setRandomImages] = useState([])
   
@@ -13,18 +14,11 @@ const Home = () => {
       .then(data => setRandomImages(data))
   }, [])
 
-  const getFlights = useCallback(() => {
-    getListOfFlights('BOG', 'MAD', '2023-10-21', '2', true)
-      .then((response) => setFlightList(response))
-  }, [])
   
-  useEffect(() => {
-    getFlights()
-  }, [getFlights])
- /* console.log(flightList)  */
 
   return (
     <section className='home-container'>
+      <TransitionComponent />
       <DatePicker />
       <Explore />
       <Gallery>

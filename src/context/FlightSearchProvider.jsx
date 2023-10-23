@@ -6,9 +6,10 @@ import airports from '../data/airports.json'
 
 const FlightSearchProvider = ({ children }) => {
   const [flightList, setFlightList] = useState([])
+  const searchDetail = JSON.parse(localStorage.getItem('searchDetail'))
   
   const getFlights = useCallback(() => {
-    getListOfFlights('SYD', 'BKK', '2023-10-29', '2', false, 'ECONOMY')
+    getListOfFlights(searchDetail.departure, searchDetail.arrival, searchDetail.departureDate, searchDetail.passengers, false, searchDetail.classesType)
       .then((response) => setFlightList(response))
   }, [])
 

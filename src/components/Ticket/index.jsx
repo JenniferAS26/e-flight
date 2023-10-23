@@ -74,26 +74,26 @@ const Ticket = () => {
         </div>
         </div >
               <div className='ticket-container__barcode1'>
-              <div class="bargruesa"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div> 
-              <div class="bargruesa"></div>
-              <div class="bargruesa"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bargruesa"></div>
-              <div class="bargruesa"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bargruesa"></div>
-              <div class="bargruesa"></div>
-              <div class="bargruesa"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bargruesa"></div>
+              <div className="bargruesa"></div>
+              <div className="bardelgada"></div>
+              <div className="bardelgada"></div>
+              <div className="bardelgada"></div> 
+              <div className="bargruesa"></div>
+              <div className="bargruesa"></div>
+              <div className="bardelgada"></div>
+              <div className="bardelgada"></div>
+              <div className="bardelgada"></div>
+              <div className="bargruesa"></div>
+              <div className="bargruesa"></div>
+              <div className="bardelgada"></div>
+              <div className="bardelgada"></div>
+              <div className="bardelgada"></div>
+              <div className="bargruesa"></div>
+              <div className="bargruesa"></div>
+              <div className="bargruesa"></div>
+              <div className="bardelgada"></div>
+              <div className="bardelgada"></div>
+              <div className="bargruesa"></div>
             </div> 
 
 
@@ -113,26 +113,26 @@ const Ticket = () => {
           <span>Airline Booking code</span>
           <span>CA-6018</span>
         <div className='barcode'>
-          <div class="bargruesa"></div>
-          <div class="bardelgada"></div>
-          <div class="bardelgada"></div>
-          <div class="bardelgada"></div> 
-          <div class="bargruesa"></div>
-          <div class="bargruesa"></div>
-          <div class="bardelgada"></div>
-          <div class="bardelgada"></div>
-          <div class="bardelgada"></div>
-          <div class="bargruesa"></div>
-          <div class="bargruesa"></div>
-          <div class="bardelgada"></div>
-          <div class="bardelgada"></div>
-          <div class="bardelgada"></div>
-          <div class="bargruesa"></div>
-          <div class="bargruesa"></div>
-          <div class="bargruesa"></div>
-          <div class="bardelgada"></div>
-          <div class="bardelgada"></div>
-          <div class="bargruesa"></div>
+          <div className="bargruesa"></div>
+          <div className="bardelgada"></div>
+          <div className="bardelgada"></div>
+          <div className="bardelgada"></div> 
+          <div className="bargruesa"></div>
+          <div className="bargruesa"></div>
+          <div className="bardelgada"></div>
+          <div className="bardelgada"></div>
+          <div className="bardelgada"></div>
+          <div className="bargruesa"></div>
+          <div className="bargruesa"></div>
+          <div className="bardelgada"></div>
+          <div className="bardelgada"></div>
+          <div className="bardelgada"></div>
+          <div className="bargruesa"></div>
+          <div className="bargruesa"></div>
+          <div className="bargruesa"></div>
+          <div className="bardelgada"></div>
+          <div className="bardelgada"></div>
+          <div className="bargruesa"></div>
         </div>  
       </div>
         <div className='button'>

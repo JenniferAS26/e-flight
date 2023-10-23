@@ -6,7 +6,7 @@ const SearchableDropdown = ({
   label,
   id,
   selectedVal,
-  handleChange
+  handleChange,
 }) => {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
