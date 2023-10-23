@@ -1,14 +1,29 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { createData } from '../../../services/usersService.js'
 import logo from '../../../assets/icons/logo.svg'
+import Swal from 'sweetalert2'
 import './styles.scss'
 
 const SignUp = () => {
   const { register, handleSubmit } = useForm()
+  const navigate = useNavigate()
 
   const onSubmit = async ( userInfo  ) => {
     await createData(userInfo)
+    const userConfirmCreation = await Swal.fire({
+      title: 'Account created successfully',
+      confirmButtonText: 'Ok',
+      reverseButtons: true,
+      "customClass": {
+          button: 'custom-button',
+          htmlContainer: 'custom-container'
+      },
+    })
+    if (userConfirmCreation.isConfirmed) {
+      navigate('/sign-in')
+      // window.location.reload()
+    }
   }
 
   return (
