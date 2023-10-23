@@ -1,19 +1,23 @@
-import { useCallback, useState } from "react"
-import { FlightSearchContext } from "./FlightSearchContext"
-import { getListOfFlights } from "../services/flightService"
-import { useEffect } from "react"
+import { useCallback, useState, useEffect} from 'react'
+import { FlightSearchContext } from './FlightSearchContext'
+import { getListOfFlights } from '../services/flightService'
+import { getToken } from '../services/auth'
 
 const FlightSearchProvider = ({ children }) => {
   const [flightList, setFlightList] = useState([])
   
   const getFlights = useCallback(() => {
-    getListOfFlights('BOG', 'MAD', '2023-10-23', '2', true)
+    getListOfFlights('SYD', 'BKK', '2023-10-29', '2', false, 'ECONOMY')
       .then((response) => setFlightList(response))
   }, [])
   
   useEffect(() => {
     getFlights()
   }, [getFlights])
+
+  useEffect(() => {
+    getToken()
+  }, [])
 
   return (
     <FlightSearchContext.Provider value={{ flightList }}>

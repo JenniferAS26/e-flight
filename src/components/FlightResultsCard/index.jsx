@@ -6,6 +6,22 @@ import departure from '../../assets/icons/departure.svg'
 import './styles.scss'
 
 const FlightResultsCard = ({ data }) => {
+
+  const formatDuration = (duration) => {
+    const reg = /PT([0-9]{1,2}H)?([0-9]{1,2}M)?/
+    const parsedDuration = reg.exec(duration)
+    const hours = parseInt(parsedDuration[1])
+    const minutes = parseInt(parsedDuration[2])
+    let displayDuration = ''
+    if (hours) {
+      displayDuration += `${hours}hr ` 
+    } 
+    if (minutes) {
+      displayDuration += `${minutes}min` 
+    }
+    return displayDuration
+  }
+
   return (
     <article className='card cursor-pointer'>
       <section className='card__airline-info'>
@@ -22,7 +38,7 @@ const FlightResultsCard = ({ data }) => {
         <h3 className='card__time--hour desktop'>10:25PM - 7:06AM</h3>
         <div className='card__time--duration'>
             <img src={clock} alt='clock icon' />
-            <span>{data.itineraries[0].duration}</span>
+            <span>{ formatDuration(data.itineraries[0].duration) }</span>
           </div>
       </section>
       <section className='card__stops'>

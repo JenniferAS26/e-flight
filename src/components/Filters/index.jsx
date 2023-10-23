@@ -108,11 +108,21 @@ const Filters = () => {
           </div>
           <form className='filters-desktop__point-container--form'>
             <div className='input-container'>
-              <input className='check-input' type="checkbox" name="" id="departure" />
+              <input 
+                className='check-input' 
+                type="checkbox" 
+                id="departure" 
+                value='departure'
+              />
               <label className='check-label' htmlFor="departure">Osaka (ITM)</label>
             </div>
             <div className='input-container'>
-              <input className='check-input' type="checkbox" name="" id="arrival" />
+              <input 
+                className='check-input' 
+                type="checkbox" 
+                id="arrival" 
+                value='arrival'
+              />
               <label className='check-label' htmlFor="arrival">Kuala Lumpur (KUL)</label>
             </div>
           </form>

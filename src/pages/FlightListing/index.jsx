@@ -19,7 +19,7 @@ const FlightListing = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const onPageChange = (page) => setCurrentPage(page)
   const { flightList } = useContext(FlightSearchContext)
-  console.log(flightList)
+  
   return (
     <section className='flight-listing'>
       <div className='flight-listing__filters'>
