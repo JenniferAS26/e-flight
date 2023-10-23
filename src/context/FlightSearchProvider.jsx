@@ -6,6 +6,16 @@ import airports from '../data/airports.json'
 
 const FlightSearchProvider = ({ children }) => {
   const [flightList, setFlightList] = useState([])
+/*   const initialValuesSearch = {
+    arrival: '',
+    departure: '',
+    classesType: '',
+    departureDate: '',
+    passengers: '',
+    tripType: ''
+  }
+
+  localStorage.setItem('searchDetail', JSON.stringify(initialValuesSearch)) */
   const searchDetail = JSON.parse(localStorage.getItem('searchDetail'))
   
   const getFlights = useCallback(() => {
