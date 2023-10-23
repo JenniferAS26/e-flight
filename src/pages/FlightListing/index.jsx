@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useCallback, useContext, useEffect, useState } from 'react'
 import Filters from '../../components/Filters'
 import SortBy from '../../components/SortBy'
 import FlightResults from '../../components/FlightResults'
@@ -12,14 +12,34 @@ import switching from '../../assets/icons/switch.svg'
 import calendar from '../../assets/icons/calendar-black.svg'
 import glass from '../../assets/icons/glass.svg'
 import { Pagination } from 'flowbite-react'
-import './styles.scss'
 import { FlightSearchContext } from '../../context/FlightSearchContext'
+import SearchableDropdown from '../../components/SearchableDropdown'
+import airports from '../../data/airports.json' 
+import './styles.scss'
+import { getListOfFlights } from '../../services/flightService'
+
+
 
 const FlightListing = () => {
+  const [departureValue, setDepartureValue] = useState()
+  const [arrivalValue, setArrivalValue] = useState()
   const [currentPage, setCurrentPage] = useState(1)
   const onPageChange = (page) => setCurrentPage(page)
-  const { flightList } = useContext(FlightSearchContext)
+  const { filter } = useContext(FlightSearchContext)
+
+  // const [flightList, setFlightList] = useState([])
   
+  // const getFlights = useCallback(() => {
+  //   getListOfFlights(departureValue, arrivalValue, '2023-10-29', '2', false, 'ECONOMY')
+  //     .then((response) => setFlightList(response))
+  // }, [])
+
+  // useEffect(() => {
+  //   getFlights()
+  // }, [getFlights])
+  
+  
+
   return (
     <section className='flight-listing'>
       <div className='flight-listing__filters'>
@@ -50,14 +70,34 @@ const FlightListing = () => {
             <div className='switch-flight__wrapper flex justify-between items-center'>
               <div className='input-wrapper'>
                 <img src={pointer} alt='pointer icon' />
-                <input type='text' placeholder='Houston (HOU)' />
+                {/* <input type='text' placeholder='Houston (HOU)' /> */}
+                <SearchableDropdown 
+                  options={filter()}
+                  label='municipality'
+                  id='3'
+                  selectedVal={departureValue}
+                  handleChange={(val) => {
+                    setDepartureValue(val)
+                    console.log(val)
+                  }}
+                />
               </div>
               <span className='mx-8'>
                 <img src={switching} alt='arrows icon' />
               </span>
               <div className='input-wrapper'>
                 <img src={pointer} alt='pointer icon' />
-                <input type='text' placeholder='Los Angeles (LAX)' />
+                {/* <input type='text' placeholder='Los Angeles (LAX)' /> */}
+                <SearchableDropdown 
+                  options={filter()}
+                  label='municipality'
+                  id='3'
+                  selectedVal={arrivalValue}
+                  handleChange={(val) => {
+                    setArrivalValue(val)
+                    console.log(val)
+                  }}
+                />
               </div>
             </div>
             <div className='switch-flight__date-wrapper flex justify-between items-center'>
@@ -107,9 +147,9 @@ const FlightListing = () => {
         </div>
         <FlightResults>
           {
-            flightList.map( (flightSearch, index) => (
+            flightList?.length ? flightList.map( (flightSearch, index) => (
               <FlightResultsCard key={index} data={flightSearch} />
-            ))
+            )) : <div>Loading...</div>
           }
         </FlightResults>
         <div className='flight-listing__results--pagination'>
