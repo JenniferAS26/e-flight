@@ -5,6 +5,7 @@ import FlightListing from '../pages/FlightListing'
 import FlightBooking from '../pages/FlightBooking'
 import SignUp from '../auth/pages/SignUp'
 import SignIn from '../auth/pages/SignIn'
+import PassengerForm from '../components/PassengerForm'
 
 const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AppRoutes = () => {
           <Route path='/flight-booking' element={<FlightBooking />} />
           <Route path='sign-in' element={<SignIn />} />
           <Route path='sign-up' element={<SignUp/>} />
+          <Route path='passenger-form' element={<PassengerForm />} />
         </Route>
       </Routes>
   )
