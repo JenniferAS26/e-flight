@@ -48,7 +48,7 @@ const SignUp = () => {
               { ...register('documentType') }
             >
               <option value='cc'>Cédula de ciudadania</option>
-              <option value='pastport'>Pasaporte</option>
+              <option value='passport'>Pasaporte</option>
             </select>
           </div>
           <div className='grid gap-4'>
