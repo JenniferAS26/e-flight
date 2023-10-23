@@ -74,11 +74,23 @@ const SortBy = () => {
           </div>
           <form className='sortby-desktop__bottom-container--form'>
             <div className='input-container'>
-              <input className='input-container__radio-button' type='radio' id='lowest' />
+              <input 
+                className='input-container__radio-button' 
+                type='radio' 
+                name='price' 
+                id='lowest' 
+                value='lowest' 
+              />
               <label className='input-container__label' htmlFor='lowest'>Lowest price</label>
             </div>
             <div className='input-container'>
-              <input className='input-container__radio-button' type='radio' id='highest' />
+              <input 
+                className='input-container__radio-button' 
+                type='radio' 
+                name='price' 
+                id='highest' 
+                value='highest' 
+              />
               <label className='input-container__label' htmlFor='highest'>Highest price</label>
             </div>
           </form>
