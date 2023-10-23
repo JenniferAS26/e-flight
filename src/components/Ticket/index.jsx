@@ -4,6 +4,9 @@ import imgnube from '../../assets/icons/airline3.svg'
 import imgmaleta from '../../assets/icons/bag.svg'
 import imgavion from '../../assets/icons/landing-airplane.svg'
 import imgavion2 from '../../assets/icons/logo-white.svg'
+import imgniño from '../../assets/images/gallery-1.svg'
+import imgvarco from '../../assets/images/gallery-2.svg'
+import imglapiz from '../../assets/images/gallery-3.svg'
 
 import './styles.scss'
 
@@ -34,14 +37,16 @@ const Ticket = () => {
 
       <div className='ticket-container__ticket'>
         <div className='ticket-container__cloudy--airlines'>
-          <img src={imgnube} alt="" />
-          <h3>Cloudy Airlines</h3>
-          <div className='ticket-container__cloudy--booton'>
-            <img src={imgmaleta} alt="" />
+           <img src={imgnube} alt="" />
+           <h3>Cloudy Airlines</h3>     
+           <div className='ticket-container__bag--booton'>
+            <span>
+              <img src={imgmaleta} alt="" />
+            </span> 
             <div className='kg'>2x23Kg</div>
             <div className='kg'>1x7Kg</div>
-          </div> 
-        </div>
+          </div>  
+      </div>
           
         <div className='ticket-container__passenger'>
           <span>Passenger: </span>
@@ -56,13 +61,13 @@ const Ticket = () => {
             <div className='infovuelos'>
               <div className='detalleinfovuelos'>
                 <span className='hora'>23:15</span>
-                <span className='ciudad'>Houston</span>
+                <span className='ciudad'>Houston (HOU)</span>
                 <span className='fecha'>9 Feb,2023</span>
               </div>
               <div className='detalleinfovuelos'>
-                <span className='hora'>23:15</span>
-                <span className='ciudad'>Houston</span>
-                <span className='fecha'>9 Feb,2023</span>
+                <span className='hora'>1:25</span>
+                <span className='ciudad'>Las Vegas (LAS)</span>
+                <span className='fecha'>10 Feb,2023</span>
               </div>
             </div>
             <div className='ticket-container__img--trayecto1'>
@@ -73,28 +78,38 @@ const Ticket = () => {
             </div>
         </div>
         </div >
-              <div className='ticket-container__barcode1'>
-              <div class="bargruesa"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div> 
-              <div class="bargruesa"></div>
-              <div class="bargruesa"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bargruesa"></div>
-              <div class="bargruesa"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bargruesa"></div>
-              <div class="bargruesa"></div>
-              <div class="bargruesa"></div>
-              <div class="bardelgada"></div>
-              <div class="bardelgada"></div>
-              <div class="bargruesa"></div>
-            </div> 
+        <div className='ticket-container__barcode1'>
+          <div class="bargruesa"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div> 
+          <div class="bargruesa"></div>
+          <div class="bargruesa"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bargruesa"></div>
+          <div class="bargruesa"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bargruesa"></div>
+          <div class="bargruesa"></div>
+          <div class="bargruesa"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bargruesa"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bargruesa"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bargruesa"></div>
+          <div class="bargruesa"></div>
+          
+        </div> 
 
 
 
@@ -104,6 +119,7 @@ const Ticket = () => {
           <span className='local'>*All time displayed are local</span>
         </div>       
       </div>
+      <div className='ticket-container__E--flight-container'>
       <div className='ticket-container__E--flight'>
           <span><img src={imgavion2} alt="" />
           <h5>E-flight</h5>          
@@ -133,13 +149,81 @@ const Ticket = () => {
           <div class="bardelgada"></div>
           <div class="bardelgada"></div>
           <div class="bargruesa"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bargruesa"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
+          <div class="bardelgada"></div>
         </div>  
+      </div>
       </div>
         <div className='button'>
           <button>Send to my e-mail</button>
         </div>
+        <div className='ticket-container__principal-title'>
+          <h1>What's new</h1>
+        </div>
+        <div className='ticket-container__cards'>
+          <div className='ticket-container__card1'>
+            <img src={imgniño} alt="" />
+            <div className='ticket-container__do--consectetus'>
+              <h2>Do Consectetus</h2>
+            </div>
+            <div className='ticket-container__US--flights'>
+              <h3> US flights delayed due to FAA system outage</h3>
+            </div>
+            <div className='ticket-container__informacion--final'>
+              <span>Dec 24,2022</span>
+              <p>5 mins read</p>
+            </div>
+          </div>
+
+          <div className='ticket-container__card2'>
+          <img src={imgvarco} alt="" />
+          <div className='ticket-container__do--consectetus'>
+            <h2>Do Consectetus</h2>
+          </div>
+          <div className='ticket-container__US--flights'>
+            <h3> US flights delayed due to FAA system outage</h3>
+          </div>
+          <div className='ticket-container__informacion--final'>
+            <span>Dec 24,2022</span>
+            <p>5 mins read</p>
+          </div>
+        </div>
+
+        <div className='ticket-container__card3'>
+          <img src={imglapiz} alt="" />
+          <div className='ticket-container__do--consectetus'>
+            <h2>Do Consectetus</h2>
+          </div>
+          <div className='ticket-container__US--flights'>
+            <h3> US flights delayed due to FAA system outage</h3>
+          </div>
+          <div className='ticket-container__informacion--final'>
+            <span>Dec 24,2022</span>
+            <p>5 mins read</p>
+          </div>
+        </div>
+        </div>
+
+        
+
+        <div className='ticket-container__button--final'>
+            <button>Read more articles</button>
+          </div>
+
     </div>
+
+
+
+
+
+
   )
+
 }
 
 export default Ticket
