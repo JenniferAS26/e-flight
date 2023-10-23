@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-
+/* import { useState } from 'react' */
 /* import { Datepicker } from 'flowbite-react' 
 import { Flowbite } from 'flowbite-react'; */
 import ImageRound from '../../assets/icons/round-tip.svg'
@@ -25,6 +25,11 @@ import './styles.scss'
 
 
 const DatePicker = () => {
+  /*   const [roundTrip, setRoundTrip] = useState(false);
+
+    const handleRoundTripClick = () => {
+      setRoundTrip(!roundTrip); // Cambia el valor de roundTrip cuando se hace clic
+    }; */
 
     const { register: searchFlight, handleSubmit } = useForm()
 
@@ -50,12 +55,13 @@ const DatePicker = () => {
             </div>
             <div className='DatePicker-container-header__wrapper'>
                 <div className='DatePicker-container-header__informacion'>
-                    <div className='round-trip'>
+                    <div className='round-trip'  /* onClick={handleRoundTripClick} */ >
                         <p>Round Trip</p>
                        <input 
                           type="radio" 
                           id="javascript"
                           className='radio' 
+                        /*   checked={roundTrip} */
                           {...searchFlight('roundTrip')}
                           name="roundTrip"
                        />
@@ -175,6 +181,7 @@ const DatePicker = () => {
                             onChange={handleReturnDateChange} */
                             className='Returndate' 
                             placeholder='Returndate'
+                            /* disabled={!roudTrip} */
                             {...searchFlight('ReturnDate')}  
                             name="ReturnDate" />
                     </p>
