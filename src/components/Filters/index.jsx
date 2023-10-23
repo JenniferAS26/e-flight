@@ -6,6 +6,9 @@ import './styles.scss'
 
 const Filters = () => {
   const [openModal, setOpenModal] = useState();
+
+  const { departure, arrival } = JSON.parse(localStorage.getItem('searchDetail'))
+
   return (
     <section className="filters-container">
       <section className='filters'>
@@ -48,13 +51,13 @@ const Filters = () => {
               <div className='filters__checkbox-wrapper flex justify-between'>
                 <div className='flex items-center gap-2'>
                   <Checkbox id='departure' />
-                  <Label className='filters__label' htmlFor='departure'>Osaka (ITM)</Label>
+                  <Label className='filters__label' htmlFor='departure'>{ departure }</Label>
                 </div>
               </div>
               <div className='filters__checkbox-wrapper flex justify-between'>
                 <div className='flex items-center gap-2'>
                   <Checkbox id='arrival' />
-                  <Label className='filters__label' htmlFor='arrival'>Kuala Lumpur (KUL)</Label>
+                  <Label className='filters__label' htmlFor='arrival'>{ arrival }</Label>
                 </div>
               </div>
               <div className='filters__bar'></div>
@@ -108,12 +111,22 @@ const Filters = () => {
           </div>
           <form className='filters-desktop__point-container--form'>
             <div className='input-container'>
-              <input className='check-input' type="checkbox" name="" id="departure" />
-              <label className='check-label' htmlFor="departure">Osaka (ITM)</label>
+              <input 
+                className='check-input' 
+                type="checkbox" 
+                id="departure" 
+                value='departure'
+              />
+              <label className='check-label' htmlFor="departure">{ departure }</label>
             </div>
             <div className='input-container'>
-              <input className='check-input' type="checkbox" name="" id="arrival" />
-              <label className='check-label' htmlFor="arrival">Kuala Lumpur (KUL)</label>
+              <input 
+                className='check-input' 
+                type="checkbox" 
+                id="arrival" 
+                value='arrival'
+              />
+              <label className='check-label' htmlFor="arrival">{ arrival }</label>
             </div>
           </form>
         </div>

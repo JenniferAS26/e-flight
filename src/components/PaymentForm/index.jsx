@@ -70,18 +70,16 @@
             Expiration Date
             <input type="date" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
             </label>
-        <div>
-            <label className="checkbox-label">
-            <input className="chec" type="checkbox" checked={sameAddress} onChange={() => setSameAddress(!sameAddress)} />
-            Use same address as billing info
-            </label>
-        </div>
-        <div>
+            <div>
+                <label className="checkbox-label">
+                    <input className="checkbox-input" type="checkbox" checked={sameAddress} onChange={() => setSameAddress(!sameAddress)} />
+                    <span className="checkbox-text">Use same address as billing info</span>
+                </label>
+            </div>
             <label className="adress">
             Address
             <input type="text" placeholder="Enter address" value={address} onChange={(e) => setAddress(e.target.value)} />
             </label>
-        </div>
         </div>
         <div>
             <label>
@@ -105,8 +103,8 @@
             </select>
             </label>
         </div>
-        <h2>By selecting the button below, I agree to the Property Rules, Terms and Conditions, and Privacy Policy </h2>
         </div>
+        <h3 className="tittle-terms">By selecting the button below, I agree to the Property Rules, Terms and Conditions, and Privacy Policy </h3>
         <button className="submit" type="submit">Submit</button>
         </form>
     );

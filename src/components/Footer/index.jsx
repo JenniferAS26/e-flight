@@ -1,6 +1,5 @@
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import logo from '../../assets/icons/logo.svg';
-import letterIcon from '../../assets/icons/letter.svg';
 import './Footer.scss';
 
 function Footer() {
@@ -12,31 +11,34 @@ function Footer() {
                     <span className="name">E-Flight</span>
                 </div>
                 <div className="links">
-                    <a href="#">About us</a>
-                    <a href="#">Flight</a>
-                    <a href="#">Contact us</a>
+                    <div className="link-group">
+                        <a href="#">About us</a>
+                        <div className="sub-links">
+                            <a href="#">How to book</a>
+                            <a href="#">Help center</a>
+                        </div>
+                    </div>
+                    <div className="link-group">
+                        <a href="#">Flight</a>
+                        <div className="sub-links">
+                            <a href="#">Booking easily</a>
+                            <a href="#">Promotions</a>
+                        </div>
+                    </div>
+                    <div className="link-group">
+                        <a href="#">Contact us</a>
+                        <div className="social">
+                            <FaTwitter />
+                            <FaFacebook />
+                            <FaInstagram />
+                        </div>
+                    </div>
                 </div>
                 <div className="subscribe">
                     <div className="input-container">
                         <input type="email" placeholder="input your email" className="email-input" />
-                        <img src={letterIcon} alt="Email Icon" className="input-icon" />
                     </div>
                     <button>Subscribete</button>
-                </div>
-                <div className="sub-links">
-                    <div className="about">
-                        <a href="#">How to book</a>
-                        <a href="#">Help center</a>
-                    </div>
-                    <div className="contact">
-                        <a href="#">Booking easily</a>
-                        <a href="#">Promotions</a>
-                    </div>
-                </div>
-                <div className="social">
-                    <FaTwitter />
-                    <FaFacebook />
-                    <FaInstagram />
                 </div>
                 <div className="copy">
                     © 2021 Company, Inc. • Privacy • Terms
