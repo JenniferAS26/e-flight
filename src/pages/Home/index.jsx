@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import Gallery from '../../components/Gallery'
 import GalleryCard from '../../components/GalleryCard'
+import DatePicker from '../../components/DatePicker'
 import Explore from '../../components/Explore'
 import Ticket from '../../components/Ticket'
+import TransitionComponent from '../../components/TransitionComponent'
 const Home = () => {
   const [randomImages, setRandomImages] = useState([])
   
@@ -12,8 +14,12 @@ const Home = () => {
       .then(data => setRandomImages(data))
   }, [])
 
+  
+
   return (
     <section className='home-container'>
+      <TransitionComponent />
+      <DatePicker />
       <Explore />
       <Gallery>
         {

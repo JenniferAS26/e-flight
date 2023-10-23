@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react'
+import { useForm } from 'react-hook-form'
 import Filters from '../../components/Filters'
 import SortBy from '../../components/SortBy'
 import FlightResults from '../../components/FlightResults'
@@ -12,14 +13,37 @@ import switching from '../../assets/icons/switch.svg'
 import calendar from '../../assets/icons/calendar-black.svg'
 import glass from '../../assets/icons/glass.svg'
 import { Pagination } from 'flowbite-react'
-import './styles.scss'
 import { FlightSearchContext } from '../../context/FlightSearchContext'
+import SearchableDropdown from '../../components/SearchableDropdown'
+import './styles.scss'
+
+
 
 const FlightListing = () => {
+  const [departureValue, setDepartureValue] = useState()
+  const [arrivalValue, setArrivalValue] = useState()
+  const { register, handleSubmit } = useForm()
+
+  const { filter, flightList } = useContext(FlightSearchContext)
+
   const [currentPage, setCurrentPage] = useState(1)
   const onPageChange = (page) => setCurrentPage(page)
-  const { flightList } = useContext(FlightSearchContext)
+
+  const searchFlight = JSON.parse(localStorage.getItem('searchDetail'))
+
+  const onSubmit = ( changeFlightDetails ) => {
+    const newFlightDetails = {
+      ...searchFlight,
+      departureDateChange: changeFlightDetails.departureDateChange,
+      arrivalDateChange: changeFlightDetails.arrivalDateChange,
+      departure: departureValue,
+      arrival: arrivalValue
+    }
+    console.log(newFlightDetails)
+  }
   
+  
+
   return (
     <section className='flight-listing'>
       <div className='flight-listing__filters'>
@@ -46,25 +70,55 @@ const FlightListing = () => {
           </button>
         </div>
         <div className='flight-listing__results--change-flight'>
-          <form className='switch-flight'>
+          <form className='switch-flight' onSubmit={ handleSubmit(onSubmit) }>
             <div className='switch-flight__wrapper flex justify-between items-center'>
               <div className='input-wrapper'>
                 <img src={pointer} alt='pointer icon' />
-                <input type='text' placeholder='Houston (HOU)' />
+                {/* <input type='text' placeholder='Houston (HOU)' /> */}
+                <SearchableDropdown 
+                  options={filter()}
+                  label='municipality'
+                  id='3'
+                  selectedVal={departureValue}
+                  handleChange={(val) => {
+                    setDepartureValue(val)
+                    console.log(val)
+                  }}
+                />
               </div>
               <span className='mx-8'>
                 <img src={switching} alt='arrows icon' />
               </span>
               <div className='input-wrapper'>
                 <img src={pointer} alt='pointer icon' />
-                <input type='text' placeholder='Los Angeles (LAX)' />
+                {/* <input type='text' placeholder='Los Angeles (LAX)' /> */}
+                <SearchableDropdown 
+                  options={filter()}
+                  label='municipality'
+                  id='3'
+                  selectedVal={arrivalValue}
+                  handleChange={(val) => {
+                    setArrivalValue(val)
+                    console.log(val)
+                  }}
+                />
               </div>
             </div>
             <div className='switch-flight__date-wrapper flex justify-between items-center'>
               <img src={calendar} alt='pointer icon' />
-              <input className='date-input' type='date' />
+              <input 
+                className='date-input' 
+                type='date' 
+                name='departureDateChange'
+                { ...register('departureDateChange') }
+              />
               <div className='separator'></div>
-              <input className='date-input' type='date' />
+              <input 
+                className='date-input' 
+                type='date' 
+                name='arrivalDateChange'
+                { ...register('arrivalDateChange') }
+              />
             </div>
             <button className='switch-flight__button' type='submit'>
               <img src={glass} alt='glass icon' />
@@ -107,9 +161,9 @@ const FlightListing = () => {
         </div>
         <FlightResults>
           {
-            flightList.map( (flightSearch, index) => (
+            flightList?.length ? flightList.map( (flightSearch, index) => (
               <FlightResultsCard key={index} data={flightSearch} />
-            ))
+            )) : <div>Loading...</div>
           }
         </FlightResults>
         <div className='flight-listing__results--pagination'>

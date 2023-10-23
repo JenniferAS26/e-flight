@@ -7,7 +7,6 @@ import './styles.scss'
 const SortBy = () => {
   const [openModal, setOpenModal] = useState();
 
-
   return (
     <section className='sortby-container'>
       <section className='sortby'>
