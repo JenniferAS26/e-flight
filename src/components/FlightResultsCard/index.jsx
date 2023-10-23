@@ -46,7 +46,7 @@ const FlightResultsCard = ({ data }) => {
           <h4 className='name-airline'>{data.validatingAirlineCodes[0]}</h4>
           <div className='info'>
             <img src={luggage} alt='luggage icon' />
-            {/* <span>{`${data.travelerPricings[0].fareDetailsBySegment[1].includedCheckedBags.quantity}kg`}</span> */}
+            {/* <span>{`${data.travelerPricings[0].fareDetailsBySegment[1].includedCheckedBags.weight}kg`}</span> */}
             <span>{data.travelerPricings[0].fareDetailsBySegment[1].includedCheckedBags.quantity}</span>
           </div>
         </div>
