@@ -104,7 +104,7 @@
             </label>
         </div>
         </div>
-        <h3>By selecting the button below, I agree to the Property Rules, Terms and Conditions, and Privacy Policy </h3>
+        <h3 className="tittle-terms">By selecting the button below, I agree to the Property Rules, Terms and Conditions, and Privacy Policy </h3>
         <button className="submit" type="submit">Submit</button>
         </form>
     );
