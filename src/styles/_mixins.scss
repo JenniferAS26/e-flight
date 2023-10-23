@@ -17,11 +17,11 @@
 @mixin buttonStyle($width, $height, $border-radius, $color, $bg-color, $font-size) {
   cursor: pointer;
   width: $width;
-  height: $height,;
+  height: $height;
   border: none;
   border-radius: $border-radius;
   color: $color;
-  background-color: $bg-color,;
+  background-color: $bg-color;
   font-size: $font-size;
 }
 
