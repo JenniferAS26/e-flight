@@ -129,15 +129,22 @@
       align-content: center;
       gap: 10px;
       &--button {
-        width: 69px;
-        height: 36px;
+        display: block !important;
+        width: 75px !important;
+        height: 36px !important;
         border-radius: 4px;
-        border: 1px solid $tertiary-text-color;
-        background: #FEFEFE;
+        border: 1px solid $tertiary-text-color !important;
+        background: #FEFEFE !important;
         justify-self: flex-end;
         margin-right: 26px;
         align-items: center;
-        font-size: 1.4rem;
+        color: $tertiary-text-color !important;
+        .text {
+          font-size: 1.4rem !important;
+        }
+        &:focus {
+          box-shadow: none !important;
+        }
       }
     }
   }
@@ -151,8 +158,17 @@
 }
 
 .desktop {
-  display: none;
+  display: none !important;
   @media (min-width: $desktop-width) {
-    display: grid;
+    display: grid !important;
   }
 }
+
+.border-white {
+  background-color: $primary-color !important;
+}
+
+.timeline-content time {
+  color: $primary-color !important;
+}
+

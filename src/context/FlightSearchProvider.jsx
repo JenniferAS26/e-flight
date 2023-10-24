@@ -22,7 +22,7 @@ const FlightSearchProvider = ({ children }) => {
   
   const getFlights = useCallback(() => {
     getListOfFlights(searchDetail.departure, searchDetail.arrival, searchDetail.departureDate, searchDetail.passengers, false, searchDetail.classesType)
-      .then((response) => setFlightList(response))
+      .then((response) => setFlightList(response.data))
   }, [])
 
   useEffect(() => {
