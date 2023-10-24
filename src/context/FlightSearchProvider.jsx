@@ -9,10 +9,10 @@ const FlightSearchProvider = ({ children }) => {
   const [dictionaries, setDictionaries] = useState({})
   const [ firstTrip, setFirstTrip ] = useState([])
 
+  // localStorage.setItem('searchDetail', JSON.stringify(firstTrip))
 
-  localStorage.setItem('searchDetail', JSON.stringify(firstTrip))
-
-  const searchDetail = JSON.parse(localStorage.getItem('searchDetail'))
+  // const searchDetail = JSON.parse(localStorage.getItem('searchDetail'))
+  const searchDetail = firstTrip
 
   const filter = () => {
     const filtered = airports.filter(e => {
