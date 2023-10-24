@@ -9,11 +9,10 @@ const FlightSearchProvider = ({ children }) => {
   const [dictionaries, setDictionaries] = useState({})
   const [ firstTrip, setFirstTrip ] = useState([])
 
-  // localStorage.setItem('searchDetail', JSON.stringify(firstTrip))
+  localStorage.setItem('searchDetail', JSON.stringify(firstTrip))
 
   // const searchDetail = JSON.parse(localStorage.getItem('searchDetail'))
-  const searchDetail = firstTrip[0]
-  console.log(searchDetail)
+  const searchDetail = firstTrip
 
   const filter = () => {
     const filtered = airports.filter(e => {
@@ -32,17 +31,19 @@ const FlightSearchProvider = ({ children }) => {
       })
   }, [])
 
-  const getTrips = useCallback(() => {
-    getTripData()
-      .then((response) => setFirstTrip(response))
-  }, [])
+  // const getTrips = useCallback(() => {
+    
+  // }, [])
 
   useEffect(() => {
     getFlights()
   }, [getFlights])
 
   useEffect(() => {
-    getTrips()
+    getTripData()
+      .then((response) => {
+        setFirstTrip(response)
+      })
   }, [])
 
   useEffect(() => {

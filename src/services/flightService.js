@@ -30,8 +30,9 @@ const getListOfFlights = async (origin, destination, departureDate, passengers, 
 
 const getTripData = async () => {
   try {
-    const { data } = await axios.get(endpoints.trips)
-    return data
+    const response = await axios.get(endpoints.trips)
+    console.log(response.data[0])
+    return response.data[0]
   } catch (error) {
     console.warn(error)
   }
