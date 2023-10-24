@@ -30,7 +30,8 @@ const TransitionComponent = () => {
   }
 
   return (
-    <form className="grid" onSubmit={handleSubmit(onSubmit)}>
+    <form className="form  grid" onSubmit={handleSubmit(onSubmit)}>
+      <div className='container'>
       <label htmlFor="round-trip">round trip</label>
       <input 
        className='round-trip'
@@ -52,6 +53,7 @@ const TransitionComponent = () => {
         value='one'
         { ...register('tripType') }
       />
+      </div>
       <br />
       <label htmlFor="passengers">passengers</label>
       <input 
