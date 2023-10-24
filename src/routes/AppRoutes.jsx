@@ -16,20 +16,20 @@ const AppRoutes = () => {
 
   return (
     <Routes>
-        <Route element={<Layout />}>
-          <Route path='/flight-booking' element={
-            <PrivateRoute>
-              <FlightBooking />
-            </PrivateRoute>
-          } />
-          <Route element={<PublicRoute isAuth={ logged } />}>
-            <Route index element={<Home />} />
-            <Route path='/flight-listing' element={<FlightListing />} />
-            <Route path='/sign-in' element={<SignIn />} />
-            <Route path='/sign-up' element={<SignUp/>} />
-          </Route>
+      <Route element={<Layout />}>
+        <Route path='/flight-booking' element={
+          <PrivateRoute>
+            <FlightBooking />
+          </PrivateRoute>
+        } />
+        <Route element={<PublicRoute isAuth={ logged } />}>
+          <Route index element={<Home />} />
+          <Route path='/flight-listing' element={<FlightListing />} />
+          <Route path='/sign-in' element={<SignIn />} />
+          <Route path='/sign-up' element={<SignUp/>} />
         </Route>
-      </Routes>
+      </Route>
+    </Routes>
   )
 }
 
