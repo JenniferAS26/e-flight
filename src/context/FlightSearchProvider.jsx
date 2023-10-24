@@ -8,16 +8,16 @@ const FlightSearchProvider = ({ children }) => {
   const [flightList, setFlightList] = useState([])
   const [dictionaries, setDictionaries] = useState({})
 
-  const initialValuesSearch = {
-    arrival: '',
-    departure: '',
-    classesType: '',
-    departureDate: '',
-    passengers: '',
-    tripType: ''
-  }
+  // const initialValuesSearch = {
+  //   arrival: '',
+  //   departure: '',
+  //   classesType: '',
+  //   departureDate: '',
+  //   passengers: '',
+  //   tripType: ''
+  // }
 
-  localStorage.setItem('searchDetail', JSON.stringify(initialValuesSearch))
+  // localStorage.setItem('searchDetail', JSON.stringify(initialValuesSearch))
 
   const searchDetail = JSON.parse(localStorage.getItem('searchDetail'))
   
