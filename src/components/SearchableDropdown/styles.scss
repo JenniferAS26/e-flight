@@ -4,6 +4,7 @@
 
 .dropdown {
   position: relative;
+  margin-left: 2px;
   color: #333;
   cursor: default;
 }
@@ -31,8 +32,7 @@
   line-height: 1.5;
   font-size: 1rem;
   background-color: transparent;
-  border: 1px solid #ccc;
-  border-radius: 2px;
+  border-radius: 20px;
   box-sizing: border-box;
   cursor: default;
   outline: none;
@@ -74,3 +74,4 @@
   background-color: #f2f9fc;
   color: #333;
 }
+

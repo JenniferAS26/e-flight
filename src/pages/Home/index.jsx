@@ -5,6 +5,7 @@ import DatePicker from '../../components/DatePicker'
 import Explore from '../../components/Explore'
 import Ticket from '../../components/Ticket'
 import TransitionComponent from '../../components/TransitionComponent'
+
 const Home = () => {
   const [randomImages, setRandomImages] = useState([])
 
