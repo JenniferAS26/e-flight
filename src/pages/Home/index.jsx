@@ -3,7 +3,6 @@ import Gallery from '../../components/Gallery'
 import GalleryCard from '../../components/GalleryCard'
 import DatePicker from '../../components/DatePicker'
 import Explore from '../../components/Explore'
-import Ticket from '../../components/Ticket'
 import TransitionComponent from '../../components/TransitionComponent'
 
 const Home = () => {
@@ -40,7 +39,6 @@ const Home = () => {
           ))
         }
       </Gallery>
-      <Ticket/>
     </section>
   )
 }
