@@ -1,10 +1,51 @@
-/* @use '../../styles/variables' as *;
-@use '../../styles/mixins' as *; */
 
 .grid{
     width: 350px;
     height: 450px;
     display: grid;
-    justify-content: end;
-    align-items: center;
+    border-width: 1px;
+    padding: 8px 52px 8px 10px;
+    border-radius: 18px;
+    .label{
+        width: 10px;
+        height: 10px;
+        display: grid;
+        margin-top: 23px;
+        margin-right: 10px;
+    }
+    
+    .round-trip, .one-way{
+        width: 8px;
+        height: 8px;
+        display: grid;
+        background-color: #F2F3F5;
+    }
+    .passager{
+        width: 23px;
+        height: 23px;
+        border: 1px solid #323842;
+        border-radius: 18px;
+    }
+    .search{
+        width: 167px;
+        height: 26px;
+        display: grid;
+        background-color: #11D295;
+        justify-content: space-evenly;
+        border-radius: 18px;
+        margin-top: 9px;
+        margin-left: 46px;
+        @media screen and (min-width: 1280px) {
+            width: 295px;
+            height: 40px;
+            display: grid;
+            margin-left: 133px;
+        }
+    }
+    @media screen and (min-width: 1280px) {
+        width: calc(1280px - 650px);
+        height: 510px;
+        display: grid;
+        margin: 0 auto;
+    }
 }
