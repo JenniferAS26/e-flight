@@ -12,7 +12,8 @@ const FlightSearchProvider = ({ children }) => {
   // localStorage.setItem('searchDetail', JSON.stringify(firstTrip))
 
   // const searchDetail = JSON.parse(localStorage.getItem('searchDetail'))
-  const searchDetail = firstTrip
+  const searchDetail = firstTrip[0]
+  console.log(searchDetail)
 
   const filter = () => {
     const filtered = airports.filter(e => {
