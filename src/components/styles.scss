@@ -1,0 +1,10 @@
+/* @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *; */
+
+.grid{
+    width: 350px;
+    height: 450px;
+    display: grid;
+    justify-content: end;
+    align-items: center;
+}

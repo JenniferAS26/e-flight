@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import SearchableDropdown from './SearchableDropdown'
 import { FlightSearchContext } from '../context/FlightSearchContext'
+import '../components/styles.scss'
 
 const TransitionComponent = () => {
   const navigate = useNavigate()
