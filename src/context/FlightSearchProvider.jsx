@@ -12,7 +12,7 @@ const FlightSearchProvider = ({ children }) => {
   const searchDetail = JSON.parse(localStorage.getItem('searchDetail'))
   
   const getFlights = useCallback(() => {
-    getListOfFlights(searchDetail.departure, searchDetail.arrival, searchDetail.departureDate, searchDetail.passengers, false, searchDetail.classesType)
+    getListOfFlights(searchDetail?.departure, searchDetail?.arrival, searchDetail?.departureDate, searchDetail?.passengers, false, searchDetail?.classesType)
       .then((response) => {
         setFlightList(response.data)
         setDictionaries(response.dictionaries)
