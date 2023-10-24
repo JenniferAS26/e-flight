@@ -7,6 +7,17 @@ import Ticket from '../../components/Ticket'
 import TransitionComponent from '../../components/TransitionComponent'
 const Home = () => {
   const [randomImages, setRandomImages] = useState([])
+
+  const initialValuesSearch = {
+    arrival: '',
+    departure: '',
+    classesType: '',
+    departureDate: '',
+    passengers: '',
+    tripType: ''
+  }
+
+  localStorage.setItem('searchDetail', JSON.stringify(initialValuesSearch))
   
   useEffect(() => {
     fetch('https://api.unsplash.com/photos/?client_id=FP6o71rtFQqnYRrRXDvf7d07O49T7SH7OI7eUdugG0E')
