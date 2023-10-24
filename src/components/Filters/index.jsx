@@ -51,13 +51,13 @@ const Filters = () => {
               <div className='filters__checkbox-wrapper flex justify-between'>
                 <div className='flex items-center gap-2'>
                   <Checkbox id='departure' />
-                  <Label className='filters__label' htmlFor='departure'>{ departure }</Label>
+                  <Label className='filters__label' htmlFor='departure'>Departure city</Label>
                 </div>
               </div>
               <div className='filters__checkbox-wrapper flex justify-between'>
                 <div className='flex items-center gap-2'>
                   <Checkbox id='arrival' />
-                  <Label className='filters__label' htmlFor='arrival'>{ arrival }</Label>
+                  <Label className='filters__label' htmlFor='arrival'>Arrival city</Label>
                 </div>
               </div>
               <div className='filters__bar'></div>
