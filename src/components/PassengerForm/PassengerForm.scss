@@ -11,21 +11,21 @@
     background-color: #f8f8f8;
     border-radius: 5px;
 
-    img {
+    .img {
         max-width: 40px;
     }
 
-    h2 {
+    .h2 {
         font-size: 20px;
         margin-top: 10px;
     }
 
-    p {
+    .parrafo {
         font-size: 14px;
         color: #555;
     }
 
-    form {
+    .form {
         display: flex;
         flex-direction: column;
 
@@ -34,12 +34,12 @@
             flex-direction: column;
             margin-bottom: 10px;
 
-            label {
+            .label {
                 font-size: 14px;
                 margin-bottom: 5px;
             }
 
-            input {
+            .input {
                 padding: 8px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
@@ -49,7 +49,7 @@
     }
 }
 
-button {
+.boton {
     background-color: #0077ff;
     color: #fff;
     font-size: 16px;
@@ -68,28 +68,28 @@ button {
         .section {
             margin-right: 20px;
 
-            img {
+            .img {
                 width: 70px;
                 height: 70px;
             }
 
-            h2 {
+            .h2 {
                 font-size: 28px;
                 margin-bottom: 15px;
             }
 
-            p {
+            .parrafo {
                 font-size: 18px;
                 margin-bottom: 25px;
             }
 
             .input-container {
-                label {
+                .label {
                     font-size: 16px;
                     margin-bottom: 7px;
                 }
 
-                input {
+                .input {
                     height: 35px;
                     font-size: 16px;
                     padding-left: 15px;
@@ -97,7 +97,7 @@ button {
             }
         }
 
-        button {
+        .boton {
             display: flex;
             justify-content: center;
             align-items: center;
