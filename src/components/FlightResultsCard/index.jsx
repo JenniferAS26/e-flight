@@ -43,7 +43,6 @@ const FlightResultsCard = ({ data }) => {
     return `${hours}:${minutes}${amPm}`
   }
 
-  console.log(data.data)
   return (
     <article className='card cursor-pointer'>
       <section className='card__airline-info'>
