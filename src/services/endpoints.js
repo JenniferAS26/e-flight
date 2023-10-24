@@ -4,7 +4,8 @@ const BASE_URL = 'https://e-flight-app.onrender.com'
 const endpoints = {
   searchByDestination: (origin, destination, departureDate, passengers, stops, classes) => `${API_URL}?originLocationCode=${origin}&destinationLocationCode=${destination}&departureDate=${departureDate}&adults=${passengers}&nonStop=${stops}&max=25&travelClass=${classes}`,
   users: `${BASE_URL}/users`,
-  booking: `${BASE_URL}/booking`
+  booking: `${BASE_URL}/booking`,
+  trips: `${BASE_URL}/trips`
 }
 
 export default endpoints

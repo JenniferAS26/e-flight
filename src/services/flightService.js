@@ -28,4 +28,13 @@ const getListOfFlights = async (origin, destination, departureDate, passengers, 
   }
 }
 
-export { getListOfFlights }
+const getTripData = async () => {
+  try {
+    const { data } = await axios.get(endpoints.trips)
+    return data
+  } catch (error) {
+    console.warn(error)
+  }
+}
+
+export { getListOfFlights, getTripData }
