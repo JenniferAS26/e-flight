@@ -3,8 +3,8 @@ import PassengerForm from '../../components/PassengerForm'
 
 const FlightBooking = () => {
     return (<>
-        <PassengerForm />
         <PaymentForm />
+        <PassengerForm />
     </>);
 };
 

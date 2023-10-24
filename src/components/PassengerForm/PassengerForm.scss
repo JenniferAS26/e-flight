@@ -1,0 +1,114 @@
+// Estilos para vista móvil (ancho de pantalla menor a 768px)
+
+.App {
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+
+    img {
+        max-width: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+
+            label {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            input {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+button {
+    background-color: #0077ff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+    .App {
+        flex-direction: row;
+        width: 782px;
+        margin-left: 300px;
+        .section {
+            margin-right: 20px;
+
+            img {
+                width: 70px;
+                height: 70px;
+            }
+
+            h2 {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 18px;
+                margin-bottom: 25px;
+            }
+
+            .input-container {
+                label {
+                    font-size: 16px;
+                    margin-bottom: 7px;
+                }
+
+                input {
+                    height: 35px;
+                    font-size: 16px;
+                    padding-left: 15px;
+                }
+            }
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 782px;
+            height: 45px;
+            font-size: 18px;
+            background-color: #11D295;
+            color: #FEFEFE;
+        }
+    }
+}
+
+
+
