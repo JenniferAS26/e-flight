@@ -1,5 +1,8 @@
 import { useForm } from "react-hook-form"
-/* import { useState } from 'react' */
+import { useState, /* useContext */ } from 'react';
+import { useNavigate } from 'react-router-dom';
+/* import { FlightSearchContext } from '../../FlightSearchContext' */
+/* import SearchableDropdown from "../SearchableDropdown" */
 /* import { Datepicker } from 'flowbite-react' 
 import { Flowbite } from 'flowbite-react'; */
 import ImageRound from '../../assets/icons/round-tip.svg'
@@ -23,30 +26,25 @@ import ImageCalendarW from '../../assets/icons/calendar-white.svg'
 import ImageCalendaryO from '../../assets/icons/calendar-orange.svg'
 import './styles.scss'
 
-
-const DatePicker = () => {
-  /*   const [roundTrip, setRoundTrip] = useState(false);
-
-    const handleRoundTripClick = () => {
-      setRoundTrip(!roundTrip); // Cambia el valor de roundTrip cuando se hace clic
-    }; */
-
-    const { register: searchFlight, handleSubmit } = useForm()
-
-    const onSubmit = (searchDetail, event) => {
-        event.preventDefault()
-        console.log(searchDetail)
+  const DatePicker = () => {
+    const navigate = useNavigate();
+   
+    
+    const [origin, setOriginValue] = useState();
+    const [destination, setDestinationValue] = useState();
+    const { register, handleSubmit } = useForm();
+  
+    const onSubmit = (searchDetail) => {
+      const newSearchModified = {
+        tripType: searchDetail.roundTrip ? 'round' : 'one',
+        origin: origin,
+        destination: destination
       }
-
-     
-
-   /*  const customT0heme = {
-        datepicker: {
-          color: {
-            primary: 'bg-violet-600 hover:bg-violet-600',
-          },
-        },
-      }; */
+      console.log(newSearchModified);
+      localStorage.setItem('searchDetail', JSON.stringify(newSearchModified));
+      navigate('/flight-listing');
+      window.location.reload();
+    };
   return (
     <section className='DatePicker-page-container'>
         <form onSubmit={handleSubmit(onSubmit)} className='DatePicker-container-wrapper'>
@@ -62,7 +60,7 @@ const DatePicker = () => {
                           id="javascript"
                           className='radio' 
                         /*   checked={roundTrip} */
-                          {...searchFlight('roundTrip')}
+                          {...register('roundTrip')}
                           name="roundTrip"
                        />
                         <img src={ImageRound} alt='doble-flechas' />
@@ -73,7 +71,7 @@ const DatePicker = () => {
                         type="radio" 
                         className='radio' 
                         placeholder='One Way'
-                        {...searchFlight('oneWay')}
+                        {...register('oneWay')}
                         name="oneWay"
                         />
                         <img src={ImageOne} alt='flecha' />
@@ -102,11 +100,10 @@ const DatePicker = () => {
                               <input 
                               type="text" 
                               className="texto" 
-                              placeholder='Houston (HOU)' 
-                              {...searchFlight('origin')}
-                              name="origin"
-                             /*  value={origin}
-                              onChange={handleFromChange} */
+                              placeholder='Houston (HOU)'
+                              value={origin}
+                              onChange={(e) => setOriginValue(e.target.value)}
+                              {...register('origin')}
                               />
                             </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
@@ -116,13 +113,12 @@ const DatePicker = () => {
                             <span>To</span>
                             <p>
                               <input 
-                               type="text" 
-                               className="texto" 
-                               placeholder='Where is your destination?'
-                               {...searchFlight('destination')}
-                               name="destination"
-                               /* value={destination} 
-                               onChange={handleToChange} */
+                                type="text" 
+                                className="texto" 
+                                placeholder='Where is your destination?'
+                                value={destination}
+                                onChange={(e) => setDestinationValue(e.target.value)}
+                                {...register('destination')}
                               />
                             </p>
                             <img className='horizon-line' src={ImageLineHorizontal} alt='linea-horizontal' />
@@ -168,7 +164,7 @@ const DatePicker = () => {
                         onChange={handleDepartureDateChange} */
                         className='departure' 
                         placeholder='departure'
-                        {...searchFlight('departure')}  
+                        {...register('departure')}  
                         name="departureDate" />
                     </p>
                 </div>
@@ -182,7 +178,7 @@ const DatePicker = () => {
                             className='Returndate' 
                             placeholder='Returndate'
                             /* disabled={!roudTrip} */
-                            {...searchFlight('ReturnDate')}  
+                            {...register('ReturnDate')}  
                             name="ReturnDate" />
                     </p>
                     <img src={ImageCalendaryO} alt='calendario-blanco' />
@@ -195,7 +191,7 @@ const DatePicker = () => {
             </div>
         </form>
     </section>
-  )
+  );
 }
 
 export default DatePicker
