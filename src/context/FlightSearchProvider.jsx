@@ -6,16 +6,7 @@ import airports from '../data/airports.json'
 
 const FlightSearchProvider = ({ children }) => {
   const [flightList, setFlightList] = useState([])
-/*   const initialValuesSearch = {
-    arrival: '',
-    departure: '',
-    classesType: '',
-    departureDate: '',
-    passengers: '',
-    tripType: ''
-  }
-
-  localStorage.setItem('searchDetail', JSON.stringify(initialValuesSearch)) */
+  const [dictionaries, setDictionaries] = useState({})
 
   // const initialValuesSearch = {
   //   arrival: '',
@@ -32,7 +23,10 @@ const FlightSearchProvider = ({ children }) => {
   
   const getFlights = useCallback(() => {
     getListOfFlights(searchDetail.departure, searchDetail.arrival, searchDetail.departureDate, searchDetail.passengers, false, searchDetail.classesType)
-      .then((response) => setFlightList(response))
+      .then((response) => {
+        setFlightList(response.data)
+        setDictionaries(response.dictionaries)
+      })
   }, [])
 
   useEffect(() => {
@@ -52,7 +46,7 @@ const FlightSearchProvider = ({ children }) => {
   }, [])
 
   return (
-    <FlightSearchContext.Provider value={{ flightList, filter }}>
+    <FlightSearchContext.Provider value={{ flightList, dictionaries, filter }}>
       { children }
     </FlightSearchContext.Provider>
   )
