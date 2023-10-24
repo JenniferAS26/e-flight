@@ -25,7 +25,7 @@ const FlightListing = () => {
   const [arrivalValue, setArrivalValue] = useState()
   const { register, handleSubmit } = useForm()
 
-  const { filter, flightList } = useContext(FlightSearchContext)
+  let { filter, dictionaries, flightList } = useContext(FlightSearchContext)
 
   const [currentPage, setCurrentPage] = useState(1)
   const onPageChange = (page) => setCurrentPage(page)
@@ -43,12 +43,14 @@ const FlightListing = () => {
     console.log(newFlightDetails)
   }
   
-  
-
+  console.log(dictionaries)
   return (
     <section className='flight-listing'>
       <div className='flight-listing__filters'>
-        <SortBy />
+        <SortBy onChange={() =>{ 
+          flightList = flightList.sort((a, b) => parseFloat(b.price.total) - parseFloat(a.price.total))
+          console.log(flightList)
+        }} />
         <Filters />
       </div>
       <div className='flight-listing__results'>
@@ -164,7 +166,7 @@ const FlightListing = () => {
           {
             flightList?.length 
             ? flightList.map( (flightSearch, index) => (
-              <FlightResultsCard key={index} data={flightSearch} />
+              <FlightResultsCard key={index} data={flightSearch} carriers={ dictionaries.carriers } aircraft={dictionaries.aircraft}  />
             )) 
             : <div className='button-loading-container w-full grid justify-center items-center'>
                 <Button color="gray" className='spiner-button'>

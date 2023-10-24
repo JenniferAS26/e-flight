@@ -27,7 +27,7 @@
         font-weight: $medium-weight;
         color: $tertiary-text-color;
         @media (min-width: $desktop-width) {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
         }
       }
       .info {
@@ -129,15 +129,22 @@
       align-content: center;
       gap: 10px;
       &--button {
-        width: 69px;
-        height: 36px;
+        display: block !important;
+        width: 75px !important;
+        height: 36px !important;
         border-radius: 4px;
-        border: 1px solid $tertiary-text-color;
-        background: #FEFEFE;
+        border: 1px solid $tertiary-text-color !important;
+        background: #FEFEFE !important;
         justify-self: flex-end;
         margin-right: 26px;
         align-items: center;
-        font-size: 1.4rem;
+        color: $tertiary-text-color !important;
+        .text {
+          font-size: 1.4rem !important;
+        }
+        &:focus {
+          box-shadow: none !important;
+        }
       }
     }
   }
@@ -151,8 +158,120 @@
 }
 
 .desktop {
-  display: none;
+  display: none !important;
   @media (min-width: $desktop-width) {
+    display: grid !important;
+  }
+}
+
+.border-white {
+  background-color: $primary-color !important;
+}
+
+.timeline-content time {
+  color: $primary-color !important;
+}
+
+
+.airline-logo {
+  width: 350px;
+  height: 100%;
+  column-gap: 10px;
+  padding: 0 5px;
+  img {
+    width: 25px;
+    height: 25px;
+  }
+  span {
+    display: block;
+    width: 200px;
+    color: #323842;
+    font-size: 1.6rem;
+  }
+}
+
+.navbar-detail {
+  padding: 0 20px;
+  width: 100%;
+  height: 40px;
+  display: grid;
+  ul li:nth-child(1) { 
+    color: $secondary-color;
+  }
+  li {
+    @include flexCenter(row, flex-start, center);
+    gap: 5px;
+    font-size: 1.4rem;
+    font-weight: $medium-weight;
+    letter-spacing: 1px;
+  }
+}
+
+.flight-details {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  background-color: #F9F9FA;
+  border-radius: $form-border-radius;
+  display: grid;
+  gap: 10px;
+  &__trip {
+    width: 100%;
+    height: auto;
     display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    &--details {
+      display: grid;
+      gap: 10px;
+      .top {
+        width: 100%;
+        height: 100%;
+        &__title {
+          font-size: 1.6rem;
+          font-weight: $medium-weight;
+          color: $primary-text-color;
+        }
+        &__text {
+          font-size: 1.4rem;
+          font-weight: $regular-weight;
+          color: #565E6C;
+        }
+      }
+      .middle {
+        width: 100%;
+        display: grid;
+        gap: 5px;
+        &__ticket-detail {
+          @include flexCenter(row, flex-start, center);
+          gap: 10px;
+          span {
+            font-size: 1.4rem;
+            font-weight: $medium-weight;
+            color: $secondary-color;
+          }
+        }
+        &__luggage {
+          width: 100%;
+          @include flexCenter(row, flex-start, center);
+          gap: 30px;
+          .luggage {
+          }
+        }
+      }
+    }
+    &--price-book {
+      width: 100%;
+      height: 60px;
+      @include flexCenter(row, space-between, center);
+      .price {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $tertiary-color;
+      }
+      button {
+        @include buttonStyle(100px, 36px, $drawer-border-radius, #FFFFFF, $secondary-color, 1.4rem);
+      }
+    }
   }
 }

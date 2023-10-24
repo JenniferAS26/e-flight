@@ -4,8 +4,14 @@ import chevron from '../../assets/icons/chevron.svg'
 import options from '../../assets/icons/options.svg'
 import './styles.scss'
 
-const SortBy = () => {
-  const [openModal, setOpenModal] = useState();
+const SortBy = ({ onChange }) => {
+  const [openModal, setOpenModal] = useState()
+  const [ priceValue, setPriceValue ] = useState()
+  
+
+  // const { flightList } = useContext(FlightSearchContext)
+
+  console.log(priceValue)
 
   return (
     <section className='sortby-container'>
@@ -78,7 +84,9 @@ const SortBy = () => {
                 type='radio' 
                 name='price' 
                 id='lowest' 
-                value='lowest' 
+                value='lowest'
+                onChange={(e) => {setPriceValue(e.target.value)}} 
+                onClick={onChange}
               />
               <label className='input-container__label' htmlFor='lowest'>Lowest price</label>
             </div>
@@ -88,7 +96,9 @@ const SortBy = () => {
                 type='radio' 
                 name='price' 
                 id='highest' 
-                value='highest' 
+                value='highest'
+                onChange={(e) => setPriceValue(e.target.value)} 
+                onClick={onChange}
               />
               <label className='input-container__label' htmlFor='highest'>Highest price</label>
             </div>
