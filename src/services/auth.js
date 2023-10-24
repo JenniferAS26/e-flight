@@ -4,8 +4,8 @@ import qs from 'qs'
 export const getToken = async () => {
   const data = {
     "grant_type": "client_credentials",
-    "client_id": "f2gBi7wYsUASmFGzMcHJVjUFvG0ypK0B",
-    "client_secret": "mkNqzPAJxwzhrfXw"
+    "client_id": "O3HEeIDzT4BG4jAIE3b2vPTcEPfSuWqB",
+    "client_secret": "KXh9WRGfcrtGMRVK"
   }
   const headers = {
     'content-type': 'application/x-www-form-urlencoded'

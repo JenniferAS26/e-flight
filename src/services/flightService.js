@@ -7,7 +7,6 @@ const getListOfFlights = async (origin, destination, departureDate, passengers, 
   while( retries < 3 ){
     try {
       let ACCESS_TOKEN = localStorage.getItem('authToken')
-      // console.log(ACCESS_TOKEN)
       const config = {
         headers: {
           "content-type": "application/vnd.amadeus+json",
@@ -15,7 +14,7 @@ const getListOfFlights = async (origin, destination, departureDate, passengers, 
         }
       }
       const { data } = await axios.get(endpoints.searchByDestination(origin, destination, departureDate, passengers, stops, classes), config)
-      return data.data
+      return data
     } catch (error) {
       // console.warn(error.response)
       if (error.response.status == 401) {
