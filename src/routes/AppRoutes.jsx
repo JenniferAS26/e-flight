@@ -24,9 +24,9 @@ const AppRoutes = () => {
           } />
           <Route element={<PublicRoute isAuth={ logged } />}>
             <Route index element={<Home />} />
-            <Route path='flight-listing' element={<FlightListing />} />
-            <Route path='sign-in' element={<SignIn />} />
-            <Route path='sign-up' element={<SignUp/>} />
+            <Route path='/flight-listing' element={<FlightListing />} />
+            <Route path='/sign-in' element={<SignIn />} />
+            <Route path='/sign-up' element={<SignUp/>} />
           </Route>
         </Route>
       </Routes>
