@@ -6,6 +6,7 @@ import airports from '../data/airports.json'
 
 const FlightSearchProvider = ({ children }) => {
   const [flightList, setFlightList] = useState([])
+  const [dictionaries, setDictionaries] = useState({})
 
   // const initialValuesSearch = {
   //   arrival: '',
@@ -22,7 +23,10 @@ const FlightSearchProvider = ({ children }) => {
   
   const getFlights = useCallback(() => {
     getListOfFlights(searchDetail.departure, searchDetail.arrival, searchDetail.departureDate, searchDetail.passengers, false, searchDetail.classesType)
-      .then((response) => setFlightList(response.data))
+      .then((response) => {
+        setFlightList(response.data)
+        setDictionaries(response.dictionaries)
+      })
   }, [])
 
   useEffect(() => {
@@ -42,7 +46,7 @@ const FlightSearchProvider = ({ children }) => {
   }, [])
 
   return (
-    <FlightSearchContext.Provider value={{ flightList, filter }}>
+    <FlightSearchContext.Provider value={{ flightList, dictionaries, filter }}>
       { children }
     </FlightSearchContext.Provider>
   )

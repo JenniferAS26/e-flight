@@ -7,9 +7,16 @@ import line from '../../assets/icons/trayecto.svg'
 import departure from '../../assets/icons/departure.svg'
 import logoAirline from '../../assets/icons/airline2.svg'
 import { Button, Modal, Timeline  } from 'flowbite-react'
+import ticketIcon from '../../assets/icons/ticket-green.svg'
+import bag from '../../assets/icons/bag.svg'
+import alert from '../../assets/icons/alert-green.svg'
+import like from '../../assets/icons/like.svg'
+import refund from '../../assets/icons/refund.svg'
+import calendar from '../../assets/icons/calendar-black.svg'
+
 import './styles.scss'
 
-const FlightResultsCard = ({ data }) => {
+const FlightResultsCard = ({ data, carriers, aircraft }) => {
   const [openModal, setOpenModal] = useState();
 
   const navigate = useNavigate()
@@ -43,12 +50,16 @@ const FlightResultsCard = ({ data }) => {
     return `${hours}:${minutes}${amPm}`
   }
 
+  const goToBooking = () => {
+    navigate('/flight-booking')
+  }
+  
   return (
     <article className='card cursor-pointer'>
       <section className='card__airline-info'>
         <img className='card__airline-info--icon' src={iconAirline} alt='logo airline' />
         <div className='card__airline-info--name-luggage desktop'>
-          <h4 className='name-airline'>{data.validatingAirlineCodes[0]}</h4>
+          <h4 className='name-airline'>{carriers[data.validatingAirlineCodes[0]]}</h4>
           <div className='info'>
             <img src={luggage} alt='luggage icon' />
             {/* <span>{`${data.travelerPricings[0].fareDetailsBySegment[1].includedCheckedBags.weight}kg`}</span> */}
@@ -81,23 +92,27 @@ const FlightResultsCard = ({ data }) => {
       </section>
       <Modal show={ openModal === 'default' } size="5xl" onClose={() => setOpenModal(undefined)}>
         <Modal.Header>
-          <div className='airline-logo'>
+          <div className='airline-logo flex justify-start items-center'>
             <img src={logoAirline} alt='' />
-            <span>Name airline</span>
+            <span>{carriers[data.validatingAirlineCodes[0]]}</span>
           </div>
         </Modal.Header>
-        <nav>
-          <ul>
+        <nav className='navbar-detail w-full grid'>
+          <ul className='w-full flex justify-between items-center'>
             <li>
+              <img src={alert} alt="" />
               <Link>Flight details</Link>
             </li>
             <li>
+              <img src={like} alt="" />
               <Link>Benefits</Link>
             </li>
             <li>
-              <Link>Refound</Link>
+              <img src={refund} alt="" />
+              <Link>Refund</Link>
             </li>
             <li>
+              <img src={calendar} alt="" />
               <Link>Reschedule</Link>
             </li>
           </ul>
@@ -128,13 +143,38 @@ const FlightResultsCard = ({ data }) => {
             </div>
             <div className="flight-details__trip--details">
               <div className="top">
-                <h3 className='top__title'>City (IATA)</h3>
+                <h3 className='top__title'>City</h3>
                 <p className='top__text'>airport name</p>
               </div>
               <div className="middle">
                 <div className="middle__ticket-detail">
-                  <img src="" alt="" />
-                  <span>codigo</span>
+                  <img src={ticketIcon} alt="ticket icon" />
+                  <span>codigo vuelo</span>
+                </div>
+                <div className='middle__luggage'>
+                  <div className='luggage'>
+                    <div className='up'>
+                      <div>
+                        <img src={bag} alt="bag icon" />
+                        <span>Baggage</span>
+                      </div>
+                      <span>2 x 23 kg</span>
+                    </div>
+                    <div className='down'>
+                      <div>
+                        <span>Cabin Baggage</span>
+                      </div>
+                      <span>1 x 7 kg</span>
+                    </div>
+                  </div>
+                  <div className='aircraft'>
+                    <div>
+                      <img src={bag} alt="bag icon" />
+                      <span>A320</span>
+                    </div>
+                    <p>3-3 seat layout</p>
+                    <p>29 inches Seat pitch (standard)</p>
+                  </div>
                 </div>
                 <span className='middle__classes'></span>
               </div>
@@ -164,11 +204,48 @@ const FlightResultsCard = ({ data }) => {
               </Timeline.Item>
             </Timeline>
             </div>
-            <div className="flight-details__trip--details"></div>
+            <div className="flight-details__trip--details">
+              <div className="top">
+                <h3 className='top__title'>City</h3>
+                <p className='top__text'>airport name</p>
+              </div>
+              <div className="middle">
+                <div className="middle__ticket-detail">
+                  <img src={ticketIcon} alt="ticket icon" />
+                  <span>codigo vuelo</span>
+                </div>
+                <div className='middle__luggage'>
+                  <div className='luggage'>
+                    <div className='up'>
+                      <div>
+                        <img src={bag} alt="bag icon" />
+                        <span>Baggage</span>
+                      </div>
+                      <span>2 x 23 kg</span>
+                    </div>
+                    <div className='down'>
+                      <div>
+                        <span>Cabin Baggage</span>
+                      </div>
+                      <span>1 x 7 kg</span>
+                    </div>
+                  </div>
+                  <div className='aircraft'>
+                    <div>
+                      <img src={bag} alt="bag icon" />
+                      <span>A320</span>
+                    </div>
+                    <p>3-3 seat layout</p>
+                    <p>29 inches Seat pitch (standard)</p>
+                  </div>
+                </div>
+                <span className='middle__classes'></span>
+              </div>
+            </div>
           </div>
           <div className='flight-details__trip--price-book'>
             <span className='price'>price</span>
-            <button>Book now</button>
+            <button onClick={goToBooking}>Book now</button>
           </div>
 
         </div>
