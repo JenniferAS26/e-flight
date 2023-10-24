@@ -8,7 +8,7 @@ import AuthProvider from './auth/context/AuthProvider'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/e-flight-app.netlify.app/'>
       <AuthProvider>
         <FlightSearchProvider>
           <AppRoutes />
