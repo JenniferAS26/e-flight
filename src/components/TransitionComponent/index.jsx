@@ -3,6 +3,16 @@ import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import SearchableDropdown from '../SearchableDropdown'
 import { FlightSearchContext } from '../../context/FlightSearchContext'
+import banner from '../../assets/images/banner.svg'
+import sun from '../../assets/images/sun.svg'
+import round from '../../assets/icons/round-tip.svg'
+import oneWay from '../../assets/icons/one-way.svg'
+import passenger from '../../assets/icons/passeger.svg'
+import ticket from '../../assets/icons/ticket.svg'
+import switchIcon from '../../assets/icons/switch-green.svg'
+import search from '../../assets/icons/search.svg'
+import calendarWhite from '../../assets/icons/calendar-white.svg'
+import calendarOrange from '../../assets/icons/calendar-orange.svg'
 import './styles.scss'
 
 const TransitionComponent = () => {
@@ -26,119 +36,166 @@ const TransitionComponent = () => {
     console.log(newSearchModified)
     localStorage.setItem('searchDetail', JSON.stringify(newSearchModified))
     navigate('/flight-listing')
-    window.location.reload()
+    // window.location.reload()
   }
 
   return (
-    <form className="form  grid" onSubmit={handleSubmit(onSubmit)}>
-      <div className='container'>
-      <label htmlFor="round-trip">round trip</label>
-      <input 
-       className='round-trip'
-        type="radio" 
-        placeholder="round trip" 
-        id="round-trip" 
-        name='tripType'
-        value='round'
-        { ...register('tripType') }
-      />
-      <br />
-      <label htmlFor="one-way">one way</label>
-      <input 
-      className='one-way'
-        type="radio" 
-        placeholder="one way" 
-        id="one-way" 
-        name='tripType'
-        value='one'
-        { ...register('tripType') }
-      />
+    <section className='hero'>
+      <div className='hero__image-container'>
+        <img className='banner' src={banner} alt='map world' />
+        <div className='hero__image-container--weather weather'>
+          <span className='weather__today'>current day</span>
+          <div className='weather__bar'></div>
+          <div className='weather__description'>
+            <h3 className='weather__description--city'>City</h3>
+            <span className='weather__description--country'>city, country</span>
+            <div className='weather__description--image'>
+              <img className='image' src={sun} alt="" />
+            </div>
+            <h3 className='weather__description--degrees'>28°</h3>
+            <span className='weather__description--span'>mostly sunny</span>
+          </div>
+        </div>
       </div>
-      <br />
-      <label htmlFor="passengers">passengers</label>
-      <input 
-      className='passenger'
-        type="number" 
-        placeholder="passengers" 
-        id="passengers" 
-        name='passengers'
-        { ...register('passengers') }
-      />
-      <br />
-      <label htmlFor="classes">classes</label>
-      <input 
-        className='classes'
-        type="text" 
-        placeholder="classes" 
-        id="classes" 
-        name='classesType'
-        { ...register('classesType') }
-      />
-      <br />
-      <label htmlFor="departure">departure</label>
-      {/* <input 
-        type="text" 
-        placeholder="departure" 
-        id="departure" 
-        name='departureCity'
-        { ...register('departureCity') }
-      /> */}
-      <SearchableDropdown 
-        options={filter()}
-        label='municipality'
-        id='3'
-        selectedVal={departureValue}
-        // name='departureCity'
-        // { ...register('departureCity') }
-        handleChange={(val) => {
-          setDepartureValue(val)
-          console.log(val)
-        }}
-      />
-      <br />
-      <label htmlFor="arrival">arrival</label>
-      {/* <input 
-        type="text" 
-        placeholder="arrival" 
-        id="arrival" 
-        name='arrivalCity'
-        { ...register('arrivalCity') }
-      /> */}
-      <SearchableDropdown 
-        options={filter()}
-        label='municipality'
-        id='3'
-        selectedVal={arrivalValue}
-        // name='arrivalCity'
-        // { ...register('arrivalCity') }
-        handleChange={(val) => {
-          setArrivalValue(val)
-          console.log(val)
-        }}
-      />
-      <br />
-      <label htmlFor="departure-date">departure-date</label>
-      <input 
-        className='daparture'
-        type="date" 
-        placeholder="departure-date" 
-        id="departure-date" 
-        name='departureDate'
-        { ...register('departureDate') }
-      />
-      <br />
-      <label htmlFor="arrival-date">arrival-date</label>
-      <input 
-       className='date'
-        type="date" 
-        placeholder="arrival-date" 
-        id="arrival-date" 
-        name='arrivalDate'
-        { ...register('arrivalDate') }
-      />
-
-      <input  className='search' type="submit" value='BUSCAR' />
-    </form>
+      <form 
+        className='hero__form' 
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <div className='hero__form--top-container'>
+          <div className='radio-wrapper'>
+            <input 
+              className='input-radio' 
+              type="radio" 
+              name='tripType'
+              value='round'
+              { ...register('tripType') } 
+              id='round' 
+              checked 
+            />
+            <input 
+              className='input-radio' 
+              type="radio" 
+              name='tripType'
+              value='one'
+              { ...register('tripType') }
+              id='one' 
+            />
+            <div className='switch flex items-center'>
+              <label className='round-trip flex' htmlFor="round">
+                <img src={round} alt="" />
+                <span>Round trip</span>
+              </label>
+              <label className='one-way flex' htmlFor="one">
+                <img src={oneWay} alt="" />
+                <span>One way</span>
+              </label>
+            </div>
+          </div>
+          <div className='flex'>
+            <div className='label-wrapper passenger mr-6'>
+              <label htmlFor='passengers'>
+                <img src={passenger} alt="" />
+              </label>
+              <input
+                className='passenger'
+                type='number'
+                placeholder='0'
+                id='passengers'
+                name='passengers'
+                { ...register('passengers') }
+              />
+            </div>
+            <div className='label-wrapper classes ml-6'>
+              <label htmlFor='classes'>
+                <img src={ticket} alt="" />
+              </label>
+              <select
+                className='classes'
+                name='classesType'
+                { ...register('classesType') }
+                id="classes"
+              >
+                <option value="ECONOMY">Economy</option>
+                <option value="PREMUM_ECONOMY">Premium Economy</option>
+                <option value="BUSINESS">Business</option>
+                <option value="FIRST">First Class</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="travel-wrapper">
+          <div className='search-wrapper'>
+            <div
+              className='travel-wrapper__way'
+            >
+              <label className='travel-wrapper__way--label' htmlFor='departure'>From</label>
+              <SearchableDropdown
+                options={filter()}
+                label='municipality'
+                id='3'
+                selectedVal={departureValue}
+                handleChange={(val) => {
+                  setDepartureValue(val)
+                  console.log(val)
+                }}
+              />
+            </div>
+            <img
+              className='travel-wrapper__image ml-6'
+              src={switchIcon}
+              alt=""
+            />
+            <div
+              className='travel-wrapper__way  ml-6'
+            >
+              <label className='travel-wrapper__way--label' htmlFor="">To</label>
+              <SearchableDropdown
+                options={filter()}
+                label='municipality'
+                id='3'
+                selectedVal={arrivalValue}
+                handleChange={(val) => {
+                  setArrivalValue(val)
+                  console.log(val)
+                }}
+              />
+            </div>
+          </div>
+          <button className='submit-button' type='submit'>
+            <img src={search} alt="" />
+          </button>
+        </div>
+        <div className='travel-date departure'>
+          <label htmlFor='departure-date'
+          >
+            <img src={calendarWhite} alt="" />
+          </label>
+          <input
+            className='trip-date'
+            type='date'
+            placeholder='departure-date'
+            id='departure-date'
+            name='departureDate'
+            { ...register('departureDate') }
+          />
+        </div>
+        
+        <div className='travel-date arrival'>
+          <label htmlFor='arrival-date'
+          >
+            <img src={calendarOrange} alt="" />
+          </label>
+          <input
+          className='trip-date'
+            type='date'
+            placeholder='arrival-date'
+            id='arrival-date'
+            name='arrivalDate'
+            { ...register('arrivalDate') }
+          />
+        </div>
+      </form>
+    </section>
   )
 }
 

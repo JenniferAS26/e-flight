@@ -14,20 +14,18 @@ const Home = () => {
       .then(data => setRandomImages(data))
   }, [])
 
-  
-
   return (
     <section className='home-container'>
       <TransitionComponent />
-      <DatePicker />
       <Explore />
       <Gallery>
         {
           randomImages.map((image, index) => (
             <GalleryCard key={index} imageUrl={image?.urls.regular} />
-          ))
-        }
+            ))
+          }
       </Gallery>
+      {/* <DatePicker /> */}
     </section>
   )
 }

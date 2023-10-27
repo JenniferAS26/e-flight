@@ -31,7 +31,7 @@ const FlightListing = () => {
   const onPageChange = (page) => setCurrentPage(page)
 
   const searchFlight = JSON.parse(localStorage.getItem('searchDetail'))
-
+  console.log(searchFlight)
   const onSubmit = ( changeFlightDetails ) => {
     const newFlightDetails = {
       ...searchFlight,

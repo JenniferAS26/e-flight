@@ -30,7 +30,7 @@
 
 .dropdown .selected-value .input-drowpdown {
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: 1.4rem;
   background-color: transparent;
   border-radius: 20px;
   box-sizing: border-box;
@@ -39,6 +39,10 @@
   padding: 8px 52px 8px 10px;
   transition: all 200ms ease;
   width: 100%;
+  border-width: 0;
+  &::placeholder {
+    color: #FFFFFF;
+  }
 }
 
 .dropdown .options {
@@ -63,15 +67,16 @@
 
 .dropdown .option {
   box-sizing: border-box;
-  color: rgba(51, 51, 51, 0.8);
+  color: black;
   cursor: pointer;
   display: block;
   padding: 8px 10px;
+  font-size: 1.3rem;
 }
 
 .dropdown .option.selected,
 .dropdown .option:hover {
   background-color: #f2f9fc;
-  color: #333;
+  color: black;
 }
 

@@ -1,65 +1,311 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
-.form{
-    width: 350px;
-    height: 450px;
-    display: grid;
-    border-width: 1px;
-    padding: 8px 52px 8px 10px;
-    border-radius: 18px;
-    .continer{
-        width: 30px;
-        height: 30px;
-        display: grid;
-        /* grid-template-columns: auto 1fr; */
-        grid-auto-flow: row;
-        column-gap: 8px;
-        .label{
-            width: 10px;
-            height: 10px;
-            font-size: 14px;
-            display: grid;
-            margin-top: 23px;
-            margin-right: 10px;
-        }
-        .round-trip{
-            width: 8px;
-            height: 8px;
-            display: grid;
-            background-color: #F2F3F5;
-        }
-        .one-way{
-            width: 8px;
-            height: 8px;
-            display: grid;
-            background-color: #F2F3F5;
-        }
-    }
-    .passager{
-        width: 23px;
-        height: 23px;
-        border: 1px solid #323842;
-        border-radius: 18px;
-    }
-    .search{
-        width: 167px;
-        height: 26px;
-        display: grid;
-        background-color: #11D295;
-        justify-content: space-evenly;
-        border-radius: 18px;
-        margin-top: 9px;
-        margin-left: 46px;
-        @media screen and (min-width: 1280px) {
-            width: 295px;
-            height: 40px;
-            display: grid;
-            margin-left: 133px;
-        }
-    }
-    @media screen and (min-width: 1280px) {
-        width: calc(1280px - 650px);
-        height: 510px;
-        display: grid;
-        margin: 0 auto;
-    }
+.hero {
+	min-width: 485px;
+	height: 700px;
+	display: grid;
+	justify-content: center;
+	&__image-container {
+		width: 490px;
+		height: 300px;
+		position: relative;
+		.banner {
+			min-width: 481px;
+			height: 300px;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		.weather {
+			width: 134px;
+			height: 200px;
+			border-radius: 117px;
+			border: 2px solid $input-background;
+			background-color: #FEFEFE;
+			display: grid;
+			justify-items: center;
+			align-items: center;
+			grid-template-rows: 40px 5px 150px;
+			position: absolute;
+			right: 0;
+			top: 35px;
+			&__today {
+				font-size: 1.2rem;
+				font-weight: $regular-weight;
+				color: $secondary-text-color;
+			}
+			&__bar {
+				width: 100%;
+				height: 2px;
+				background-color: $input-background;
+			}
+			&__description {
+				width: 100%;
+				height: 100%;
+				display: grid;
+				justify-items: center;
+				align-items: center;
+				grid-template-rows: 20px 10px 54px 19px;
+				gap: 5px;
+				&--city {
+					font-size: 1.4rem;
+					font-weight: $medium-weight;
+					letter-spacing: 1px;
+					color: $primary-color;
+				}
+				&--country {
+					font-weight: 1.2rem;
+					color: $primary-color;
+				}
+				&--image {
+					width: 54px;
+					height: 54px;
+					z-index: 2;
+					.image {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				&--degrees {
+					font-size: 1.6rem;
+					font-weight: $bold-weight;
+					margin-top: 5px;
+				}
+				&--span {
+					font-size: 1.2rem;
+					color: $secondary-text-color;
+					align-self: flex-start;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+	&__form {
+		width: 100%;
+		height: 100%;
+		display: grid;
+		gap: 10px;
+		&--top-container {
+			min-width: 561px;
+			@include flexCenter(column, flex-start, flex-start);
+			gap: 20px;
+			.switch {
+				width: 250px;
+				height: 36px;
+				column-gap: 15px;
+				label {
+					cursor: pointer;
+					border-radius: 18px;
+					padding: 7px 20px;
+					@include flexCenter(row, center, center);
+					gap: 5px;
+					span {
+						font-size: 1.25rem;
+					}
+				}
+				.round-trip {
+					background-color: $input-background;
+				}
+				.one-way {
+					background-color: #ECFDF7;
+				}
+			}
+			.input-radio {
+				display: none !important;
+			}
+			.label-wrapper {
+				border-radius: 18px;
+				@include flexCenter(row, space-between, center);
+				padding: 5px 10px;
+				gap: 5px;
+				background-color: #EFEFFE;
+				label {
+					padding-top: 3px;
+				}
+				input {
+					width: 30px;
+					height: 25px;
+					background-color: transparent;
+					border: none;
+					font-size: 1.8rem;
+					color: $primary-color;
+					padding: 0;
+					display: grid;
+					&::placeholder {
+						color: $primary-color;
+					}
+				}
+			}
+			select {
+				width: 90px;
+				background-color: transparent;
+				border: none;
+				color: $primary-color;
+				font-weight: $bold-weight;
+				font-size: 1.3rem;
+				&:focus {
+					--tw-ring-color: transparent;
+					background-color: #EFEFFE;
+					outline: none !important;
+					border: none !important;
+				}
+			}
+			@media (min-width: $desktop-height) {
+				@include flexCenter(row, flex-start, center);
+				margin-bottom: 20px;
+			}
+		}
+		.travel-wrapper {
+			max-width: 530px;
+			width: 450px;
+			height: 150px;
+			@include flexCenter(row, space-between, center);
+			.search-wrapper {
+				max-width: 510px;
+				width: 400px;
+				height: 110px;
+				background-color: $primary-color;
+				border-radius: 6px;
+				padding: 0 20px;
+				@include flexCenter(row, space-between, center);
+				@media (min-width: $desktop-width) {
+					width: 480px;
+				}
+			}
+			.submit-button {
+				width: 40px;
+				height: 110px;
+				background-color: $secondary-color;
+				border-radius: 6px;
+				display: grid;
+				place-content: center;
+			}
+			&__way {
+				width: 180px;
+				height: 60px;
+				color: #DDE0E5;
+				border-width: 1px;
+				border-top-color: transparent;
+				border-left-color: transparent;
+				border-right-color: transparent;
+				border-bottom-color: #DDE0E5;
+				display: grid;
+				&--label {
+					font-size: 1.4rem;
+					font-weight: $medium-weight;
+				}
+			}
+			&__image {
+				margin-top: 15px;
+			}
+			@media (min-width: $desktop-width) {
+				width: 600px;
+			}
+		}
+		.travel-date {
+			width: 170px;
+			height: 44px;
+			border-radius: 22px;
+			@include flexCenter(row, center, center);
+			.trip-date {
+				border: none;
+				background-color: transparent;
+				-tw-ring-color: transparent;
+				font-size: 1.4rem;
+				&:focus {
+					border: none;
+					--tw-ring-color: none;
+				}
+				&::-webkit-calendar-picker-indicator {
+					display: none;
+				}
+			}
+		}
+		.departure {
+			background-color: $tertiary-color;
+			color: #FEFEFE;
+		}
+		.arrival {
+			background-color: #FEFEFE;
+			color: $tertiary-color;
+		}
+		@media (min-width: $desktop-width) {
+			width: 600px;
+		}
+	}
+	@media (min-width: $desktop-width) {
+		max-width: $desktop-width;
+		@include flexCenter(row-reverse, center, center);
+		height: 400px;
+		margin: 0 auto;
+	}
 }
+
+
+// .form{
+//     width: 350px;
+//     height: 450px;
+//     display: grid;
+//     border-width: 1px;
+//     padding: 8px 52px 8px 10px;
+//     border-radius: 18px;
+//     .continer{
+//         width: 30px;
+//         height: 30px;
+//         display: grid;
+//         /* grid-template-columns: auto 1fr; */
+//         grid-auto-flow: row;
+//         column-gap: 8px;
+//         .label{
+//             width: 10px;
+//             height: 10px;
+//             font-size: 14px;
+//             display: grid;
+//             margin-top: 23px;
+//             margin-right: 10px;
+//         }
+//         .round-trip{
+//             width: 8px;
+//             height: 8px;
+//             display: grid;
+//             background-color: #F2F3F5;
+//         }
+//         .one-way{
+//             width: 8px;
+//             height: 8px;
+//             display: grid;
+//             background-color: #F2F3F5;
+//         }
+//     }
+//     .passager{
+//         width: 23px;
+//         height: 23px;
+//         border: 1px solid #323842;
+//         border-radius: 18px;
+//     }
+//     .search{
+//         width: 167px;
+//         height: 26px;
+//         display: grid;
+//         background-color: #11D295;
+//         justify-content: space-evenly;
+//         border-radius: 18px;
+//         margin-top: 9px;
+//         margin-left: 46px;
+//         @media screen and (min-width: 1280px) {
+//             width: 295px;
+//             height: 40px;
+//             display: grid;
+//             margin-left: 133px;
+//         }
+//     }
+//     @media screen and (min-width: 1280px) {
+//         width: calc(1280px - 650px);
+//         height: 510px;
+//         display: grid;
+//         margin: 0 auto;
+//     }
+// }
