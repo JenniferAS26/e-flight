@@ -20,3 +20,15 @@ export const authReducer = ( state = {}, action ) => {
       return state
   }
 }
+
+export const flightReducer = ( state = {}, action ) => {
+  switch (action.type) {
+    case 'Serch_Flight':
+      return {
+        ...state, search: action.payload
+      }
+  
+    default:
+      return state
+  }
+}

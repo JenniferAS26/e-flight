@@ -11,12 +11,21 @@ import passenger from '../../assets/icons/passeger.svg'
 import ticket from '../../assets/icons/ticket.svg'
 import switchIcon from '../../assets/icons/switch-green.svg'
 import search from '../../assets/icons/search.svg'
-import calendarWhite from '../../assets/icons/calendar-white.svg'
-import calendarOrange from '../../assets/icons/calendar-orange.svg'
+import Datepicker from "react-tailwindcss-datepicker"
 import './styles.scss'
 
 const TransitionComponent = () => {
+
+  const { dispatch } = useContext(FlightSearchContext)
   const navigate = useNavigate()
+  const [value, setValue] = useState({ 
+    startDate: new Date(), 
+    endDate: new Date().setMonth(11) 
+  }); 
+  
+  const handleValueChange = (newValue) => {
+    setValue(newValue); 
+  } 
 
   const [departureValue, setDepartureValue] = useState()
   const [arrivalValue, setArrivalValue] = useState()
@@ -28,15 +37,18 @@ const TransitionComponent = () => {
       tripType: searchDetail.tripType,
       passengers: searchDetail.passengers,
       classesType: searchDetail.classesType,
-      departureDate: searchDetail.departureDate,
-      arrivalDate: searchDetail.arrivalDate,
+      departureDate: value.startDate,
+      arrivalDate: value.endDate,
       departure: departureValue,
-      arrival: arrivalValue
+      arrival: arrivalValue,
     }
-    console.log(newSearchModified)
-    localStorage.setItem('searchDetail', JSON.stringify(newSearchModified))
+    dispatch(
+      {
+        type: 'Serch_Flight',
+        payload: newSearchModified
+      }
+    )
     navigate('/flight-listing')
-    // window.location.reload()
   }
 
   return (
@@ -136,7 +148,6 @@ const TransitionComponent = () => {
                 selectedVal={departureValue}
                 handleChange={(val) => {
                   setDepartureValue(val)
-                  console.log(val)
                 }}
               />
             </div>
@@ -156,7 +167,6 @@ const TransitionComponent = () => {
                 selectedVal={arrivalValue}
                 handleChange={(val) => {
                   setArrivalValue(val)
-                  console.log(val)
                 }}
               />
             </div>
@@ -165,7 +175,7 @@ const TransitionComponent = () => {
             <img src={search} alt="" />
           </button>
         </div>
-        <div className='travel-date departure'>
+        {/* <div className='travel-date departure'>
           <label htmlFor='departure-date'
           >
             <img src={calendarWhite} alt="" />
@@ -186,12 +196,19 @@ const TransitionComponent = () => {
             <img src={calendarOrange} alt="" />
           </label>
           <input
-          className='trip-date'
+            className='trip-date'
             type='date'
             placeholder='arrival-date'
             id='arrival-date'
             name='arrivalDate'
             { ...register('arrivalDate') }
+          />
+        </div> */}
+        <div className='datepicker-wrapper'>
+          <Datepicker
+            primaryColor={"violet"}
+            value={value}
+            onChange={handleValueChange}
           />
         </div>
       </form>

@@ -11,7 +11,7 @@ const SortBy = ({ onChange }) => {
 
   // const { flightList } = useContext(FlightSearchContext)
 
-  console.log(priceValue)
+  // console.log(priceValue)
 
   return (
     <section className='sortby-container'>

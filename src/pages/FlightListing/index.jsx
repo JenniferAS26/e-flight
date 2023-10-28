@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useCallback, useContext, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Filters from '../../components/Filters'
 import SortBy from '../../components/SortBy'
@@ -17,6 +17,7 @@ import { FlightSearchContext } from '../../context/FlightSearchContext'
 import SearchableDropdown from '../../components/SearchableDropdown'
 import { Button, Spinner } from 'flowbite-react'
 import './styles.scss'
+import { getListOfFlights } from '../../services/flightService'
 
 
 
@@ -24,14 +25,18 @@ const FlightListing = () => {
   const [departureValue, setDepartureValue] = useState()
   const [arrivalValue, setArrivalValue] = useState()
   const { register, handleSubmit } = useForm()
-
-  let { filter, dictionaries, flightList } = useContext(FlightSearchContext)
+  
+  const { state, filter } = useContext(FlightSearchContext)
+  let [flightList, setFlightList] = useState([])
+  const [dictionaries, setDictionaries] = useState({})
+  
 
   const [currentPage, setCurrentPage] = useState(1)
   const onPageChange = (page) => setCurrentPage(page)
 
   const searchFlight = JSON.parse(localStorage.getItem('searchDetail'))
-  console.log(searchFlight)
+
+  
   const onSubmit = ( changeFlightDetails ) => {
     const newFlightDetails = {
       ...searchFlight,
@@ -42,14 +47,26 @@ const FlightListing = () => {
     }
     console.log(newFlightDetails)
   }
+
+  const getFlights = useCallback(() => {
+    getListOfFlights(state.search.departure, state.search.arrival, state.search.departureDate, state.search.passengers, false, state.search.classesType)
+      .then((response) => {
+        setFlightList(response.data)
+        setDictionaries(response.dictionaries)
+      })
+  }, [])
+
+
+  useEffect(() => {
+    getFlights()
+  }, [getFlights])
   
-  console.log(dictionaries)
+
   return (
     <section className='flight-listing'>
       <div className='flight-listing__filters'>
         <SortBy onChange={() =>{ 
           flightList = flightList.sort((a, b) => parseFloat(b.price.total) - parseFloat(a.price.total))
-          console.log(flightList)
         }} />
         <Filters />
       </div>
@@ -85,7 +102,6 @@ const FlightListing = () => {
                   selectedVal={departureValue}
                   handleChange={(val) => {
                     setDepartureValue(val)
-                    console.log(val)
                   }}
                 />
               </div>
@@ -94,7 +110,6 @@ const FlightListing = () => {
               </span>
               <div className='input-wrapper'>
                 <img src={pointer} alt='pointer icon' />
-                {/* <input type='text' placeholder='Los Angeles (LAX)' /> */}
                 <SearchableDropdown 
                   options={filter()}
                   label='municipality'

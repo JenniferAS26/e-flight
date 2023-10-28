@@ -40,7 +40,7 @@ import './styles.scss'
         origin: origin,
         destination: destination
       }
-      console.log(newSearchModified);
+      // console.log(newSearchModified);
       localStorage.setItem('searchDetail', JSON.stringify(newSearchModified));
       navigate('/flight-listing');
       window.location.reload();

@@ -205,33 +205,41 @@
 				width: 600px;
 			}
 		}
-		.travel-date {
-			width: 170px;
-			height: 44px;
-			border-radius: 22px;
-			@include flexCenter(row, center, center);
-			.trip-date {
-				border: none;
-				background-color: transparent;
-				-tw-ring-color: transparent;
-				font-size: 1.4rem;
-				&:focus {
-					border: none;
-					--tw-ring-color: none;
-				}
-				&::-webkit-calendar-picker-indicator {
-					display: none;
-				}
-			}
-		}
-		.departure {
-			background-color: $tertiary-color;
-			color: #FEFEFE;
-		}
-		.arrival {
-			background-color: #FEFEFE;
-			color: $tertiary-color;
-		}
+		// .travel-date {
+		// 	width: 170px;
+		// 	height: 44px;
+		// 	border-radius: 22px;
+		// 	@include flexCenter(row, center, center);
+		// 	.trip-date {
+		// 		border: none;
+		// 		background-color: transparent;
+		// 		-tw-ring-color: transparent;
+		// 		font-size: 1.4rem;
+		// 		&:focus {
+		// 			border: none;
+		// 			--tw-ring-color: none;
+		// 		}
+		// 		// &::-webkit-calendar-picker-indicator {
+		// 		// 	display: none;
+		// 		// }
+		// 		&::-webkit-calendar-picker-indicator {
+		// 			display: none;
+		// 	}
+		// 	/* Ocultar el icono del calendario en otros navegadores */
+		// 		&::-webkit-inner-spin-button, 
+		// 		&::-webkit-outer-spin-button {
+		// 				display: none;
+		// 		}
+		// 	}
+		// }
+		// .departure {
+		// 	background-color: $tertiary-color;
+		// 	color: #FEFEFE;
+		// }
+		// .arrival {
+		// 	background-color: #FEFEFE;
+		// 	color: $tertiary-color;
+		// }
 		@media (min-width: $desktop-width) {
 			width: 600px;
 		}
@@ -242,6 +250,10 @@
 		height: 400px;
 		margin: 0 auto;
 	}
+}
+
+.datepicker-wrapper {
+	width: 170px;
 }
 
 
