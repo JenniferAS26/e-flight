@@ -4,8 +4,8 @@ import Ticket from '../../components/Ticket'
 
 const FlightBooking = () => {
     return (<>
-        <PaymentForm />
         <PassengerForm />
+        <PaymentForm />
         <Ticket />
     </>);
 };
