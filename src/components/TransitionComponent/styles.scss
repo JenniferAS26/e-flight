@@ -2,96 +2,106 @@
 @use '../../styles/mixins' as *;
 
 .hero {
-	min-width: 485px;
-	height: 700px;
+	// min-width: 485px;
+	width: 400px;
+	height: 400px;
 	display: grid;
-	justify-content: center;
+	margin: 0 auto;
 	&__image-container {
-		width: 490px;
-		height: 300px;
-		position: relative;
-		.banner {
-			min-width: 481px;
+		display: none;
+		@media (min-width: $desktop-width){
+			display: block;
+			width: 490px;
 			height: 300px;
-			object-fit: cover;
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -1;
-		}
-		.weather {
-			width: 134px;
-			height: 200px;
-			border-radius: 117px;
-			border: 2px solid $input-background;
-			background-color: #FEFEFE;
-			display: grid;
-			justify-items: center;
-			align-items: center;
-			grid-template-rows: 40px 5px 150px;
-			position: absolute;
-			right: 0;
-			top: 35px;
-			&__today {
-				font-size: 1.2rem;
-				font-weight: $regular-weight;
-				color: $secondary-text-color;
+			position: relative;
+			.banner {
+				min-width: 481px;
+				height: 300px;
+				object-fit: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
 			}
-			&__bar {
-				width: 100%;
-				height: 2px;
-				background-color: $input-background;
-			}
-			&__description {
-				width: 100%;
-				height: 100%;
+			.weather {
+				width: 134px;
+				height: 200px;
+				border-radius: 117px;
+				border: 2px solid $input-background;
+				background-color: #FEFEFE;
 				display: grid;
 				justify-items: center;
 				align-items: center;
-				grid-template-rows: 20px 10px 54px 19px;
-				gap: 5px;
-				&--city {
-					font-size: 1.4rem;
-					font-weight: $medium-weight;
-					letter-spacing: 1px;
-					color: $primary-color;
-				}
-				&--country {
-					font-weight: 1.2rem;
-					color: $primary-color;
-				}
-				&--image {
-					width: 54px;
-					height: 54px;
-					z-index: 2;
-					.image {
-						width: 100%;
-						height: 100%;
-					}
-				}
-				&--degrees {
-					font-size: 1.6rem;
-					font-weight: $bold-weight;
-					margin-top: 5px;
-				}
-				&--span {
+				grid-template-rows: 40px 5px 150px;
+				position: absolute;
+				right: 0;
+				top: 35px;
+				&__today {
 					font-size: 1.2rem;
+					font-weight: $regular-weight;
 					color: $secondary-text-color;
-					align-self: flex-start;
-					margin-bottom: 5px;
+				}
+				&__bar {
+					width: 100%;
+					height: 2px;
+					background-color: $input-background;
+				}
+				&__description {
+					width: 100%;
+					height: 100%;
+					display: grid;
+					justify-items: center;
+					align-items: center;
+					grid-template-rows: 20px 10px 54px 19px;
+					gap: 5px;
+					&--city {
+						font-size: 1.4rem;
+						font-weight: $medium-weight;
+						letter-spacing: 1px;
+						color: $primary-color;
+					}
+					&--country {
+						font-weight: 1.2rem;
+						color: $primary-color;
+					}
+					&--image {
+						width: 54px;
+						height: 54px;
+						z-index: 2;
+						.image {
+							width: 100%;
+							height: 100%;
+						}
+					}
+					&--degrees {
+						font-size: 1.6rem;
+						font-weight: $bold-weight;
+						margin-top: 5px;
+					}
+					&--span {
+						font-size: 1.2rem;
+						color: $secondary-text-color;
+						align-self: flex-start;
+						margin-bottom: 5px;
+					}
 				}
 			}
 		}
 	}
 	&__form {
-		width: 100%;
+		// min-width: 485px;
+		width: 400px;
 		height: 100%;
 		display: grid;
-		gap: 10px;
+		grid-template-rows: 100px 220px 50px;
+		justify-items: center;
+		align-items: center;
+		// gap: 10px;
 		&--top-container {
-			min-width: 561px;
+			// min-width: 561px;
 			@include flexCenter(column, flex-start, flex-start);
 			gap: 20px;
+			align-items: center;
 			.switch {
 				width: 250px;
 				height: 36px;
@@ -155,14 +165,13 @@
 			}
 			@media (min-width: $desktop-height) {
 				@include flexCenter(row, flex-start, center);
-				margin-bottom: 20px;
 			}
 		}
 		.travel-wrapper {
-			max-width: 530px;
-			width: 450px;
-			height: 150px;
-			@include flexCenter(row, space-between, center);
+			height: 100%;
+			justify-self: center;
+			@include flexCenter(column, center, flex-start);
+			gap: 10px;
 			.search-wrapper {
 				max-width: 510px;
 				width: 400px;
@@ -176,22 +185,26 @@
 				}
 			}
 			.submit-button {
-				width: 40px;
-				height: 110px;
+				width: 400px;
+				height: 40px;
 				background-color: $secondary-color;
 				border-radius: 6px;
 				display: grid;
 				place-content: center;
+				@media (min-width: $desktop-width) {
+					width: 40px;
+					height: 110px;
+				}
 			}
 			&__way {
 				width: 180px;
 				height: 60px;
-				color: #DDE0E5;
+				color: #FFFFFF;
 				border-width: 1px;
 				border-top-color: transparent;
 				border-left-color: transparent;
 				border-right-color: transparent;
-				border-bottom-color: #DDE0E5;
+				border-bottom-color: #FFFFFF;
 				display: grid;
 				&--label {
 					font-size: 1.4rem;
@@ -203,6 +216,8 @@
 			}
 			@media (min-width: $desktop-width) {
 				width: 600px;
+				flex-direction: row;
+				align-items: center;
 			}
 		}
 		// .travel-date {
@@ -242,19 +257,44 @@
 		// }
 		@media (min-width: $desktop-width) {
 			width: 600px;
+			grid-template-rows: 85px 170px 50px;
+			align-items: center;
 		}
 	}
 	@media (min-width: $desktop-width) {
 		max-width: $desktop-width;
-		@include flexCenter(row-reverse, center, center);
 		height: 400px;
 		margin: 0 auto;
+		display: grid;
+		justify-content: center;
+		grid-template-areas: "search banner-image";
+    grid-template-columns: 600px 500px;
+		&__image-container {
+			grid-area: banner-image;
+		}
+		&__form {
+			grid-area: search;
+		}
 	}
 }
 
 .datepicker-wrapper {
-	width: 170px;
+	width: auto;
+	input {
+		background-color: rgba($color: $primary-color, $alpha: 1);
+    height: 44px;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 350px;
+    color: white;
+	}
+	@media (min-width: $desktop-width) {
+		justify-self: flex-start;
+		margin-left: 35px;
+	}
 }
+
+
 
 
 // .form{

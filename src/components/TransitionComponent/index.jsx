@@ -53,7 +53,7 @@ const TransitionComponent = () => {
 
   return (
     <section className='hero'>
-      <div className='hero__image-container'>
+      <div className={`hero__image-container`}>
         <img className='banner' src={banner} alt='map world' />
         <div className='hero__image-container--weather weather'>
           <span className='weather__today'>current day</span>
@@ -206,6 +206,7 @@ const TransitionComponent = () => {
         </div> */}
         <div className='datepicker-wrapper'>
           <Datepicker
+            className='datepicker-component'
             primaryColor={"violet"}
             value={value}
             onChange={handleValueChange}
