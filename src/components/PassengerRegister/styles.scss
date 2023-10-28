@@ -1,0 +1,77 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.information {
+  min-width: 400px;
+  height: auto;
+  display: grid;
+  gap: 20px;
+  &__details {
+    width: 100%;
+    height: auto;
+    &--title {
+      width: 100%;
+      height: 30px;
+      @include flexCenter(row, flex-start, center);
+      gap: 10px;
+      .title {
+        font-size: 2rem;
+        font-weight: $bold-weight;
+        color: $primary-color;
+      }
+    }
+    &--description {
+      color: #565E6C;
+    }
+    &--input-fields {
+      width: 100%;
+      height: auto;
+      display: grid;
+      gap: 10px;
+      .field-wrapper {
+        display: grid;
+        gap: 5px;
+        label {
+          font-size: 1.4rem;
+          font-weight: $bold-weight;
+        }
+        input, select {
+          width: 100%;
+          height: 35px;
+          border-radius: 18px;
+          border: none;
+          background-color: $input-background;
+        }
+      }
+      .title,
+      .birthday,
+      .nationality {
+        width: 140px
+      }
+      .contact-name,
+      .contact-surname {
+        width: 240px
+      }
+    }
+  }
+  &__identity, &__contact {
+    @extend .information__details;
+    &--title {
+      @extend .information__details--title
+    }
+    .disclaimer {
+      max-width: 760px;
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      background-color: #EFEFFE;
+      display: grid;
+      place-content: center;
+      p {
+        font-size: 1.2rem;
+        font-weight: $medium-weight;
+        color: $primary-color;
+      }
+    }
+  }
+}

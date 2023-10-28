@@ -1,10 +1,11 @@
-import PaymentForm from "../../components/PaymentForm";
-import PassengerForm from '../../components/PassengerForm'
+import PaymentForm from '../../components/PaymentForm'
 import Ticket from '../../components/Ticket'
+import PassengerRegister from '../../components/PassengerRegister'
 
 const FlightBooking = () => {
     return (<>
-        <PassengerForm />
+        <PassengerRegister />
+        {/* <PassengerForm /> */}
         <PaymentForm />
         <Ticket />
     </>);
