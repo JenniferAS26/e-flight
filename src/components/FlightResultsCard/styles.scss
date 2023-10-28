@@ -220,7 +220,7 @@
     height: auto;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 150px auto;
     &--details {
       display: grid;
       gap: 10px;

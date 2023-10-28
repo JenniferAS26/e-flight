@@ -144,7 +144,7 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
             <div className="flight-details__trip--details">
               <div className="top">
                 <h3 className='top__title'>City</h3>
-                <p className='top__text'>airport name</p>
+                <p className='top__text'>{carriers[data.validatingAirlineCodes[0]]}</p>
               </div>
               <div className="middle">
                 <div className="middle__ticket-detail">
@@ -207,7 +207,7 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
             <div className="flight-details__trip--details">
               <div className="top">
                 <h3 className='top__title'>City</h3>
-                <p className='top__text'>airport name</p>
+                <p className='top__text'>{carriers[data.validatingAirlineCodes[0]]}</p>
               </div>
               <div className="middle">
                 <div className="middle__ticket-detail">
@@ -244,7 +244,7 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
             </div>
           </div>
           <div className='flight-details__trip--price-book'>
-            <span className='price'>price</span>
+            <span className='price'>{data.price.total} {data.price.currency}</span>
             <button onClick={goToBooking}>Book now</button>
           </div>
 
