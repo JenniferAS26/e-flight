@@ -59,16 +59,16 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
       <section className='card__airline-info'>
         <img className='card__airline-info--icon' src={iconAirline} alt='logo airline' />
         <div className='card__airline-info--name-luggage desktop'>
-          <h4 className='name-airline'>{carriers[data.validatingAirlineCodes[0]]}</h4>
+          <h4 className='name-airline'>{carriers[data?.validatingAirlineCodes[0]]}</h4>
           <div className='info'>
             <img src={luggage} alt='luggage icon' />
             {/* <span>{`${data.travelerPricings[0].fareDetailsBySegment[1].includedCheckedBags.weight}kg`}</span> */}
-            <span>{data.travelerPricings[0].fareDetailsBySegment[1]?.includedCheckedBags?.quantity}</span>
+            <span>{data?.travelerPricings[0].fareDetailsBySegment[1]?.includedCheckedBags?.quantity}</span>
           </div>
         </div>
       </section>
       <section className='card__time'>
-        <h3 className='card__time--hour desktop'>{`${formatTimeTravel(data.itineraries[0].segments[0].departure.at)} - ${formatTimeTravel(data.itineraries[0].segments[0].arrival.at)}`}</h3>
+        <h3 className='card__time--hour desktop'>{`${formatTimeTravel(data?.itineraries[0]?.segments[0]?.departure.at)} - ${formatTimeTravel(data?.itineraries[0]?.segments[0]?.arrival.at)}`}</h3>
         <div className='card__time--duration'>
             <img src={clock} alt='clock icon' />
             <span>{ formatDuration(data.itineraries[0].duration) }</span>
@@ -78,11 +78,11 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
         <img className='card__stops--line desktop' src={line} alt='line' />
         <div className='card__stops--info'>
           <img src={departure} alt='airplane icon' />
-          <span>{data.itineraries[0].segments[0].numberOfStops} stop</span>
+          <span>{data?.itineraries[0]?.segments[0]?.numberOfStops} stop</span>
         </div>
       </section>
       <section className='card__price'>
-        <h2 className='card__price--quantity'>{data.price.total} {data.price.currency}<span>/pax</span></h2>
+        <h2 className='card__price--quantity'>{data?.price?.total} {data?.price?.currency}<span>/pax</span></h2>
         <Button 
           className='card__price--button desktop'
           onClick={() => setOpenModal('default')}
@@ -94,7 +94,7 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
         <Modal.Header>
           <div className='airline-logo flex justify-start items-center'>
             <img src={logoAirline} alt='' />
-            <span>{carriers[data.validatingAirlineCodes[0]]}</span>
+            <span>{carriers[data?.validatingAirlineCodes[0]]}</span>
           </div>
         </Modal.Header>
         <nav className='navbar-detail w-full grid'>
@@ -144,7 +144,7 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
             <div className="flight-details__trip--details">
               <div className="top">
                 <h3 className='top__title'>City</h3>
-                <p className='top__text'>{carriers[data.validatingAirlineCodes[0]]}</p>
+                <p className='top__text'>{carriers[data?.validatingAirlineCodes[0]]}</p>
               </div>
               <div className="middle">
                 <div className="middle__ticket-detail">
@@ -188,7 +188,7 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
                 <Timeline.Point />
                 <Timeline.Content>
                   <Timeline.Time className='text-purple-600'>
-                    {`${formatTimeTravel(data.itineraries[0].segments[0].departure.at)}`}
+                    {`${formatTimeTravel(data?.itineraries[0]?.segments[0]?.departure?.at)}`}
                   </Timeline.Time>
                 </Timeline.Content>
               </Timeline.Item>
@@ -198,7 +198,7 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
                 <Timeline.Point />
                 <Timeline.Content>
                   <Timeline.Time className='text-purple-600'>
-                  {`${formatTimeTravel(data.itineraries[0].segments[0].arrival.at)}`}
+                  {`${formatTimeTravel(data?.itineraries[0]?.segments[0]?.arrival.at)}`}
                   </Timeline.Time>
                 </Timeline.Content>
               </Timeline.Item>
@@ -207,7 +207,7 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
             <div className="flight-details__trip--details">
               <div className="top">
                 <h3 className='top__title'>City</h3>
-                <p className='top__text'>{carriers[data.validatingAirlineCodes[0]]}</p>
+                <p className='top__text'>{carriers[data?.validatingAirlineCodes[0]]}</p>
               </div>
               <div className="middle">
                 <div className="middle__ticket-detail">
@@ -244,7 +244,7 @@ const FlightResultsCard = ({ data, carriers, aircraft }) => {
             </div>
           </div>
           <div className='flight-details__trip--price-book'>
-            <span className='price'>{data.price.total} {data.price.currency}</span>
+            <span className='price'>{data?.price?.total} {data?.price?.currency}</span>
             <button onClick={goToBooking}>Book now</button>
           </div>
 

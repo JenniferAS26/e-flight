@@ -181,7 +181,7 @@ const FlightListing = () => {
           {
             flightList?.length 
             ? flightList.map( (flightSearch, index) => (
-              <FlightResultsCard key={index} data={flightSearch} carriers={ dictionaries.carriers } aircraft={dictionaries.aircraft}  />
+              <FlightResultsCard key={index} data={flightSearch} carriers={ dictionaries?.carriers } aircraft={dictionaries?.aircraft}  />
             )) 
             : <div className='button-loading-container w-full grid justify-center items-center'>
                 <Button color="gray" className='spiner-button'>
